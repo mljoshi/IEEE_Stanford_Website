@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stanford IEEE Student Branch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="page homepage">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="ieee.png" class="navbar-logo-img" alt="IEEE Logo" />
+        <div class="navbar-logo-text">IEEE @ Stanford</div>
+      </a>
+      <nav class="navbar-menu">
+        <a href="index.html" class="navbar-link active">Home</a>
+        <a href="officers.html" class="navbar-link">Officers</a>
+        <a href="events.html" class="navbar-link">Events</a>
+        <a href="resources.html" class="navbar-link">Resources</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-strong">
+      <div class="container hero-inner">
+
+        <h1 class="hero-big-title">Hardware, software, and systems at Stanford.</h1>
+        <p class="hero-tagline">
+          A focused community for students who like real circuits, chips,<br>
+          systems, and infrastructure.
+        </p>
+
+        <div class="hero-button-row">
+          <a class="hero-btn hero-btn-primary" href="events.html">See Events</a>
+          <a class="hero-btn hero-btn-secondary" href="contact.html">Get Involved</a>
+        </div>
+
+        <div class="hero-mini-card">
+          <h3>What we do</h3>
+          <ul>
+            <li>Invite engineers & alumni for technical talks.</li>
+            <li>Mentor undergrads on EE/CS classes & careers.</li>
+            <li>Run small socials: project nights, BBQs, Pi Day.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-kicker">Programs</div>
+        <h2 class="section-title">Three things we care about.</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">Industry & research</div>
+            <div class="card-body">
+              Real-world talks from people building chips, systems, and ML infra.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Students</div>
+            <div class="card-body">
+              Mentoring on classes, research groups, and hardware career routes.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Community</div>
+            <div class="card-body">
+              A few well-run events each quarter instead of random pizza talks.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REBOOT -->
+    <section class="section" style="background:#fafafa;">
+      <div class="container">
+        <div class="section-kicker">This year</div>
+        <h2 class="section-title">2025–2026 reboot.</h2>
+
+        <ul class="reboot-list">
+          <li>Clear playbooks for rooms, funding, and speakers.</li>
+          <li>Simpler officer roles with clean handoff docs.</li>
+          <li>Closer relationship with IEEE Santa Clara Valley + EE dept.</li>
+          <li>A mailing list that actually survives turnover.</li>
+        </ul>
+
+        <div class="reboot-card">
+          <h3>Want to help?</h3>
+          <p>If you care about chips, systems, or photonics, come help shape the rebuild.</p>
+          <a href="contact.html" class="reboot-link">Contact us →</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Stanford IEEE Student Branch
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

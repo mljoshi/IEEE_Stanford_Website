@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events · Stanford IEEE Student Branch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Highlight Animation -->
+  <style>
+    .highlight-card {
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: all 0.6s cubic-bezier(.19,1,.22,1);
+    }
+    .highlight-card.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .highlight-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.08);
+      transition: left 0.6s cubic-bezier(.19,1,.22,1);
+    }
+    .highlight-card:hover::after {
+      left: 0;
+    }
+
+    /* Upcoming Card */
+    .upcoming-card {
+      display: flex;
+      padding: 1.4rem 1.6rem;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      margin-bottom: 3rem;
+      border-left: 8px solid #8C1515;
+      transition: transform 0.25s ease;
+    }
+    .upcoming-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+    }
+    .upcoming-left {
+      width: 170px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #444;
+    }
+    .upcoming-right h4 {
+      margin: 0 0 6px 0;
+      font-size: 1.15rem;
+    }
+    .upcoming-right p {
+      margin: 0;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    /* Highlight cards */
+    .highlight-card {
+      padding: 1.3rem 1.6rem;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #EBEBEB 0%, #D6D6D6 100%);
+      color: #222;
+      margin-bottom: 1.8rem;
+      border-left: 8px solid #8C1515;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.10);
+    }
+    .highlight-card .event-title {
+      font-size: 1.16rem;
+      font-weight: 650;
+      color: #8C1515;
+      margin-top: 4px;
+    }
+    .highlight-card .event-meta {
+      font-size: 0.92rem;
+      color: #444;
+      margin-bottom: 6px;
+    }
+
+    /* Complete archive */
+    .archive-container {
+      margin-top: 3rem;
+    }
+    details {
+      margin: 0.75rem 0 1.2rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 650;
+      background: #f3f3f3;
+      padding: 0.6rem 0.9rem;
+      border-radius: 10px;
+      border-left: 6px solid #8C1515;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+    summary:hover {
+      color: #8C1515;
+      background: #f0f0f0;
+    }
+    .year-events {
+      margin-left: 1rem;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body class="page">
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">
+      <img src="ieee.png" alt="IEEE Logo" class="navbar-logo-img">
+      <div class="navbar-logo-text">IEEE @ Stanford</div>
+    </a>
+    <nav class="navbar-menu">
+      <a href="index.html" class="navbar-link">Home</a>
+      <a href="officers.html" class="navbar-link">Officers</a>
+      <a href="events.html" class="navbar-link active">Events</a>
+      <a href="resources.html" class="navbar-link">Resources</a>
+      <a href="contact.html" class="navbar-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+
+      <div class="section-kicker">Events</div>
+      <h3>Upcoming</h3>
+
+      <!-- UPCOMING -->
+      <div class="upcoming-card">
+        <div class="upcoming-left">2025–2026</div>
+        <div class="upcoming-right">
+          <h4>Upcoming Stanford IEEE Events</h4>
+          <p>Our winter quarter schedule will be announced soon. Join the mailing list to stay updated.</p>
+        </div>
+      </div>
+
+      <!-- PAST HIGHLIGHTS -->
+      <h2 class="section-title" style="font-size:1.2rem; margin-top:3rem;">Past Highlights</h2>
+
+      <div class="highlight-list">
+
+        <article class="highlight-card">
+          <div class="event-meta">2009–2010</div>
+          <div class="event-title">Jensen Huang · Tegra & NVIDIA's Mobile Strategy</div>
+          <p class="event-meta">Founder & CEO of NVIDIA. One of the most influential leaders in AI and computing.</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2008–2009</div>
+          <div class="event-title">Marissa Mayer · Google: Creativity & Innovation</div>
+          <p class="event-meta">Former CEO of Yahoo. Early Google leader and Silicon Valley pioneer.</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2009–2010</div>
+          <div class="event-title">Mark Horowitz · Trends in VLSI Automation</div>
+          <p class="event-meta">Stanford EE professor, Rambus co-founder, pioneer of modern VLSI design.</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2010–2011</div>
+          <div class="event-title">Clara Shih · Stanford IEEE Tech Talk</div>
+          <p class="event-meta">Founder of Hearsay Systems, former Salesforce exec, Starbucks Board member.</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2011–2012</div>
+          <div class="event-title">Martin Hellman · Public Key Cryptography</div>
+          <p class="event-meta">Turing Award winner and co-inventor of modern cryptography.</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2011–2012</div>
+          <div class="event-title">Fei-Fei Li · Lunch with CS/EE Faculty</div>
+          <p class="event-meta">Co-director of Stanford HAI, world leader in computer vision and AI.</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2011–2012</div>
+          <div class="event-title">Naveen Verma · Embedded DSP to Embedded AI</div>
+          <p class="event-meta">Dean of Engineering at Princeton; expert in ML hardware & biosensing.</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2008–2009</div>
+          <div class="event-title">Craig Weissman · Salesforce.com Platform</div>
+          <p class="event-meta">Founding CTO of Salesforce Platform, co-founder of Duetto (cloud SaaS).</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2008–2009</div>
+          <div class="event-title">Burak GökTürk · Visual Search & Riya/Like.com</div>
+          <p class="event-meta">Founder of Like.com (acquired by Google). Vision & AI leader.</p>
+        </article>
+
+        <article class="highlight-card">
+          <div class="event-meta">2011–2012</div>
+          <div class="event-title">Tom Coughlin · Mountains of Data</div>
+          <p class="event-meta">IEEE President (2023). Leading voice in storage and data systems.</p>
+        </article>
+
+      </div>
+
+      <!-- COMPLETE ARCHIVE -->
+      <h3 class="section-title" style="font-size:1.1rem; margin-top:2.8rem;">Complete Archive</h3>
+
+      <div class="archive-container">
+
+        <details>
+          <summary>2013–2014</summary>
+          <div class="year-events">
+            <p>Walmart Labs · Big/Fast/Heterogenous Data — Feb 12, 2013</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>2011–2012</summary>
+          <div class="year-events">
+            <p>Feedback Communication Systems — Nov 30, 2011</p>
+            <p>Embedded AI Biomedical Sensors — Nov 16, 2011</p>
+            <p>Groupon Tech Talk — Nov 14, 2011</p>
+            <p>Lunch with Women Faculty — Nov 10, 2011</p>
+            <p>Body Area Networks — Oct 26, 2011</p>
+            <p>Millibits to Terabits — Oct 21, 2011</p>
+            <p>EDS Discussion — Oct 21, 2011</p>
+            <p>Big/Little Sister Mentorship — Oct 20, 2011</p>
+            <p>Twitter Tech Talk — Oct 18, 2011</p>
+            <p>Women Engineers Picnic — Oct 10, 2011</p>
+            <p>Boeing Ethics Talk — Oct 7, 2011</p>
+            <p>IEEE BBQ Night — Oct 6, 2011</p>
+            <p>Public Key Crypto — Sep 28, 2011</p>
+            <p>Mountains of Data — Sep 15, 2011</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>2010–2011</summary>
+          <div class="year-events">
+            <p>New Frontiers in Computing — July 16, 2011</p>
+            <p>Industry vs B-School vs Grad School — May 5, 2011</p>
+            <p>ESD Distinguished Lecture — Apr 14, 2011</p>
+            <p>Writing Productivity Workshop — Apr 6, 2011</p>
+            <p>Lockheed Systems Engineering — Mar 29, 2011</p>
+            <p>IEEE/ACM Pi Day — Mar 14, 2011</p>
+            <p>IP Law & Entrepreneurship — Mar 2, 2011</p>
+            <p>Flow of Information in Networks — Feb 22, 2011</p>
+            <p>GOLD Opportunities — Feb 17, 2011</p>
+            <p>Clash of the Bay Mixer — Feb 13, 2011</p>
+            <p>Apple Networking Night — Jan 25, 2011</p>
+            <p>Social Media & Web Search — Jan 10, 2011</p>
+            <p>Mentorship Kickoff — Jan 5, 2011</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>2009–2010</summary>
+          <div class="year-events">
+            <p>Tomographic Imaging — Nov 4, 2010</p>
+            <p>Congressional Fellowship Info — Nov 4, 2010</p>
+            <p>NVIDIA Tegra Strategy (Huang) — Nov 1, 2010</p>
+            <p>Trends in VLSI (Horowitz) — Oct 26, 2010</p>
+            <p>Clara Shih Tech Talk — Oct 24, 2010</p>
+            <p>Twitter Tech Talk — Oct 19, 2010</p>
+            <p>IEEE BBQ Night — Sep 24, 2010</p>
+            <p>Back to School BBQ — Sep 27, 2009</p>
+            <p>EE vs CS Orientation — Oct 2, 2009</p>
+            <p>Mentorship Kickoff — Oct 5, 2009</p>
+            <p>Schlumberger Info Session — Oct 6, 2009</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>2008–2009</summary>
+          <div class="year-events">
+            <p>IEEE BBQ — Oct 6, 2008</p>
+            <p>KLA-Tencor Session — Oct 20, 2008</p>
+            <p>Marvell Info Session — Oct 28, 2008</p>
+            <p>Orbital Sciences — Feb 1, 2008</p>
+            <p>Marvell (Wong/Yu/Fang) — Jan 28, 2008</p>
+            <p>Salesforce.com Talk — Dec 3, 2007</p>
+            <p>Google (Marissa Mayer) — Nov 28, 2007</p>
+            <p>Visual Search (GökTürk) — Nov 2, 2007</p>
+            <p>Entrepreneurship in Latin America — Oct 29, 2007</p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Stanford IEEE Student Branch
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+  const cards = document.querySelectorAll('.highlight-card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
