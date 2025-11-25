@@ -2,6 +2,8 @@
 
 Official website for the IEEE Stanford Student Branch.
 
+> **Note:** This site was migrated from static HTML/CSS/JS to a React-based SPA in November 2025. The original static site is preserved in `legacy/` for reference.
+
 ## Tech Stack
 
 - **React 18** - UI framework
