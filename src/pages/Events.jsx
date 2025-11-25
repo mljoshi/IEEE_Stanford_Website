@@ -95,7 +95,7 @@ export default function Events() {
         <article className="highlight-card">
           <div className="event-meta">2011–2012</div>
           <div className="event-title">Tom Coughlin · Mountains of Data</div>
-          <p className="event-meta">IEEE President (2023). Leading voice in storage and data systems.</p>
+          <p className="event-meta">IEEE President (2024). Leading voice in storage and data systems.</p>
         </article>
 
       </div>
