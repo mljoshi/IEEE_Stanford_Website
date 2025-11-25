@@ -19,7 +19,7 @@ export default function Nav() {
     <header className="navbar">
     <div className="container navbar-inner">
       <Link to="/" className='navbar-logo'>
-        <img src="/img/ieee.png" className="navbar-logo-img" alt="IEEE Logo" />
+        <img src={`${import.meta.env.BASE_URL}img/ieee.png`} className="navbar-logo-img" alt="IEEE Logo" />
         <div className="navbar-logo-text">IEEE @ Stanford</div>
       </Link>
       <nav className="navbar-menu">

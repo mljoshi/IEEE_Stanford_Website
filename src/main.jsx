@@ -7,7 +7,7 @@ import './styles/index.css'
 const root = createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/group/ieee">
       <App />
     </BrowserRouter>
   </React.StrictMode>

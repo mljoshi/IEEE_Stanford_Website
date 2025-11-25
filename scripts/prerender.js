@@ -20,4 +20,19 @@ routes.forEach((route) => {
   console.log(`✓ Created ${route}/index.html`)
 })
 
+// Create .htaccess for Apache routing
+const htaccess = `RewriteEngine On
+RewriteBase /group/ieee/
+
+# Handle subdirectory routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ /group/ieee/$1/index.html [L]
+
+# Serve root index
+RewriteRule ^$ /group/ieee/index.html [L]
+`
+fs.writeFileSync(path.resolve(__dirname, '../dist/.htaccess'), htaccess)
+console.log('✓ Created .htaccess')
+
 console.log('\n✓ All routes prerendered successfully!')
