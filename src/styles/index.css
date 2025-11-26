@@ -94,7 +94,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 880px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
@@ -113,6 +113,12 @@ body {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   height: var(--nav-height);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
 }
 
 .navbar-inner {
@@ -120,6 +126,7 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  padding: 0 1.5rem;
 }
 
 .navbar-logo {
@@ -144,8 +151,48 @@ body {
 
 .navbar-menu {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
+}
+
+/* Hide desktop menu on small screens, show burger */
+.navbar-burger {
+  display: none;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fff;
+}
+.burger-line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #222;
+  margin: 3px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar-menu-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 820px) {
+  .navbar-menu-desktop {
+    display: none;
+  }
+  .navbar-burger {
+    display: inline-flex;
+  }
+  .navbar-menu-mobile {
+    display: flex;
+  }
 }
 
 .navbar-link {
@@ -188,6 +235,7 @@ body {
 
 .section-kicker {
   font-size: 0.8rem;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: #888;
@@ -195,7 +243,12 @@ body {
 }
 
 .section-title {
+  text-align: center;
   margin: 0 0 1.5rem;
+}
+
+.section-description {
+  text-align: center;
 }
 
 /* Home page hero */
@@ -362,6 +415,7 @@ body {
   box-shadow: var(--shadow-soft);
   padding: 1rem 1.1rem 1.1rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 0.4rem;
 }
@@ -527,6 +581,11 @@ a:hover {
 }
 
 .hero-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   max-width: 800px;
 }
 
@@ -590,6 +649,28 @@ a:hover {
   line-height: 1.45;
 }
 
+
+.mini-card {
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.12);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.mini-card h3 {
+  margin: 0 0 0.6rem;
+}
+
+.mini-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 /* Programs */
 .card-grid {
   display: grid;
@@ -618,6 +699,9 @@ a:hover {
 
 /* Reboot card */
 .reboot-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #fff;
   padding: 1.2rem 1.3rem;
   border: 1px solid #eee;
@@ -668,6 +752,8 @@ a:hover {
 /* Name & bio */
 .officer-info {
   display: flex;
+  align-items: center;
+  text-align: center;
   flex-direction: column;
 }
 
@@ -686,6 +772,7 @@ a:hover {
 }
 
 .officer-bio {
+  text-align: center;
   font-size: 0.83rem;
   color: #444;
   line-height: 1.35;
@@ -791,6 +878,9 @@ a:hover {
     transform: translateX(-30px);
     transition: all 0.6s cubic-bezier(.19,1,.22,1);
 }
+.highlight-card:hover {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+}
 .highlight-card.visible {
     opacity: 1;
     transform: translateX(0);
@@ -894,12 +984,14 @@ summary:hover {
   list-style: disc;
   list-style-position: outside;
   padding-left: 1.25rem; /* keep markers aligned with text */
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
+  max-width: fit-content;
 }
 
 /* Ensure reboot-list items don't accidentally inherit a flex layout that hides markers */
 .reboot-list li {
   display: list-item;
+  text-align: left;
 }
 
 

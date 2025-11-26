@@ -4,129 +4,143 @@ import OfficerCard from '../components/OfficerCard'
 export default function Officers() {
   const baseUrl = import.meta.env.BASE_URL
   const officers = [
-    {
-      id: 1,
-      img: `${baseUrl}img/officers/luke.jpeg`,
-      name: 'Luke Qiao',
-      role: 'Chair',
-      bio: 'Luke Qiao is a junior and coterm MS student at Stanford University studying Electrical Engineering. He is passionate about anything involving PCB/IC design, analog/RF engineering, hardware, and music tech. He has previously worked on R&D work at Sandia National Laboratories, design verification at Apple and power electronics of a CubeSat at Stanford. Luke also loves music, and has been playing piano for 12 years.',
-      href: 'https://www.linkedin.com/in/luke-qiao/' 
-    },
-    {
-      id: 2,
-      img: `${baseUrl}img/officers/ethan.jpg`,
-      name: 'Ethan Song',
-      role: 'Vice Chair',
-      bio: 'Sophomore majoring in Electrical Engineering. Previously attended Duke University where he was Event Organizer for the student branch. Interested in photonics, semincoductors, and hardware systems. Outside of school, he enjoys playing piano, MMA, swimming, and running. Big fan of dogs and cats, has one of each at home.',
-      href: 'https://www.linkedin.com/in/ethan-s0ng/' 
-    },
-    {
-      id: 3,
-      img: `${baseUrl}img/officers/hannah.jpeg`,
-      name: 'Hannah Shu',
-      role: 'Finance & Funding',
-      bio: 'Hannah Shu is a junior at Stanford University majoring in Electrical Engineering. She is interested in signal processing, perception/sensing for autonomous vehicles, and AI systems. On campus, she helps organize TreeHacks with a focus on marketing and serves as the financial officer for the IEEE Stanford Student Branch. Outside of school, she enjoys photography and playing violin.',
-      href: 'https://www.linkedin.com/in/hannah-shu/'
-    },
-    {
-      id: 4,
-      img: `${baseUrl}img/officers/milly.png`,
-      name: 'Milly',
-      role: 'Marketing & Outreach',
-      bio: 'Milly Wong is a junior studying Electrical Engineering with a Master’s in Computer Science on the hardware–software track. She is passionate about healthcare technologies, especially sensing systems, and works in Professor James Landay’s lab prototyping an ultrasound-based continuous blood pressure sensor, drawing on prior experience with EEG research. On campus, she is part of the Stanford Space Initiative’s CubeSat team and the Stanford Healthcare Design Challenge, where she explores how better system-level and mixed-signal design can improve real-world systems. Outside of school, Milly enjoys reading widely.',
-      href: 'https://www.linkedin.com/in/millyyuwong/'
-    },
-    {
-      id: 5,
-      img: `${baseUrl}img/officers/kierra.jpeg`,
-      name: 'Kierra',
-      role: 'Event Operations',
-      bio: 'Junior majoring in EE on the physical science and tech track, outside of school I like to watch basketball and play tennis.',
-      href: 'https://www.linkedin.com/in/kierra-barr/'
-    },
-    {
-      id: 6,
-      img: `${baseUrl}img/officers/brant.png`,
-      name: 'Brant Bueno',
-      role: 'Industry Liason',
-      bio: `Sophomore studying Electrical Engineering. I'm originally from Minnesota and proudly Ecuadorian. On campus, I lead Stanford Funbotics, bringing STEM to underrepresented communities, and serve as the corporate relations officer in Stanford’s SHPE chapter, building a strong Latino engineering network. I’m especially drawn to the intersection of embedded systems and AI/ML. Last summer, I interned at Amazon, focusing on modular computer vision devices. I work part-time with Stanford's Computer Forum, connecting students and tech companies. Outside of academia, I love to organize emails and hanging out with my friends in Gamma Zeta Alpha!`,
-      href: '#'
-    },
-    {
-      id: 7,
-      img: `${baseUrl}img/officers/weston.png`,
-      name: 'Weston Keller',
-      role: 'Industry Liason',
-      bio: `Junior studying Electrical Engineering and Music. Studying abroad in Japan and interested in neuroscience/BCIs.`,
-      href: 'https://www.linkedin.com/in/weston-keller/'
-    },
-    {
-      id: 8,
-      img: `${baseUrl}img/officers/conejo.jpg`,
-      name: 'Fabian Israel Conejo',
-      role: 'Event Ops and Finance',
-      bio: `Sophomore pursuing an Individually Designed Major in Engineering (IDMEN), tentatively titled Sustainable Systems and Power Engineering. Passionate about the intersection of sustainability, energy, and electrical engineering as it relates to modern power systems.`,
-      href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
-    },
-    {
-      id: 9,
-      img: `${baseUrl}img/officers/nubia.png`,
-      name: 'Nubia Correa',
-      role: 'Marketing and Outreach',
-      bio: `Nubia Correa is a senior studying Electrical Engineering at Stanford University, specializing in hardware-software systems and machine learning. She currently conducts research in Dr. Craig Levin's Molecular Imaging Instrumentation Lab (MIIL) on deep learning motion-correction algorithms for cardiac PET imaging. As Marketing & Outreach Officer for Stanford's IEEE Student Branch and Advocacy & Industry Chair for Women in Electrical Engineering club, she is passionate about connecting students to opportunities in technology and expanding access to STEM.`,
-      href: 'https://www.linkedin.com/in/nubia-correa/'
-    },
-    {
-      id: 10,
-      img: `${baseUrl}img/officers/ege.png`,
-      name: 'Ege Turan',
-      role: 'Industry Liason',
-      bio: `I handle industry relations and connections. I’m a BS/MS EE student focused on hardware systems engineering, mechatronics, and sensing technology. I’m also a Lab Assistant at lab64, Stanford’s EE-run makerspace, where I help students bring their projects to life end-to-end.`,
-      href: 'https://www.linkedin.com/in/ege-turan/'
-    },
-    {
-      id: 11,
-      img: `${baseUrl}img/officers/joshi.jpeg`,
-      name: 'Joshiro Lawrence',
-      role: 'Website Developer',
-      bio: `Joshiro Lawrence is a junior majoring in Computer Science. He is interested in machine learning, signal processing, educational technology, and pure math. Outside of the classroom, he enjoys playing hockey, reading, video games, and long-distance running.`,
-      href: 'https://www.linkedin.com/in/joshiro-lawrence/'
-    },
-    {
-      id: 12,
-      img: `${baseUrl}img/officers/thomaslee.jpg`,
-      name: 'Thomas Lee',
-      role: 'Faculty Counselor',
-      bio: `Provides guidance on academic and professional direction for the branch.`,
-      href: 'https://profiles.stanford.edu/thomas-lee' 
-    }
-  ]
+  {
+    id: 1,
+    img: `${baseUrl}img/officers/luke.jpeg`,
+    name: 'Luke Qiao',
+    major: 'MS in Electrical Engineering',
+    role: 'Chair',
+    bio: 'He focuses on PCB and IC design, analog/RF engineering, and hardware systems. He has worked in R&D at Sandia National Laboratories, design verification at Apple, and CubeSat power electronics at Stanford. In his free time, he enjoys playing piano and exploring music technology.',
+    href: 'https://www.linkedin.com/in/luke-qiao/'
+  },
+  {
+    id: 2,
+    img: `${baseUrl}img/officers/ethan.jpg`,
+    name: 'Ethan Song',
+    major: 'BS in Electrical Engineering',
+    role: 'Vice Chair',
+    bio: 'He is interested in photonics, semiconductors, and hardware systems. His experience includes event organizing at Duke University and involvement in various engineering activities at Stanford. Outside academics, he enjoys playing piano, MMA, swimming, and running.',
+    href: 'https://www.linkedin.com/in/ethan-s0ng/'
+  },
+  {
+    id: 3,
+    img: `${baseUrl}img/officers/hannah.jpeg`,
+    name: 'Hannah Shu',
+    major: 'BS in Electrical Engineering',
+    role: 'Finance & Funding',
+    bio: 'She focuses on signal processing, sensing systems, and perception for autonomous vehicles. She helps organize TreeHacks and manages finances for the IEEE Stanford Student Branch. In her free time, she enjoys photography and playing violin.',
+    href: 'https://www.linkedin.com/in/hannah-shu/'
+  },
+  {
+    id: 4,
+    img: `${baseUrl}img/officers/milly.png`,
+    name: 'Milly Wong',
+    major: 'BS in Electrical Engineering; MS in Computer Science',
+    role: 'Marketing & Outreach',
+    bio: 'She is interested in healthcare technologies, sensing systems, and hardware–software integration. She works on prototyping an ultrasound-based continuous blood pressure sensor and contributes to CubeSat and healthcare design teams on campus. Outside academics, she enjoys reading widely.',
+    href: 'https://www.linkedin.com/in/millyyuwong/'
+  },
+  {
+    id: 5,
+    img: `${baseUrl}img/officers/kierra.jpeg`,
+    name: 'Kierra',
+    major: 'BS in Electrical Engineering',
+    role: 'Event Operations',
+    bio: 'She studies physical science and technology within electrical engineering and is involved in event coordination for the branch. She enjoys watching basketball and playing tennis in her free time.',
+    href: 'https://www.linkedin.com/in/kierra-barr/'
+  },
+  {
+    id: 6,
+    img: `${baseUrl}img/officers/brant.png`,
+    name: 'Brant Bueno',
+    major: 'BS in Electrical Engineering',
+    role: 'Industry Liaison',
+    bio: 'He is interested in embedded systems and the intersection of AI/ML with hardware. His experience includes interning at Amazon on modular computer vision devices and supporting corporate relations through SHPE and the Computer Forum. Outside academics, he enjoys organizing, community outreach, and spending time with friends.',
+    href: '#'
+  },
+  {
+    id: 7,
+    img: `${baseUrl}img/officers/weston.png`,
+    name: 'Weston Keller',
+    major: 'BS in Electrical Engineering and Music',
+    role: 'Industry Liaison',
+    bio: 'He focuses on neuroscience, brain–computer interfaces, and interdisciplinary applications of electrical engineering. He is currently studying abroad in Japan and exploring cross-cultural perspectives in engineering and music.',
+    href: 'https://www.linkedin.com/in/weston-keller/'
+  },
+  {
+    id: 8,
+    img: `${baseUrl}img/officers/conejo.jpg`,
+    name: 'Fabian Israel Conejo',
+    major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
+    role: 'Event Ops and Finance',
+    bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
+    href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
+  },
+  {
+    id: 9,
+    img: `${baseUrl}img/officers/nubia.png`,
+    name: 'Nubia Correa',
+    major: 'BS in Electrical Engineering',
+    role: 'Marketing and Outreach',
+    bio: 'She specializes in hardware–software systems and machine learning, with research in deep-learning motion correction for cardiac PET imaging. She also supports outreach and advocacy efforts for IEEE and Women in Electrical Engineering. She is passionate about expanding access to opportunities in STEM.',
+    href: 'https://www.linkedin.com/in/nubia-correa/'
+  },
+  {
+    id: 10,
+    img: `${baseUrl}img/officers/ege.png`,
+    name: 'Ege Turan',
+    major: 'BS/MS in Electrical Engineering',
+    role: 'Industry Liaison',
+    bio: 'He focuses on hardware systems, mechatronics, and sensing technology. He also works as a Lab Assistant at lab64, helping students develop projects from concept to completion.',
+    href: 'https://www.linkedin.com/in/ege-turan/'
+  },
+  {
+    id: 11,
+    img: `${baseUrl}img/officers/joshi.jpeg`,
+    name: 'Joshiro Lawrence',
+    major: 'BS in Computer Science',
+    role: 'Website Developer',
+    bio: 'He is interested in machine learning, signal processing, educational technology, and pure mathematics. Outside the classroom, he enjoys hockey, reading, gaming, and long-distance running.',
+    href: 'https://www.linkedin.com/in/joshiro-lawrence/'
+  },
+  {
+    id: 12,
+    img: `${baseUrl}img/officers/thomaslee.jpg`,
+    name: 'Thomas Lee',
+    major: 'Electrical Engineering',
+    role: 'Faculty Counselor',
+    bio: 'He provides academic and professional guidance for the IEEE Stanford Student Branch. He supports student initiatives and helps foster connections between industry and the academic community.',
+    href: 'https://profiles.stanford.edu/thomas-lee'
+  }
+];
+
   const industryAdvisors = [
-    {
-      id: 13,
-      img: `${baseUrl}img/officers/kim.jpeg`,
-      name: 'T. Kim Parnell, PhD, PE',
-      role: 'IEEE Life Senior Member',
-      bio: `Mechanical engineering expert specializing in forensic analysis, product failures, and patent disputes. With over 30 years of experience, he provides clear, defensible technical insight for high-stakes litigation as founder of Parnell Engineering & Consulting. A Life Senior Member of IEEE and ASME Fellow, he has led major engineering initiatives, collaborated with Stanford researchers, and presented nationally on failure mechanisms. His career includes expert testimony in numerous federal cases and forensic work on major industrial incidents such as the 1988 PEPCON explosion.`,
-      href: 'https://www.linkedin.com/in/ParnellPEC'
-    },
-    {
-      id: 14,
-      img: `${baseUrl}img/officers/mohan.png`,
-      name: 'Mohan Sankaran',
-      role: 'IEEE Senior Member',
-      bio: `Experienced engineer with two decades of hands-on work across fintech, secure mobile systems, artificial intelligence, and cybersecurity. A Senior Member of IEEE, he contributes to the IEEE-USA AI Policy Committee (AIPC). He serves as a peer reviewer and has chaired technical sessions at IEEE conferences.`,
-      href: 'https://www.linkedin.com/in/mohan-sankaran'
-    },
-    {
-      id: 15,
-      img: `${baseUrl}img/officers/tom.jpg`,
-      name: 'Tom Coughlin',
-      role: 'IEEE President (2024)',
-      bio: `Digital storage analyst and business/technology consultant. He has over 40 years in the data storage industry with engineering and senior management positions. Coughlin Associates consults, publishes books and market and technology reports and puts on digital storage and memory-oriented events. He is a regular contributor for forbes.com and M&E organization websites. He is an IEEE Fellow, 2025 IEEE Past President, Past-President IEEE-USA, Past Director IEEE Region 6 and Past Chair Santa Clara Valley IEEE Section, and is also active with SNIA and SMPTE.`,
-      href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
-    }
-  ]
+  {
+    id: 13,
+    img: `${baseUrl}img/officers/kim.jpeg`,
+    name: 'T. Kim Parnell, PhD, PE',
+    role: 'IEEE Life Senior Member',
+    bio: 'He specializes in forensic engineering, product failures, and patent-related technical analysis. With over 30 years of experience, he has consulted for federal cases and contributed to major industrial investigations. He remains active in IEEE and ASME and frequently presents on failure mechanisms and engineering design.',
+    href: 'https://www.linkedin.com/in/ParnellPEC'
+  },
+  {
+    id: 14,
+    img: `${baseUrl}img/officers/mohan.png`,
+    name: 'Mohan Sankaran',
+    role: 'IEEE Senior Member',
+    bio: 'He has two decades of experience across fintech, secure mobile systems, artificial intelligence, and cybersecurity. He contributes to the IEEE-USA AI Policy Committee and serves as a peer reviewer and technical session chair for IEEE conferences.',
+    href: 'https://www.linkedin.com/in/mohan-sankaran'
+  },
+  {
+    id: 15,
+    img: `${baseUrl}img/officers/tom.jpg`,
+    name: 'Tom Coughlin',
+    role: 'IEEE President (2024)',
+    bio: 'He is a digital storage analyst and consultant with over 40 years of industry experience in engineering and senior management roles. He leads Coughlin Associates, publishes technical reports and books, and contributes regularly to industry media. He is an IEEE Fellow and has held leadership positions across IEEE-USA, Region 6, and professional organizations such as SNIA and SMPTE.',
+    href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
+  }
+];
+
 
   return (
     <>
@@ -142,7 +156,7 @@ export default function Officers() {
     {/* ===================== CURRENT OFFICERS ===================== */}
   <div className="officer-grid">
     {officers.map(officer => (
-      <OfficerCard key={officer.id} img={officer.img} name={officer.name} role={officer.role} bio={officer.bio} href={officer.href} />
+      <OfficerCard key={officer.id} img={officer.img} name={officer.name} role={officer.role} major={officer.major} bio={officer.bio} href={officer.href} />
     ))}
   </div>
     {/* ===================== INDUSTRY ADVISORS ===================== */}

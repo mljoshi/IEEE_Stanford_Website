@@ -23,14 +23,14 @@ export default function Events() {
   <div className="container" ref={containerRef}>
 
       <div className="section-kicker">Events</div>
-      <h3>Upcoming</h3>
+      <h3 className="text-center">Upcoming</h3>
 
       {/* UPCOMING */}
       <div className="upcoming-card">
         <div className="upcoming-left">2025–2026</div>
         <div className="upcoming-right">
           <h4>Upcoming Stanford IEEE Events</h4>
-          <p>Our winter quarter schedule will be announced soon. Join the mailing list to stay updated.</p>
+          <p>Our winter quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated.</p>
         </div>
       </div>
 

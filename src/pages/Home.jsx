@@ -20,7 +20,7 @@ export default function Home() {
           <a className="hero-btn hero-btn-secondary" href="contact">Get Involved</a>
         </div>
 
-        <div className="hero-mini-card">
+        <div className="hero-mini-card hover-zoom">
           <h3>What we do</h3>
           <ul>
             <li>Invite engineers & alumni for technical talks.</li>
@@ -39,21 +39,21 @@ export default function Home() {
         <h2 className="section-title">Three things we care about.</h2>
 
         <div className="card-grid">
-          <div className="card">
+          <div className="card hover-zoom">
             <div className="card-title">Industry & research</div>
             <div className="card-body">
               Real-world talks from people building chips, systems, and ML infra.
             </div>
           </div>
 
-          <div className="card">
+          <div className="card hover-zoom">
             <div className="card-title">Students</div>
             <div className="card-body">
               Mentoring on classes, research groups, and hardware career routes.
             </div>
           </div>
 
-          <div className="card">
+          <div className="card hover-zoom">
             <div className="card-title">Community</div>
             <div className="card-body">
               A few well-run events each quarter instead of random pizza talks.
@@ -67,14 +67,15 @@ export default function Home() {
   <section className="section" style={{ background: '#fafafa' }}>
       <div className="container">
         <div className="section-kicker">This year</div>
-        <h2 className="section-title">2025–2026 reboot.</h2>
-
-        <ul className="reboot-list">
-          <li>Clear playbooks for rooms, funding, and speakers.</li>
-          <li>Simpler officer roles with clean handoff docs.</li>
-          <li>Closer relationship with IEEE Santa Clara Valley + EE dept.</li>
-          <li>A mailing list that actually survives turnover.</li>
-        </ul>
+        <div className="mini-card hover-zoom">
+          <h3 className="section-title">2025–2026 reboot.</h3>
+          <ul className="reboot-list">
+            <li>Clear playbooks for rooms, funding, and speakers.</li>
+            <li>Simpler officer roles with clean handoff docs.</li>
+            <li>Closer relationship with IEEE Santa Clara Valley + EE dept.</li>
+            <li>A mailing list that actually survives turnover.</li>
+          </ul>
+        </div>
 
         <div className="reboot-card">
           <h3>Want to help?</h3>
