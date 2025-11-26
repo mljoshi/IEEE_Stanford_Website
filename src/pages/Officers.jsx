@@ -120,7 +120,7 @@ export default function Officers() {
     img: `${baseUrl}img/officers/kim.jpeg`,
     name: 'T. Kim Parnell, PhD, PE',
     role: 'IEEE Life Senior Member',
-    bio: 'He specializes in forensic engineering, product failures, and patent-related technical analysis. With over 30 years of experience, he has consulted for federal cases and contributed to major industrial investigations. He remains active in IEEE and ASME and frequently presents on failure mechanisms and engineering design.',
+    bio: `Mechanical engineering expert specializing in forensic analysis, product failures, and patent disputes. With over 30 years of experience, he provides clear, defensible technical insight for high-stakes litigation as founder of Parnell Engineering & Consulting. A Life Senior Member of IEEE and ASME Fellow, he has led major engineering initiatives, collaborated with Stanford researchers, and presented nationally on failure mechanisms. His career includes expert testimony in numerous federal cases and forensic work on major industrial incidents such as the 1988 PEPCON explosion.`,
     href: 'https://www.linkedin.com/in/ParnellPEC'
   },
   {
@@ -128,7 +128,7 @@ export default function Officers() {
     img: `${baseUrl}img/officers/mohan.png`,
     name: 'Mohan Sankaran',
     role: 'IEEE Senior Member',
-    bio: 'He has two decades of experience across fintech, secure mobile systems, artificial intelligence, and cybersecurity. He contributes to the IEEE-USA AI Policy Committee and serves as a peer reviewer and technical session chair for IEEE conferences.',
+    bio: `Experienced engineer with two decades of hands-on work across fintech, secure mobile systems, artificial intelligence, and cybersecurity. A Senior Member of IEEE, he contributes to the IEEE-USA AI Policy Committee (AIPC). He serves as a peer reviewer and has chaired technical sessions at IEEE conferences.`,
     href: 'https://www.linkedin.com/in/mohan-sankaran'
   },
   {
@@ -136,7 +136,7 @@ export default function Officers() {
     img: `${baseUrl}img/officers/tom.jpg`,
     name: 'Tom Coughlin',
     role: 'IEEE President (2024)',
-    bio: 'He is a digital storage analyst and consultant with over 40 years of industry experience in engineering and senior management roles. He leads Coughlin Associates, publishes technical reports and books, and contributes regularly to industry media. He is an IEEE Fellow and has held leadership positions across IEEE-USA, Region 6, and professional organizations such as SNIA and SMPTE.',
+    bio: `Digital storage analyst and business/technology consultant. He has over 40 years in the data storage industry with engineering and senior management positions. Coughlin Associates consults, publishes books and market and technology reports and puts on digital storage and memory-oriented events. He is a regular contributor for forbes.com and M&E organization websites. He is an IEEE Fellow, 2025 IEEE Past President, Past-President IEEE-USA, Past Director IEEE Region 6 and Past Chair Santa Clara Valley IEEE Section, and is also active with SNIA and SMPTE.`,
     href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
   }
 ];
