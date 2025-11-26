@@ -16,8 +16,8 @@ export default function Home() {
         </p>
 
         <div className="hero-button-row">
-          <a className="hero-btn hero-btn-primary" href="events">See Events</a>
-          <a className="hero-btn hero-btn-secondary" href="contact">Get Involved</a>
+          <Link to="/events" className="hero-btn hero-btn-primary">See Events</Link>
+          <Link to="/contact" className="hero-btn hero-btn-secondary">Get Involved</Link>
         </div>
 
         <div className="hero-mini-card hover-zoom">
