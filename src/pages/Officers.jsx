@@ -302,6 +302,61 @@ export default function Officers() {
           </div>
         </details>
 
+        {/* 2006-2007 */}
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2006–2007 </span>
+            <span className="year-subtitle">Co-Presidents: Yuriy Teslyar & Yoo-Yoo Yeh</span>
+          </summary>
+          <div className="year-body">
+            <ul>
+              <li><span className="year-role">Co-Presidents: </span> Yuriy Teslyar, Yoo-Yoo Yeh</li>
+              <li><span className="year-role">VP ECJ:</span> Ian Wong</li>
+              <li><span className="year-role">VP Mixer/Membership:</span> Han Choi</li>
+              <li><span className="year-role">Treasurer:</span> Sylvia Yun</li>
+              <li><span className="year-role">Secretary:</span> Albert Chen</li>
+              <li><span className="year-role">Research & Competitions Co-Chairs:</span> Tracy Chou, Vincent Mei</li>
+              <li><span className="year-role">ECJ Co-Editor-in-Chief:</span> Gary Chang</li>
+              <li><span className="year-role">Publicity Manager: </span> Jong Kim</li>
+              <li><span className="year-role">Corporate Liason: </span> Yi Gu</li>
+              <li><span className="year-role">Community Service Chair:</span> Akintunde Maiyegun</li>
+            </ul>
+            {/* TODO: Consider adding year-bio, or removing all of them since they look GPT'd
+            <p className="year-bio">
+              
+            </p>
+            */}
+          </div>
+        </details>
+
+        {/* 2005-2006 */}
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2005–2006 </span>
+            <span className="year-subtitle">President: Dmitry Belogolovsky</span>
+          </summary>
+          <div className="year-body">
+            <ul>
+              <li><span className="year-role">President:</span> Dmitry Belogolovsky</li>
+              <li><span className="year-role">VP:</span> Yuriy Teslyar</li>
+              <li><span className="year-role">Corporate Liaison:</span> Francis Doumet</li>
+              <li><span className="year-role">Secretary:</span> Kahye Song</li>
+              <li><span className="year-role">Treasurer:</span> Yoo-Yoo Yeh</li>
+              <li><span className="year-role">Research & Competitions:</span> Omair Saadat</li>
+              <li><span className="year-role">Community Service:</span> Ryan Propper</li>
+              <li><span className="year-role">Publicity Manager: </span> Kishore Jayanti</li>
+              <li><span className="year-role">ECJ Editor-in-Chief: </span> William Liou</li>
+              <li><span className="year-role">Webmaster:</span> Kishore Jayanti</li>
+              <li><span className="year-role">Advisors:</span> Professor Ed McCluskey, Clara Shih</li>
+            </ul>
+            {/* TODO: Consider adding year-bio, or removing all of them since they look GPT'd
+            <p className="year-bio">
+              
+            </p>
+            */}
+          </div>
+        </details>
+
         {/* 2001-2002 */}
         <details className="year-details">
           <summary className="year-summary">
