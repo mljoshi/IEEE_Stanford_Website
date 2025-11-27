@@ -336,7 +336,7 @@ export default function Officers() {
             <span className="year-subtitle">President: Dmitry Belogolovsky</span>
           </summary>
           <div className="year-body">
-            <a href="https://docs.google.com/document/d/1jr6Bse849oE4ahwJA-Ybbw5G4elh_hG1/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2005-2006</a>
+            <a target="_blank" href="https://docs.google.com/document/d/1jr6Bse849oE4ahwJA-Ybbw5G4elh_hG1/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2005-2006</a>
             <ul>
               <li><span className="year-role">President:</span> Dmitry Belogolovsky</li>
               <li><span className="year-role">VP:</span> Yuriy Teslyar</li>
@@ -365,7 +365,7 @@ export default function Officers() {
             <span className="year-subtitle">President: Clara Shih</span>
           </summary>
           <div className="year-body">
-            <a href="https://docs.google.com/document/d/1_EfhamUj95yo5o4BdQf8ylaVuX6JUMKK/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2003-2004</a>
+            <a target="_blank" href="https://docs.google.com/document/d/1_EfhamUj95yo5o4BdQf8ylaVuX6JUMKK/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2003-2004</a>
             <ul>
               <li><span className="year-role">President:</span> Clara Shih</li>
               <li><span className="year-role">VP:</span> Joshua Reeves</li>
@@ -394,7 +394,7 @@ export default function Officers() {
             <span className="year-subtitle">President: Clara Shih</span>
           </summary>
           <div className="year-body">
-            <a href="https://docs.google.com/document/d/1iJLaBNplPwtWSw0HE9DgoD8X4Oi9-Iy3/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2002-2003</a>
+            <a target="_blank" href="https://docs.google.com/document/d/1iJLaBNplPwtWSw0HE9DgoD8X4Oi9-Iy3/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2002-2003</a>
             <ul>
               <li><span className="year-role">President:</span> Clara Shih</li>
               <li><span className="year-role">VP:</span> Cher Wee Lim</li>
