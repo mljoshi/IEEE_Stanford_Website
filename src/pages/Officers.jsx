@@ -99,7 +99,7 @@ export default function Officers() {
     img: `${baseUrl}img/officers/joshi.jpeg`,
     name: 'Joshiro Lawrence',
     major: 'BS in Computer Science',
-    role: 'Website Developer',
+    role: 'Webmaster',
     bio: 'He is interested in machine learning, signal processing, educational technology, and pure mathematics. Outside the classroom, he enjoys hockey, reading, gaming, and long-distance running.',
     href: 'https://www.linkedin.com/in/joshiro-lawrence/'
   },
@@ -336,6 +336,7 @@ export default function Officers() {
             <span className="year-subtitle">President: Dmitry Belogolovsky</span>
           </summary>
           <div className="year-body">
+            <a href="https://docs.google.com/document/d/1jr6Bse849oE4ahwJA-Ybbw5G4elh_hG1/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2005-2006</a>
             <ul>
               <li><span className="year-role">President:</span> Dmitry Belogolovsky</li>
               <li><span className="year-role">VP:</span> Yuriy Teslyar</li>
@@ -348,6 +349,66 @@ export default function Officers() {
               <li><span className="year-role">ECJ Editor-in-Chief: </span> William Liou</li>
               <li><span className="year-role">Webmaster:</span> Kishore Jayanti</li>
               <li><span className="year-role">Advisors:</span> Professor Ed McCluskey, Clara Shih</li>
+            </ul>
+            {/* TODO: Consider adding year-bio, or removing all of them since they look GPT'd
+            <p className="year-bio">
+              
+            </p>
+            */}
+          </div>
+        </details>
+
+        {/* 2003-2004 */}
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2003–2004 </span>
+            <span className="year-subtitle">President: Clara Shih</span>
+          </summary>
+          <div className="year-body">
+            <a href="https://docs.google.com/document/d/1_EfhamUj95yo5o4BdQf8ylaVuX6JUMKK/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2003-2004</a>
+            <ul>
+              <li><span className="year-role">President:</span> Clara Shih</li>
+              <li><span className="year-role">VP:</span> Joshua Reeves</li>
+              <li><span className="year-role">Treasurer:</span> Dmitry Belogolovsky</li>
+              <li><span className="year-role">Secretary:</span> Su Fen Lee</li>
+              <li><span className="year-role">SA/Webmaster:</span> Alex Chow</li>
+              <li><span className="year-role">Corporate Liaison:</span> Kevin Shen</li>
+              <li><span className="year-role">Community Service:</span> Nancy Wu, William Liou</li>
+              <li><span className="year-role">Competitions Chair: </span> Yuriy Teslyar</li>
+              <li><span className="year-role">Publicity Manager:</span> Yoo-Hsiu Yeh</li>
+              <li><span className="year-role">Regional Liaison: </span> Albert Hsu</li>
+              <li><span className="year-role">Social Chair:</span> A. Justin Sabet-Peyman</li>
+            </ul>
+            {/* TODO: Consider adding year-bio, or removing all of them since they look GPT'd
+            <p className="year-bio">
+              
+            </p>
+            */}
+          </div>
+        </details>
+
+        {/* 2002-2003 */}
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2002–2003 </span>
+            <span className="year-subtitle">President: Clara Shih</span>
+          </summary>
+          <div className="year-body">
+            <a href="https://docs.google.com/document/d/1iJLaBNplPwtWSw0HE9DgoD8X4Oi9-Iy3/edit?usp=drive_link&ouid=108743721022922172832&rtpof=true&sd=true">Handbook 2002-2003</a>
+            <ul>
+              <li><span className="year-role">President:</span> Clara Shih</li>
+              <li><span className="year-role">VP:</span> Cher Wee Lim</li>
+              <li><span className="year-role">Treasurer:</span> Elizabeth Williams</li>
+              <li><span className="year-role">Secretary:</span> Agnes Li</li>
+              <li><span className="year-role">Undergrad Coordinator:</span> Anthony Hui</li>
+              <li><span className="year-role">Graduate Coordinator:</span> Pierre Ponce, Saad Waqas</li>
+              <li><span className="year-role">Corporate Liaison:</span> Joshua Reeves</li>
+              <li><span className="year-role">Competitions Chair: </span> Su Fen Lee</li>
+              <li><span className="year-role">Webmaster:</span> Chee Hau Tan, William Lu</li>
+              <li><span className="year-role">System Administrator: </span> Eric Sun</li>
+              <li><span className="year-role">Publicity Manager:</span> Kevin Shen</li>
+              <li><span className="year-role">Community Service:</span> Nancy Wu</li>
+              <li><span className="year-role">Regional Liaison:</span> Pedram Keyani</li>
             </ul>
             {/* TODO: Consider adding year-bio, or removing all of them since they look GPT'd
             <p className="year-bio">
