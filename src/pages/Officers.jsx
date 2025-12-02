@@ -69,7 +69,7 @@ export default function Officers() {
   },
   {
     id: 8,
-    img: `${baseUrl}img/officers/conejo.jpg`,
+    img: `${baseUrl}img/officers/fabian.png`,
     name: 'Fabian Israel Conejo',
     major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
     role: 'Event Ops and Finance',

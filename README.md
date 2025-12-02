@@ -60,7 +60,7 @@ Upload the contents of `dist/` to your web server via FTP/SFTP.
 **For Stanford hosting:**
 
 1. Connect to Stanford's server via Cyberduck
-2. Upload all files from `dist/` to your web root (e.g., `WWW/` or `public_html/`)
+2. Upload all files from `dist/` to your web root (afs/ir/group/ieee/www)
 3. Ensure `.htaccess` is uploaded for proper routing
 
 The `.htaccess` file enables clean URLs (`/officers` instead of `/#/officers`) on Apache servers.

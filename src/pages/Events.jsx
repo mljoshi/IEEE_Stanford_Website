@@ -18,6 +18,7 @@ export default function Events() {
     cards.forEach(card => observer.observe(card));
     return () => observer.disconnect();
   }, []);
+  // TODO: Create components for both upcoming and past highlight cards.
   return (
     <section className="section">
   <div className="container" ref={containerRef}>
