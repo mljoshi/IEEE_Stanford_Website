@@ -302,6 +302,27 @@ export default function Officers() {
           </div>
         </details>
 
+        {/* 2008-2009 */}
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2008–2009 </span>
+            <span className="year-subtitle">President: Ian Wong</span>
+          </summary>
+          <div className="year-body">
+            <ul>
+              <li><span className="year-role">President:</span> Ian Wong</li>
+              <li><span className="year-role">Co-VP, ECJ & Membership:</span> Gary Chang</li>
+              <li><span className="year-role">Co-VP, Mixer, Class & Awards:</span> Vincent Mei</li>
+              <li><span className="year-role">CS Chair:</span> Alice & Nancy</li>
+              <li><span className="year-role">Corporate Liaison:</span> Yi Gu & Jonathan</li>
+              <li><span className="year-role">Publicity Manager:</span> Nikki</li>
+              <li><span className="year-role">Social Chair:</span> Sylvia Yun</li>
+              <li><span className="year-role">Treasurer:</span> Karthik</li>
+              <li><span className="year-role">Webmaster:</span> Tracy Chou</li>
+            </ul>
+          </div>
+        </details>
+
         {/* 2006-2007 */}
         <details className="year-details">
           <summary className="year-summary">

@@ -635,7 +635,7 @@ a:hover {
   border-radius: 12px;
   padding: 1.2rem 1.4rem;
   box-shadow: 0 3px 16px rgba(0,0,0,0.12);
-  max-width: 420px;
+  width: 370px;
 }
 
 .hero-mini-card h3 {
@@ -647,6 +647,10 @@ a:hover {
   padding-left: 1.2rem;
   font-size: 0.9rem;
   line-height: 1.45;
+}
+
+.hero-mini-card p {
+  font-size: 0.9rem;
 }
 
 

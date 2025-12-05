@@ -19,16 +19,23 @@ export default function Home() {
           <Link to="/events" className="hero-btn hero-btn-primary">See Events</Link>
           <Link to="/contact" className="hero-btn hero-btn-secondary">Get Involved</Link>
         </div>
+        <div className="flex flex-col md:flex-row place-items-center">
+          <div className="hero-mini-card hover-zoom mx-2 my-2">
+            <h3>What is IEEE?</h3>
+            <p classname="text-sm">
+              IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+            </p>
+          </div>
+          <div className="hero-mini-card hover-zoom mx-2 my-2">
+            <h3>What we do</h3>
+            <ul>
+              <li>Invite engineers & alumni for technical talks.</li>
+              <li>Mentor undergrads on EE/CS classes & careers.</li>
+              <li>Run small socials: project nights, BBQs, Pi Day.</li>
+            </ul>
+          </div>
 
-        <div className="hero-mini-card hover-zoom">
-          <h3>What we do</h3>
-          <ul>
-            <li>Invite engineers & alumni for technical talks.</li>
-            <li>Mentor undergrads on EE/CS classes & careers.</li>
-            <li>Run small socials: project nights, BBQs, Pi Day.</li>
-          </ul>
         </div>
-
       </div>
     </section>
 
