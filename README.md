@@ -2,7 +2,7 @@
 
 Official website for the IEEE Stanford Student Branch.
 
-> **Note:** This site was migrated from static HTML/CSS/JS to React with static site generation in November 2025. The original static site is preserved in `legacy/` for reference.
+> **Note:** This site was migrated from static HTML/CSS/JS to React with static site generation in November 2025. The original static site is preserved in the `legacy` branch for reference.
 
 ## Tech Stack
 
