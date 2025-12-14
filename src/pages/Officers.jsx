@@ -6,21 +6,21 @@ export default function Officers() {
   const officers = [
   {
     id: 1,
-    img: `${baseUrl}img/officers/luke.jpeg`,
-    name: 'Luke Qiao',
-    major: 'MS in Electrical Engineering',
-    role: 'Chair',
-    bio: 'He focuses on PCB and IC design, analog/RF engineering, and hardware systems. He has worked in R&D at Sandia National Laboratories, design verification at Apple, and CubeSat power electronics at Stanford. In his free time, he enjoys playing piano and exploring music technology.',
-    href: 'https://www.linkedin.com/in/luke-qiao/'
-  },
-  {
-    id: 2,
     img: `${baseUrl}img/officers/ethan.jpg`,
     name: 'Ethan Song',
     major: 'BS in Electrical Engineering',
-    role: 'Vice Chair',
+    role: 'Chair',
     bio: 'He is interested in photonics, semiconductors, and hardware systems. His experience includes event organizing at Duke University and involvement in various engineering activities at Stanford. Outside academics, he enjoys playing piano, MMA, swimming, and running.',
     href: 'https://www.linkedin.com/in/ethan-s0ng/'
+  },
+  {
+    id: 2,
+    img: `${baseUrl}img/officers/luke.jpeg`,
+    name: 'Luke Qiao',
+    major: 'MS in Electrical Engineering',
+    role: 'Vice Chair',
+    bio: 'He focuses on PCB and IC design, analog/RF engineering, and hardware systems. He has worked in R&D at Sandia National Laboratories, design verification at Apple, and CubeSat power electronics at Stanford. In his free time, he enjoys playing piano and exploring music technology.',
+    href: 'https://www.linkedin.com/in/luke-qiao/'
   },
   {
     id: 3,

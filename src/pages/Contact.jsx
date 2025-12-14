@@ -17,7 +17,7 @@ export default function Contact() {
           <h3>For students</h3>
           <p>Email us anytime with questions or to get involved.</p>
 
-          <p><strong>General questions:</strong> esong88@stanford.edu</p>
+          <p><strong>General questions:</strong> ieee@ee.stanford.edu</p>
           <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" className="contact-btn" target="_blank">
             Join Mailing List
           </a>
@@ -40,10 +40,10 @@ export default function Contact() {
             We're looking for speakers and partners in semiconductors, photonics, compute systems, networking, and AI hardware.
           </p>
 
-          <p><strong>Speaking / tech talks:</strong> esong88@stanford.edu</p>
-          <p><strong>Sponsorships:</strong> esong88@stanford.edu</p>
+          <p><strong>Speaking / tech talks:</strong> ieee@ee.stanford.edu</p>
+          <p><strong>Sponsorships:</strong> ieee@ee.stanford.edu</p>
 
-          <a href="mailto:esong88@stanford.edu" className="contact-btn">
+          <a href="mailto:ieee@ee.stanford.edu" className="contact-btn">
             Email the Branch
           </a>
 
