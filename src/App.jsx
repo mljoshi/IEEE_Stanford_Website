@@ -6,6 +6,7 @@ import Officers from './pages/Officers'
 import Events from './pages/Events'
 import Resources from './pages/Resources'
 import Contact from './pages/Contact'
+import Event from './pages/Event'
 
 export default function App() {
   const location = useLocation()
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/officers" element={<Officers />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/event/:id" element={<Event />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

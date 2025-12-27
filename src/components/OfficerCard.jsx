@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function OfficerCard({ img, name, role, major = "", bio, href }) {
   return (
     <article className="officer-card hover-zoom">

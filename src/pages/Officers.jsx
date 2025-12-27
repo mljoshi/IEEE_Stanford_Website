@@ -4,142 +4,142 @@ import OfficerCard from '../components/OfficerCard'
 export default function Officers() {
   const baseUrl = import.meta.env.BASE_URL
   const officers = [
-  {
-    id: 1,
-    img: `${baseUrl}img/officers/ethan.jpg`,
-    name: 'Ethan Song',
-    major: 'BS in Electrical Engineering',
-    role: 'Chair',
-    bio: 'He is interested in photonics, semiconductors, and hardware systems. His experience includes event organizing at Duke University and involvement in various engineering activities at Stanford. Outside academics, he enjoys playing piano, MMA, swimming, and running.',
-    href: 'https://www.linkedin.com/in/ethan-s0ng/'
-  },
-  {
-    id: 2,
-    img: `${baseUrl}img/officers/luke.jpeg`,
-    name: 'Luke Qiao',
-    major: 'MS in Electrical Engineering',
-    role: 'Vice Chair',
-    bio: 'He focuses on PCB and IC design, analog/RF engineering, and hardware systems. He has worked in R&D at Sandia National Laboratories, design verification at Apple, and CubeSat power electronics at Stanford. In his free time, he enjoys playing piano and exploring music technology.',
-    href: 'https://www.linkedin.com/in/luke-qiao/'
-  },
-  {
-    id: 3,
-    img: `${baseUrl}img/officers/hannah.jpeg`,
-    name: 'Hannah Shu',
-    major: 'BS in Electrical Engineering',
-    role: 'Finance & Funding',
-    bio: 'She focuses on signal processing, sensing systems, and perception for autonomous vehicles. She helps organize TreeHacks and manages finances for the IEEE Stanford Student Branch. In her free time, she enjoys photography and playing violin.',
-    href: 'https://www.linkedin.com/in/hannah-shu/'
-  },
-  {
-    id: 4,
-    img: `${baseUrl}img/officers/milly.png`,
-    name: 'Milly Wong',
-    major: 'BS in Electrical Engineering; MS in Computer Science',
-    role: 'Marketing & Outreach',
-    bio: 'She is interested in healthcare technologies, sensing systems, and hardware–software integration. She works on prototyping an ultrasound-based continuous blood pressure sensor and contributes to CubeSat and healthcare design teams on campus. Outside academics, she enjoys reading widely.',
-    href: 'https://www.linkedin.com/in/millyyuwong/'
-  },
-  {
-    id: 5,
-    img: `${baseUrl}img/officers/kierra.jpeg`,
-    name: 'Kierra',
-    major: 'BS in Electrical Engineering',
-    role: 'Event Operations',
-    bio: 'She studies physical science and technology within electrical engineering and is involved in event coordination for the branch. She enjoys watching basketball and playing tennis in her free time.',
-    href: 'https://www.linkedin.com/in/kierra-barr/'
-  },
-  {
-    id: 6,
-    img: `${baseUrl}img/officers/brant.png`,
-    name: 'Brant Bueno',
-    major: 'BS in Electrical Engineering',
-    role: 'Industry Liaison',
-    bio: 'He is interested in embedded systems and the intersection of AI/ML with hardware. His experience includes interning at Amazon on modular computer vision devices and supporting corporate relations through SHPE and the Computer Forum. Outside academics, he enjoys organizing, community outreach, and spending time with friends.',
-    href: '#'
-  },
-  {
-    id: 7,
-    img: `${baseUrl}img/officers/weston.png`,
-    name: 'Weston Keller',
-    major: 'BS in Electrical Engineering and Music',
-    role: 'Industry Liaison',
-    bio: 'He focuses on neuroscience, brain–computer interfaces, and interdisciplinary applications of electrical engineering. He is currently studying abroad in Japan and exploring cross-cultural perspectives in engineering and music.',
-    href: 'https://www.linkedin.com/in/weston-keller/'
-  },
-  {
-    id: 8,
-    img: `${baseUrl}img/officers/fabian.png`,
-    name: 'Fabian Israel Conejo',
-    major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
-    role: 'Event Ops and Finance',
-    bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
-    href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
-  },
-  {
-    id: 9,
-    img: `${baseUrl}img/officers/nubia.png`,
-    name: 'Nubia Correa',
-    major: 'BS in Electrical Engineering',
-    role: 'Marketing and Outreach',
-    bio: 'She specializes in hardware–software systems and machine learning, with research in deep-learning motion correction for cardiac PET imaging. She also supports outreach and advocacy efforts for IEEE and Women in Electrical Engineering. She is passionate about expanding access to opportunities in STEM.',
-    href: 'https://www.linkedin.com/in/nubia-correa/'
-  },
-  {
-    id: 10,
-    img: `${baseUrl}img/officers/ege.png`,
-    name: 'Ege Turan',
-    major: 'BS/MS in Electrical Engineering',
-    role: 'Industry Liaison',
-    bio: 'He focuses on hardware systems, mechatronics, and sensing technology. He also works as a Lab Assistant at lab64, helping students develop projects from concept to completion.',
-    href: 'https://www.linkedin.com/in/ege-turan/'
-  },
-  {
-    id: 11,
-    img: `${baseUrl}img/officers/joshi.jpeg`,
-    name: 'Joshiro Lawrence',
-    major: 'BS in Computer Science',
-    role: 'Webmaster',
-    bio: 'He is interested in machine learning, signal processing, educational technology, and pure mathematics. Outside the classroom, he enjoys hockey, reading, gaming, and long-distance running.',
-    href: 'https://www.linkedin.com/in/joshiro-lawrence/'
-  },
-  {
-    id: 12,
-    img: `${baseUrl}img/officers/thomaslee.jpg`,
-    name: 'Thomas Lee',
-    major: 'Electrical Engineering',
-    role: 'Faculty Counselor',
-    bio: 'He provides academic and professional guidance for the IEEE Stanford Student Branch. He supports student initiatives and helps foster connections between industry and the academic community.',
-    href: 'https://profiles.stanford.edu/thomas-lee'
-  }
-];
+    {
+      id: 1,
+      img: `${baseUrl}img/officers/ethan.jpg`,
+      name: 'Ethan Song',
+      major: 'BS in Electrical Engineering',
+      role: 'Chair',
+      bio: 'He is interested in photonics, semiconductors, and hardware systems. His experience includes event organizing at Duke University and involvement in various engineering activities at Stanford. Outside academics, he enjoys playing piano, MMA, swimming, and running.',
+      href: 'https://www.linkedin.com/in/ethan-s0ng/'
+    },
+    {
+      id: 2,
+      img: `${baseUrl}img/officers/luke.jpeg`,
+      name: 'Luke Qiao',
+      major: 'MS in Electrical Engineering',
+      role: 'Vice Chair',
+      bio: 'He focuses on PCB and IC design, analog/RF engineering, and hardware systems. He has worked in R&D at Sandia National Laboratories, design verification at Apple, and CubeSat power electronics at Stanford. In his free time, he enjoys playing piano and exploring music technology.',
+      href: 'https://www.linkedin.com/in/luke-qiao/'
+    },
+    {
+      id: 3,
+      img: `${baseUrl}img/officers/hannah.jpeg`,
+      name: 'Hannah Shu',
+      major: 'BS in Electrical Engineering',
+      role: 'Finance & Funding',
+      bio: 'She focuses on signal processing, sensing systems, and perception for autonomous vehicles. She helps organize TreeHacks and manages finances for the IEEE Stanford Student Branch. In her free time, she enjoys photography and playing violin.',
+      href: 'https://www.linkedin.com/in/hannah-shu/'
+    },
+    {
+      id: 4,
+      img: `${baseUrl}img/officers/milly.png`,
+      name: 'Milly Wong',
+      major: 'BS in Electrical Engineering; MS in Computer Science',
+      role: 'Marketing & Outreach',
+      bio: 'She is interested in healthcare technologies, sensing systems, and hardware–software integration. She works on prototyping an ultrasound-based continuous blood pressure sensor and contributes to CubeSat and healthcare design teams on campus. Outside academics, she enjoys reading widely.',
+      href: 'https://www.linkedin.com/in/millyyuwong/'
+    },
+    {
+      id: 5,
+      img: `${baseUrl}img/officers/kierra.jpeg`,
+      name: 'Kierra',
+      major: 'BS in Electrical Engineering',
+      role: 'Event Operations',
+      bio: 'She studies physical science and technology within electrical engineering and is involved in event coordination for the branch. She enjoys watching basketball and playing tennis in her free time.',
+      href: 'https://www.linkedin.com/in/kierra-barr/'
+    },
+    {
+      id: 6,
+      img: `${baseUrl}img/officers/brant.png`,
+      name: 'Brant Bueno',
+      major: 'BS in Electrical Engineering',
+      role: 'Industry Liaison',
+      bio: 'He is interested in embedded systems and the intersection of AI/ML with hardware. His experience includes interning at Amazon on modular computer vision devices and supporting corporate relations through SHPE and the Computer Forum. Outside academics, he enjoys organizing, community outreach, and spending time with friends.',
+      href: '#'
+    },
+    {
+      id: 7,
+      img: `${baseUrl}img/officers/weston.png`,
+      name: 'Weston Keller',
+      major: 'BS in Electrical Engineering and Music',
+      role: 'Industry Liaison',
+      bio: 'He focuses on neuroscience, brain–computer interfaces, and interdisciplinary applications of electrical engineering. He is currently studying abroad in Japan and exploring cross-cultural perspectives in engineering and music.',
+      href: 'https://www.linkedin.com/in/weston-keller/'
+    },
+    {
+      id: 8,
+      img: `${baseUrl}img/officers/fabian.png`,
+      name: 'Fabian Israel Conejo',
+      major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
+      role: 'Event Ops and Finance',
+      bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
+      href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
+    },
+    {
+      id: 9,
+      img: `${baseUrl}img/officers/nubia.png`,
+      name: 'Nubia Correa',
+      major: 'BS in Electrical Engineering',
+      role: 'Marketing and Outreach',
+      bio: 'She specializes in hardware–software systems and machine learning, with research in deep-learning motion correction for cardiac PET imaging. She also supports outreach and advocacy efforts for IEEE and Women in Electrical Engineering. She is passionate about expanding access to opportunities in STEM.',
+      href: 'https://www.linkedin.com/in/nubia-correa/'
+    },
+    {
+      id: 10,
+      img: `${baseUrl}img/officers/ege.png`,
+      name: 'Ege Turan',
+      major: 'BS/MS in Electrical Engineering',
+      role: 'Industry Liaison',
+      bio: 'He focuses on hardware systems, mechatronics, and sensing technology. He also works as a Lab Assistant at lab64, helping students develop projects from concept to completion.',
+      href: 'https://www.linkedin.com/in/ege-turan/'
+    },
+    {
+      id: 11,
+      img: `${baseUrl}img/officers/joshi.jpeg`,
+      name: 'Joshiro Lawrence',
+      major: 'BS in Computer Science',
+      role: 'Webmaster',
+      bio: 'He is interested in machine learning, signal processing, educational technology, and pure mathematics. Outside the classroom, he enjoys hockey, reading, gaming, and long-distance running.',
+      href: 'https://www.linkedin.com/in/joshiro-lawrence/'
+    },
+    {
+      id: 12,
+      img: `${baseUrl}img/officers/thomaslee.jpg`,
+      name: 'Thomas Lee',
+      major: 'Electrical Engineering',
+      role: 'Faculty Counselor',
+      bio: 'He provides academic and professional guidance for the IEEE Stanford Student Branch. He supports student initiatives and helps foster connections between industry and the academic community.',
+      href: 'https://profiles.stanford.edu/thomas-lee'
+    }
+  ]
 
   const industryAdvisors = [
-  {
-    id: 13,
-    img: `${baseUrl}img/officers/kim.jpeg`,
-    name: 'T. Kim Parnell, PhD, PE',
-    role: 'IEEE Life Senior Member',
-    bio: `Mechanical engineering expert specializing in forensic analysis, product failures, and patent disputes. With over 30 years of experience, he provides clear, defensible technical insight for high-stakes litigation as founder of Parnell Engineering & Consulting. A Life Senior Member of IEEE and ASME Fellow, he has led major engineering initiatives, collaborated with Stanford researchers, and presented nationally on failure mechanisms. His career includes expert testimony in numerous federal cases and forensic work on major industrial incidents such as the 1988 PEPCON explosion.`,
-    href: 'https://www.linkedin.com/in/ParnellPEC'
-  },
-  {
-    id: 14,
-    img: `${baseUrl}img/officers/mohan.png`,
-    name: 'Mohan Sankaran',
-    role: 'IEEE Senior Member',
-    bio: `Experienced engineer with two decades of hands-on work across fintech, secure mobile systems, artificial intelligence, and cybersecurity. A Senior Member of IEEE, he contributes to the IEEE-USA AI Policy Committee (AIPC). He serves as a peer reviewer and has chaired technical sessions at IEEE conferences.`,
-    href: 'https://www.linkedin.com/in/mohan-sankaran'
-  },
-  {
-    id: 15,
-    img: `${baseUrl}img/officers/tom.jpg`,
-    name: 'Tom Coughlin',
-    role: 'IEEE President (2024)',
-    bio: `Digital storage analyst and business/technology consultant. He has over 40 years in the data storage industry with engineering and senior management positions. Coughlin Associates consults, publishes books and market and technology reports and puts on digital storage and memory-oriented events. He is a regular contributor for forbes.com and M&E organization websites. He is an IEEE Fellow, 2025 IEEE Past President, Past-President IEEE-USA, Past Director IEEE Region 6 and Past Chair Santa Clara Valley IEEE Section, and is also active with SNIA and SMPTE.`,
-    href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
-  }
-];
+    {
+      id: 13,
+      img: `${baseUrl}img/officers/kim.jpeg`,
+      name: 'T. Kim Parnell, PhD, PE',
+      role: 'IEEE Life Senior Member',
+      bio: `Mechanical engineering expert specializing in forensic analysis, product failures, and patent disputes. With over 30 years of experience, he provides clear, defensible technical insight for high-stakes litigation as founder of Parnell Engineering & Consulting. A Life Senior Member of IEEE and ASME Fellow, he has led major engineering initiatives, collaborated with Stanford researchers, and presented nationally on failure mechanisms. His career includes expert testimony in numerous federal cases and forensic work on major industrial incidents such as the 1988 PEPCON explosion.`,
+      href: 'https://www.linkedin.com/in/ParnellPEC'
+    },
+    {
+      id: 14,
+      img: `${baseUrl}img/officers/mohan.png`,
+      name: 'Mohan Sankaran',
+      role: 'IEEE Senior Member',
+      bio: `Experienced engineer with two decades of hands-on work across fintech, secure mobile systems, artificial intelligence, and cybersecurity. A Senior Member of IEEE, he contributes to the IEEE-USA AI Policy Committee (AIPC). He serves as a peer reviewer and has chaired technical sessions at IEEE conferences.`,
+      href: 'https://www.linkedin.com/in/mohan-sankaran'
+    },
+    {
+      id: 15,
+      img: `${baseUrl}img/officers/tom.jpg`,
+      name: 'Tom Coughlin',
+      role: 'IEEE President (2024)',
+      bio: `Digital storage analyst and business/technology consultant. He has over 40 years in the data storage industry with engineering and senior management positions. Coughlin Associates consults, publishes books and market and technology reports and puts on digital storage and memory-oriented events. He is a regular contributor for forbes.com and M&E organization websites. He is an IEEE Fellow, 2025 IEEE Past President, Past-President IEEE-USA, Past Director IEEE Region 6 and Past Chair Santa Clara Valley IEEE Section, and is also active with SNIA and SMPTE.`,
+      href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
+    }
+  ]
 
 
   return (

@@ -1,4 +1,7 @@
 import React, { useEffect, useRef } from 'react'
+import UpcomingCard from '../components/UpcomingCard';
+import { pastHighlightData, upcomingData } from '../data/eventsPageData';
+import PastHighlightCard from '../components/PastHighlightCard';
 
 export default function Events() {
   const containerRef = useRef(null);
@@ -18,7 +21,6 @@ export default function Events() {
     cards.forEach(card => observer.observe(card));
     return () => observer.disconnect();
   }, []);
-  // TODO: Create components for both upcoming and past highlight cards.
   return (
     <section className="section">
   <div className="container" ref={containerRef}>
@@ -27,78 +29,18 @@ export default function Events() {
       <h3 className="text-center">Upcoming</h3>
 
       {/* UPCOMING */}
-      <div className="upcoming-card">
-        <div className="upcoming-left">2025–2026</div>
-        <div className="upcoming-right">
-          <h4>Upcoming Stanford IEEE Events</h4>
-          <p>Our winter quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated.</p>
-        </div>
+      <div>
+        {upcomingData.map((upcoming) => {
+          return <UpcomingCard key={upcoming.id} {...upcoming}/>
+        })}
       </div>
 
       {/* PAST HIGHLIGHTS */}
   <h2 className="section-title" style={{ fontSize: '1.2rem', marginTop: '3rem' }}>Past Highlights</h2>
       <div className="highlight-list">
-
-        <article className="highlight-card">
-          <div className="event-meta">2009–2010</div>
-          <div className="event-title">Jensen Huang · Tegra & NVIDIA's Mobile Strategy</div>
-          <p className="event-meta">Founder & CEO of NVIDIA. One of the most influential leaders in AI and computing.</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2008–2009</div>
-          <div className="event-title">Marissa Mayer · Google: Creativity & Innovation</div>
-          <p className="event-meta">Former CEO of Yahoo. Early Google leader and Silicon Valley pioneer.</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2009–2010</div>
-          <div className="event-title">Mark Horowitz · Trends in VLSI Automation</div>
-          <p className="event-meta">Stanford EE professor, Rambus co-founder, pioneer of modern VLSI design.</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2010–2011</div>
-          <div className="event-title">Clara Shih · Stanford IEEE Tech Talk</div>
-          <p className="event-meta">Founder of Hearsay Systems, former Salesforce exec, Starbucks Board member.</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2011–2012</div>
-          <div className="event-title">Martin Hellman · Public Key Cryptography</div>
-          <p className="event-meta">Turing Award winner and co-inventor of modern cryptography.</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2011–2012</div>
-          <div className="event-title">Fei-Fei Li · Lunch with CS/EE Faculty</div>
-          <p className="event-meta">Co-director of Stanford HAI, world leader in computer vision and AI.</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2011–2012</div>
-          <div className="event-title">Naveen Verma · Embedded DSP to Embedded AI</div>
-          <p className="event-meta">Dean of Engineering at Princeton; expert in ML hardware & biosensing.</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2008–2009</div>
-          <div className="event-title">Craig Weissman · Salesforce.com Platform</div>
-          <p className="event-meta">Founding CTO of Salesforce Platform, co-founder of Duetto (cloud SaaS).</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2008–2009</div>
-          <div className="event-title">Burak GökTürk · Visual Search & Riya/Like.com</div>
-          <p className="event-meta">Founder of Like.com (acquired by Google). Vision & AI leader.</p>
-        </article>
-
-        <article className="highlight-card">
-          <div className="event-meta">2011–2012</div>
-          <div className="event-title">Tom Coughlin · Mountains of Data</div>
-          <p className="event-meta">IEEE President (2024). Leading voice in storage and data systems.</p>
-        </article>
-
+        {pastHighlightData.map((highlight => {
+          return <PastHighlightCard key={highlight.id} {...highlight} />
+        }))}
       </div>
 
       {/* COMPLETE ARCHIVE */}
