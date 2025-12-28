@@ -20,13 +20,13 @@ export default function Home() {
           <Link to="/contact" className="hero-btn hero-btn-secondary">Get Involved</Link>
         </div>
         <div className="flex flex-col md:flex-row place-items-center">
-          <div className="hero-mini-card hover-zoom mx-2 my-2">
+          <div className="hero-mini-card hover-zoom mx-2 my-2 md:[min-height:225px]">
             <h3>What is IEEE?</h3>
             <p classname="text-sm">
               IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
             </p>
           </div>
-          <div className="hero-mini-card hover-zoom mx-2 my-2">
+          <div className="hero-mini-card hover-zoom mx-2 my-2 md:[min-height:225px]">
             <h3>What we do</h3>
             <ul>
               <li>Invite engineers & alumni for technical talks.</li>

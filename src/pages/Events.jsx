@@ -48,16 +48,20 @@ export default function Events() {
 
       <div className="archive-container">
 
-        <details>
-          <summary>2013–2014</summary>
-          <div className="year-events">
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2013–2014</span>
+          </summary>
+          <div className="year-body">
             <p>Walmart Labs · Big/Fast/Heterogenous Data — Feb 12, 2013</p>
           </div>
         </details>
 
-        <details>
-          <summary>2011–2012</summary>
-          <div className="year-events">
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2011–2012</span>
+          </summary>
+          <div className="year-body">
             <p>Feedback Communication Systems — Nov 30, 2011</p>
             <p>Embedded AI Biomedical Sensors — Nov 16, 2011</p>
             <p>Groupon Tech Talk — Nov 14, 2011</p>
@@ -75,9 +79,11 @@ export default function Events() {
           </div>
         </details>
 
-        <details>
-          <summary>2010–2011</summary>
-          <div className="year-events">
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2010–2011</span>
+          </summary>
+          <div className="year-body">
             <p>New Frontiers in Computing — July 16, 2011</p>
             <p>Industry vs B-School vs Grad School — May 5, 2011</p>
             <p>ESD Distinguished Lecture — Apr 14, 2011</p>
@@ -94,9 +100,11 @@ export default function Events() {
           </div>
         </details>
 
-        <details>
-          <summary>2009–2010</summary>
-          <div className="year-events">
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2009–2010</span>
+          </summary>
+          <div className="year-body">
             <p>Tomographic Imaging — Nov 4, 2010</p>
             <p>Congressional Fellowship Info — Nov 4, 2010</p>
             <p>NVIDIA Tegra Strategy (Huang) — Nov 1, 2010</p>
@@ -111,9 +119,11 @@ export default function Events() {
           </div>
         </details>
 
-        <details>
-          <summary>2008–2009</summary>
-          <div className="year-events">
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2008–2009</span>
+          </summary>
+          <div className="year-body">
             <p>IEEE BBQ — Oct 6, 2008</p>
             <p>KLA-Tencor Session — Oct 20, 2008</p>
             <p>Marvell Info Session — Oct 28, 2008</p>
