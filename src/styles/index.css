@@ -508,12 +508,14 @@ body {
 }
 
 footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  /* Remove the visible divider and match the page background so footer blends in */
+  border-top: none;
   font-size: 0.875rem;
   color: var(--gray-mid);
   padding: 2rem 0;
   margin-top: auto;
-  background: white;
+  /* inherit body background to avoid a white strip between content and footer */
+  background: inherit;
 }
 
 /* Links */
@@ -620,7 +622,12 @@ a:hover {
 .hero-strong {
   background: linear-gradient(135deg, #8C1515 0%, #B32727 100%);
   color: white;
-  padding: 6rem 0 7rem;
+  /* Reduced vertical padding for tighter hero spacing */
+  padding: 4rem 0 5rem;
+  /* center the inner hero block vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
 }
@@ -646,20 +653,21 @@ a:hover {
   text-align: center;
   max-width: 900px;
   position: relative;
+  gap: 1.25rem;
   z-index: 1;
 }
 
 .hero-big-title {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .hero-tagline {
   font-size: 1.2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
   line-height: 1.6;
   opacity: 0.95;
   max-width: 650px;
@@ -669,7 +677,7 @@ a:hover {
 .hero-button-row {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.25rem;
   flex-wrap: wrap;
   justify-content: center;
 }

@@ -10,7 +10,7 @@ export default function Event() {
 
   if (!event) {
     return (
-      <section className="min-h-screen flex items-center justify-center bg-white">
+      <section className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-black mb-4">404</h1>
           <p className="text-xl text-gray-600 mb-8">Event not found</p>
@@ -28,7 +28,7 @@ export default function Event() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-white py-16 overflow-hidden">
+      <section className="relative py-16 overflow-hidden">
         <div className="container relative z-10 mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
             <a 
@@ -54,7 +54,7 @@ export default function Event() {
       </section>
 
       {/* Content Section */}
-      <section className="bg-white">
+      <section>
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg">

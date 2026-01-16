@@ -19,7 +19,8 @@ export default function Home() {
           <Link to="/events" className="hero-btn hero-btn-primary">See Events</Link>
           <Link to="/contact" className="hero-btn hero-btn-secondary">Get Involved</Link>
         </div>
-        <div className="flex flex-col md:flex-row place-items-center">
+        
+        {/* <div className="flex flex-col md:flex-row place-items-center">
           <div className="hero-mini-card hover-zoom mx-2 my-2 md:[min-height:225px]">
             <h3>What is IEEE?</h3>
             <p classname="text-sm">
@@ -35,19 +36,19 @@ export default function Home() {
             </ul>
           </div>
 
-        </div>
+        </div> */}
       </div>
     </section>
 
     {/* PROGRAMS */}
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <div className="section-kicker">Programs</div>
         <h2 className="section-title">Three things we care about.</h2>
 
         <div className="card-grid">
           <div className="card hover-zoom">
-            <div className="card-title">Industry & research</div>
+            <div className="card-title">Industry & Research</div>
             <div className="card-body">
               Real-world talks from people building chips, systems, and ML infra.
             </div>
@@ -68,30 +69,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </section>
-
-  {/* REBOOT */}
-  <section className="section" style={{ background: '#fafafa' }}>
-      <div className="container">
-        <div className="section-kicker">This year</div>
-        <div className="mini-card hover-zoom">
-          <h3 className="section-title">2025–2026 reboot.</h3>
-          <ul className="reboot-list">
-            <li>Clear playbooks for rooms, funding, and speakers.</li>
-            <li>Simpler officer roles with clean handoff docs.</li>
-            <li>Closer relationship with IEEE Santa Clara Valley + EE dept.</li>
-            <li>A mailing list that actually survives turnover.</li>
-          </ul>
-        </div>
-
-        <div className="reboot-card">
-          <h3>Want to help?</h3>
-          <p>If you care about chips, systems, or photonics, come help shape the rebuild.</p>
-          <Link to="/contact" className="reboot-link">Contact us →</Link>
-        </div>
-
-      </div>
-    </section>
+    </section>*/}
 
   </>
   )

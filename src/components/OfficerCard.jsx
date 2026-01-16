@@ -10,7 +10,7 @@ export default function OfficerCard({ img, name, role, major = "", bio, href }) 
             {major.length > 0 && 
               <div className="text-xs font-semibold text-fuchsia-700">{major}</div>
             }
-            <div className="officer-bio">{bio}</div>
+            {/* <div className="officer-bio">{bio}</div> */}
             <a target="_blank" href={href} className="officer-linkedin">LinkedIn →</a>
           </div>
         </article>

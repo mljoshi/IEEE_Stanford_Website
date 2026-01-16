@@ -17,15 +17,16 @@ export default function Contact() {
           <h3>For students</h3>
           <p>Email us anytime with questions or to get involved.</p>
 
-          <p><strong>General questions:</strong> ieee@ee.stanford.edu</p>
-          <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" className="contact-btn" target="_blank">
-            Join Mailing List
-          </a>
+          {/* <p><strong>General questions:</strong> ieee@ee.stanford.edu</p> */}
+          <div className="flex justify-center space-x-4">
+            <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" className="contact-btn" target="_blank">
+              Join Mailing List
+            </a>
 
-          <br /><br />
-          <a href="https://www.linkedin.com/groups/16220002/" className="contact-btn" target="_blank">
-            LinkedIn Group
-          </a>
+            <a href="https://www.linkedin.com/company/stanford-ieee/" className="contact-btn" target="_blank">
+              LinkedIn Company
+            </a>
+          </div>
 
           <p style={{marginTop:"1rem"}}>
             Interested in helping with events, logistics, or outreach?  
@@ -40,12 +41,14 @@ export default function Contact() {
             We're looking for speakers and partners in semiconductors, photonics, compute systems, networking, and AI hardware.
           </p>
 
-          <p><strong>Speaking / tech talks:</strong> ieee@ee.stanford.edu</p>
-          <p><strong>Sponsorships:</strong> ieee@ee.stanford.edu</p>
+          {/* <p><strong>Speaking / tech talks:</strong> ieee@ee.stanford.edu</p>
+          <p><strong>Sponsorships:</strong> ieee@ee.stanford.edu</p> */}
 
-          <a href="mailto:ieee@ee.stanford.edu" className="contact-btn">
-            Email the Branch
-          </a>
+          <div className="flex justify-center space-x-4">
+            <a href="mailto:ieee@ee.stanford.edu" className="contact-btn">
+              Email the Branch
+            </a>
+          </div>
 
           <p style={{marginTop:"1rem"}}>
             Happy to coordinate tech talks, recruiting visits, and collaborations.

@@ -147,10 +147,9 @@ export default function Officers() {
         <section className="section">
         <div className="container">
             <div className="section-kicker">Team</div>
-            <h1 className="section-title">2024–2025 officer team</h1>
+            <h1 className="section-title">2025–2026 Officer Team</h1>
             <p className="section-description">
                 The Stanford IEEE Student Branch is being rebuilt after the pandemic.
-                Roles are intentionally simple so new officers can plug in quickly and future years inherit a structure that actually works.
             </p>
 
     {/* ===================== CURRENT OFFICERS ===================== */}
@@ -174,10 +173,10 @@ export default function Officers() {
     <div className="past-officers">
         <div className="section-kicker">Legacy</div>
         <h2 className="section-title">Past leadership &amp; officers</h2>
-        <p className="past-intro">
+        {/* <p className="past-intro">
           Stanford IEEE has been run by many generations of students. Below is a curated archive of
           past officers and roles, so future teams can see the lineage they are building on.
-        </p>
+        </p> */}
 
         {/* 2015-2016 */}
         <details className="year-details">

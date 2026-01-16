@@ -28,7 +28,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <footer className="mt-12 py-6 text-center text-sm text-gray-600">
+      <footer className="py-6 text-center text-sm text-gray-600">
         © {new Date().getFullYear()} Stanford IEEE Student Branch
       </footer>
     </body>
