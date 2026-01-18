@@ -63,7 +63,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/weston.png`,
       name: 'Weston Keller',
       major: 'BS in Electrical Engineering and Music',
-      role: 'Industry Liaison',
+      role: 'Institutional Affairs',
       bio: 'He focuses on neuroscience, brain–computer interfaces, and interdisciplinary applications of electrical engineering. He is currently studying abroad in Japan and exploring cross-cultural perspectives in engineering and music.',
       href: 'https://www.linkedin.com/in/weston-keller/'
     },
