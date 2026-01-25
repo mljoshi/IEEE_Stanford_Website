@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
+import { ExternalLink } from 'lucide-react'
 
 function NavLink({ to, children }) {
   const loc = useLocation()
@@ -46,6 +47,15 @@ export default function Nav() {
           <NavLink to="/events">Events</NavLink>
           <NavLink to="/resources">Resources</NavLink>
           <NavLink to="/contact">Contact</NavLink>
+          <a
+            href={`${import.meta.env.BASE_URL}ecj/index.html`}
+            className="navbar-link inline-flex items-center gap-1"
+            aria-label="ECJ journal site"
+            title="ECJ journal site"
+            target="_blank"
+          >
+            ECJ <ExternalLink size={14} aria-hidden="true" />
+          </a>
         </nav>
       <div className="md:hidden">
         <Hamburger toggled={mobileOpen} toggle={setMobileOpen} />
@@ -56,6 +66,15 @@ export default function Nav() {
             <NavLink to="/events">Events</NavLink>
             <NavLink to="/resources">Resources</NavLink>
             <NavLink to="/contact">Contact</NavLink>
+            <a
+              href={`${import.meta.env.BASE_URL}ecj/index.html`}
+              className="navbar-link inline-flex items-center gap-1"
+              aria-label="ECJ journal site"
+              title="ECJ journal site"
+              target="_blank"
+            >
+              ECJ <ExternalLink size={14} aria-hidden="true" />
+            </a>
           </nav>
         }
       </div>

@@ -1,0 +1,97 @@
+\documentclass{Stan_ECJ}
+
+\usepackage{bm} % Enables bold maths letters (optional)
+
+
+\begin{document} 
+
+\title{Real-Time Lens Distortion Correction: 3D Video\\
+Graphics Cards Are Good for More than Games}
+
+\author{Michael R Bax}
+
+\twocolumn[\begin{@twocolumnfalse}
+
+\maketitle
+
+\begin{abstract}
+Optical lens systems suffer from non-linear radial distortion.  Applications such as computer vision and medical imaging require distortion compensation for the accurate location, registration and measurement of image features.  While in many applications distortion correction may be applied offline, a real-time capability is desirable for systems that interact with the environment or with a user in real time.   The construction of a triangle mesh combined with distortion compensation of the mesh nodes results in a pair of static node co-ordinate sets, which a texture-mapping graphics accelerator can use along with the dynamic distorted image to render high-quality distortion-corrected images at video framerates.  Mesh generation, an error analysis, and performance results are presented.  The polar-based method proposed in this paper is shown to have both more accuracy than a conventional grid-based approach and greater speed than the traditional method of using the CPU to transform each pixel individually.
+\end{abstract}
+
+\begin{keywords}
+lens distortion, correction, compensation, real-time, texture mapping.
+\end{keywords}
+
+\end{@twocolumnfalse}] 
+
+{\renewcommand\thefootnote{}\footnotetext{The author is with the Image Guidance Laboratories at Stanford.  Email: mbax@stanford.edu}}
+
+
+\section{Introduction}
+
+\PARstart{T}{he} optical lens systems used in imaging equipment ranging from photography cameras to endoscopes suffer from distortion artifacts, which detract from the quality of the images produced.  In applications such as computer vision, photogrammetry, and medical imaging, the determination of and compensation for distortion is required to enable accurate location, measurement and registration of features in the images \cite{book/1980/slama,jrnl/ieee/ra/1987/tsai,jrnl/ieee/mi/1992/smith,jrnl/ieee/pami/1992/weng}.
+
+While distortion correction may be applied offline in many applications, a real-time capability is desirable for systems that must interact with the environment or with a user in real time. It is possible to implement radial lens-distortion correction (without display) at video framerates on current workstation central processing units (CPU's) \cite{jrnl/ieee/mi/2002/shahidi} when dealing with moderately-sized greyscale images, but this consumes a substantial portion of CPU time; correcting full-resolution colour video images in real time can require more processor power than is available.  In addition this omits consideration of the transfer of the distortion-corrected image data to the video framebuffer for display.
+
+In cases where these demands do not exceed the capability of the CPU, the processor may nevertheless be concurrently required for other important real-time tasks such as navigation or tracking, rendering it impractical to devote a large amount of CPU time to this activity; distortion correction should ideally be performed with minimal impact on the CPU load.  
+
+
+\section{Lens Distortion}
+
+Infinite series may be used to fully model the lens distortion as a combination of non-linear radial and tangential components \cite{book/1980/slama,jrnl/ieee/pami/1992/weng}.  For practical purposes however it is often sufficient to model only the dominant radial distortion (also known as barrel or pincushion distortion) using a single parameter \cite{jrnl/ieee/ra/1987/tsai}, $\kappa_1$.  This is the model used here; it is assumed that the value of $\kappa_1$ is known.
+
+Let $\bm{u} = (u,v)$ denote the position of a pixel in the image projection plane, and let $\bm{u}_0$ denote the image position where the optical axis pierces the plane.  The radius of the point within the distorted image is thus 
+\begin{equation}
+r_d=||\bm{u}-\bm{u}_0||.
+\end{equation}
+The radial lens-distortion is modelled as
+\begin{equation}
+r_u = r_d( 1 + \kappa_1 r_d^2 ),
+\label{eq:model}
+\end{equation}
+where $r_u$ is the correct, undistorted radius.  
+
+Given $r_u$, calculation of $r_d$ requires the solution of this cubic equation.  Applying Vi\`{e}ta's substitution \mbox{$r_d=w-\frac{1}{3\kappa_1{}w}$} leads to the quadratic form
+\begin{equation}
+\left(w^3\right)^2 - \frac{r_u}{\kappa_1}w^3-\frac{1}{27\kappa_1^3}=0
+\end{equation}
+and its solution
+\begin{equation}
+w = \sqrt[3]{\frac{r_u}{2\kappa_1}\pm\sqrt{\frac{r_u^2}{4\kappa_1^2}+\frac{1}{27\kappa_1^3}}}.
+\end{equation}
+The value of $r_d$ is found by substituting either of these roots for $w$.
+
+
+\bibliographystyle{IEEEtran}
+
+% Normally the bibliography is produced by bibtex from ECJ_demo.bib...
+% \bibliography{ECJ_demo}
+
+% ...but to avoid an additional dependency in this file, it is inlined here:
+\begin{thebibliography}{1}
+\bibitem{book/1980/slama}
+C.~C. Slama, C.~Theurer, and S.~W. Henriksen, Eds., \emph{Manual of
+  Photogrammetry}, 4th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Amer. Soc.
+  Photogrammetry and Remote Sensing, Jan. 1980.
+\bibitem{jrnl/ieee/ra/1987/tsai}
+R.~Y. Tsai, ``A versatile camera calibration technique for high-accuracy {3D}
+  machine vision metrology using off-the-shelf {TV} cameras and lenses,''
+  \emph{IEEE J. Robotics Automat.}, vol.~3, no.~4, pp. 323--344, Aug. 1987.
+\bibitem{jrnl/ieee/mi/1992/smith}
+W.~E. Smith, N.~Vakil, and S.~A. Maislin, ``Correction of distortion in
+  endoscope images,'' \emph{IEEE Trans. Med. Imag.}, vol.~11, no.~1, pp.
+  117--122, Mar. 1992.
+\bibitem{jrnl/ieee/pami/1992/weng}
+J.~Weng, P.~Cohen, and M.~Herniou, ``Camera calibration with distortion models
+  and accuracy evaluation,'' \emph{IEEE Trans. Patt. Anal. Machine Intell.},
+  vol.~14, no.~10, pp. 965--980, Oct. 1992.
+\bibitem{jrnl/ieee/mi/2002/shahidi}
+R.~Shahidi, M.~R. Bax, C.~R. Maurer, Jr., J.~A. Johnson, E.~P. Wilkinson,
+  B.~Wang, J.~B. West, M.~J. Citardi, K.~H. Manwaring, and R.~Khadem,
+  ``Implementation, calibration and accuracy testing of an image-enhanced
+  endoscopy system,'' \emph{IEEE Trans. Med. Imag.}, vol.~21, no.~12, pp.
+  1524--1535, Dec. 2002.
+\end{thebibliography}
+
+
+\end{document}

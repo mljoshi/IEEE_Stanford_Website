@@ -117,7 +117,7 @@ export default function Officers() {
   const industryAdvisors = [
     {
       id: 13,
-      img: `${baseUrl}img/officers/kim.jpeg`,
+      img: `${baseUrl}img/advisors/kim.jpeg`,
       name: 'T. Kim Parnell, PhD, PE',
       role: 'IEEE Life Senior Member',
       bio: `Mechanical engineering expert specializing in forensic analysis, product failures, and patent disputes. With over 30 years of experience, he provides clear, defensible technical insight for high-stakes litigation as founder of Parnell Engineering & Consulting. A Life Senior Member of IEEE and ASME Fellow, he has led major engineering initiatives, collaborated with Stanford researchers, and presented nationally on failure mechanisms. His career includes expert testimony in numerous federal cases and forensic work on major industrial incidents such as the 1988 PEPCON explosion.`,
@@ -125,7 +125,7 @@ export default function Officers() {
     },
     {
       id: 14,
-      img: `${baseUrl}img/officers/mohan.png`,
+      img: `${baseUrl}img/advisors/mohan.png`,
       name: 'Mohan Sankaran',
       role: 'IEEE Senior Member',
       bio: `Experienced engineer with two decades of hands-on work across fintech, secure mobile systems, artificial intelligence, and cybersecurity. A Senior Member of IEEE, he contributes to the IEEE-USA AI Policy Committee (AIPC). He serves as a peer reviewer and has chaired technical sessions at IEEE conferences.`,
@@ -133,12 +133,20 @@ export default function Officers() {
     },
     {
       id: 15,
-      img: `${baseUrl}img/officers/tom.jpg`,
+      img: `${baseUrl}img/advisors/tom.jpg`,
       name: 'Tom Coughlin',
       role: 'IEEE President (2024)',
       bio: `Digital storage analyst and business/technology consultant. He has over 40 years in the data storage industry with engineering and senior management positions. Coughlin Associates consults, publishes books and market and technology reports and puts on digital storage and memory-oriented events. He is a regular contributor for forbes.com and M&E organization websites. He is an IEEE Fellow, 2025 IEEE Past President, Past-President IEEE-USA, Past Director IEEE Region 6 and Past Chair Santa Clara Valley IEEE Section, and is also active with SNIA and SMPTE.`,
       href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
-    }
+    },
+    {
+      id: 16,
+      img: `${baseUrl}img/advisors/Michael_Condry.jpg`,
+      name: 'Michael Condry',
+      role: 'Life IEEE Fellow',
+      bio: ``, // TODO: Add Michael Condry's bio when he sends it
+      href: 'https://www.linkedin.com/in/michael-condry-79931a/'
+    },
   ]
 
 

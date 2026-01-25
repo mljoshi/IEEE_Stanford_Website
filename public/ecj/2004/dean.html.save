@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Stanford EE CS Research Journal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="mainStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+
+<table width="755" border="0" cellpadding="0" cellspacing="0">
+  <!--DWLayoutTable-->
+  <tr> 
+    <td height="20" colspan="5" valign="top" class="topcell">&nbsp;<a class="toplink" href="index.html">Back 
+      to ECJ Home</a></td>
+    <td width="4" rowspan="12" valign="top" background="mainImages/dottedLine.gif"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td width="1"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" rowspan="2" valign="top"><img src="mainImages/ECJ.gif" width="225" height="140"></td>
+    <td width="4" rowspan="10" valign="top" background="mainImages/dottedLine.gif"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td height="65" colspan="2" valign="top" class="mainLeftMenuItems">Stanford 
+      Electrical Engineering and Computer Science Research Journal</td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td height="75" colspan="2" valign="top" background="mainImages/titleBack.gif" class="mainTitle">message 
+      from the dean</td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td width="40" rowspan="8" valign="top" bgcolor="#B1D257"><img src="mainImages/leftBanner.gif" width="40" height="455"></td>
+    <td width="185" height="20" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td width="435" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td width="86" rowspan="3" valign="top"><img src="mainImages/plummer.jpg" width="86" height="120"></td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td height="25" valign="top" class="mainLeftMenu">The Journal</td>
+    <td rowsBpan="7" valign="top"><p 
+class="mainCellContents"><strong>Message from 
+        Jim Plummer, Dean, School of Engineering</strong></p>
+      <p class="mainCellContents"> One of the great benefits for undergraduates 
+        studying in a research university like Stanford, is the opportunity to 
+        participate in leading edge research. While not all students will take 
+        advantage of this opportunity, for those that do, the results can be magical. 
+        All too often an undergraduate engineering or science education can seem 
+        like an endless series of lectures, homework assignments and exams. There 
+        is much more to engineering and science than this. Working on the frontiers 
+        of a discipline by spending a summer in a faculty research group or by 
+        doing a special project with a faculty member can provide tremendous insight 
+        into what a career might be like. Sometimes these research experiences 
+        result in published work, in technical journals or in magazines like this 
+        EE/CS Research Journal. I hope you enjoy reading about the research projects 
+        of the students who have written for this magazine. Behind each of the 
+        articles is a story of an exciting opportunity to explore the frontiers 
+        of a field. </p></td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td rowspan="2" valign="top" class="mainLeftMenuItems"> <a href="about.html">about 
+      ecj</a><BR> <strong>message from the dean</strong><br> <a href="mission.html">mission</a><BR> 
+      <a href="sponsors.html">sponsors</a><span class="mainLeftMenuItems"></span></td>
+    <td height="75"></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td height="25" valign="top" class="mainLeftMenu">Issues</td>
+    <td>&nbsp;</td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td height="100" valign="top" class="mainLeftMenuItems"> <a href="spring04.html">spring 
+      2004</a><span class="mainLeftMenuItems"></span><BR> </td>
+    <td>&nbsp;</td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td height="25" valign="top" class="mainLeftMenu">Submissions</td>
+    <td>&nbsp;</td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td height="170" valign="top" class="mainLeftMenuItems"> <a href="guidelines.html">guidelines</a><BR> 
+      <a href="shortpapers.html">short papers</a><br> <a href="longpapers.html">long 
+      papers</a></td>
+    <td>&nbsp;</td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td height="20" colspan="5" valign="top" class="topcell">&nbsp;Copyright &copy; 
+      2004 Stanford Electrical Engineering and Computer Science Research Journal. 
+      All rights reserved.</td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.stylesheet {
+	font-family: arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+
+	}
+	a:link { color: #003399; text-decoration: none }
+	a:active { color: #333333; text-decoration: none }
+	a:visited { color: #003399; text-decoration: none }
+	a:hover { color: #0033CC; text-decoration: underline }
+.title {
+	font-family: arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.bluetitle {
+	font-family: arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #006699;
+	text-decoration: none;
+}

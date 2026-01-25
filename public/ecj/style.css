@@ -1,0 +1,119 @@
+a {
+	color: #ba6b6b;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+}
+
+div {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.main {
+	background-color: #FFFFFF;
+	background-image:url(images/left.jpg);
+	background-position: top left;
+	background-repeat: no-repeat;
+	color: #000000;
+	font: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 870px;
+	padding: 30px 30px 0px 280px;
+	position: absolute;
+	text-align:justify;
+	top: 180px;
+	width: 540px;
+}
+
+div.navbar {
+	background-color: #880000;
+	color: #FFFFFF;
+	font-size: 14px;
+	height: 25px;
+	position: absolute;
+	text-align: left;
+	top: 150px;
+	width: 850px;
+}
+
+div.navbar a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+div.navbar a:hover {
+	color: #ba6b6b;
+}
+
+div.title {
+	color: #880000;
+	font: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	left: 15px;
+	position: absolute;
+	text-align: left;
+	top: 25px;
+}
+
+h1 {
+	background-image: url(images/hr.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	color: #880000;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	letter-spacing: 1px;
+	height: 30px;
+	text-align: left;
+	width: 570px;
+}
+
+h2 {
+	color: #880000;
+	font: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+h3 {
+	color: #880000;
+	font: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+h4 {
+	color: #000000;
+	font: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	text-align: left;
+	width: 300px;
+}
+
+img {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+img.header {
+	left: 0px;
+	position: absolute;
+	top: 0px;
+}
+
+input.submit {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}

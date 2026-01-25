@@ -1,0 +1,7 @@
+AuthUserFile /afs/ir.stanford.edu/group/ieee/ecj_passwd/.htpasswd
+AuthName SteeringCom
+AuthType Basic
+
+order deny,allow
+allow from all
+require valid-user

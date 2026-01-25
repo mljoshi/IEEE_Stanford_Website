@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>[Stanford ECJ] Long Papers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="mainStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+
+<table width="754" border="0" cellpadding="0" cellspacing="0">
+  <!--DWLayoutTable-->
+  <tr> 
+    <td height="20" colspan="4" valign="top" class="topcell">&nbsp;<a class="toplink" href="index.html">Back 
+      to ECJ Home</a></td>
+    <td width="4" rowspan="11" valign="top" background="mainImages/dottedLine.gif"><!--DWLayoutEmptyCell-->&nbsp;</td>
+  </tr>
+  <tr> 
+    <td colspan="2" rowspan="2" valign="top"><img src="mainImages/ECJ.gif" width="225" height="140"></td>
+    <td width="4" rowspan="9" valign="top" background="mainImages/dottedLine.gif"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td width="521" height="65" valign="top" class="mainLeftMenuItems">Stanford 
+      Electrical Engineering and Computer Science Research Journal</td>
+  </tr>
+  <tr> 
+    <td height="75" valign="top" background="mainImages/titleBack.gif" class="mainTitle">long 
+      papers </td>
+  </tr>
+  <tr> 
+    <td width="40" rowspan="7" valign="top" bgcolor="#B1D257"><img src="mainImages/leftBanner.gif" width="40" height="455"></td>
+    <td width="185" height="20" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" valign="top" class="mainLeftMenu">The Journal</td>
+    <td rowspan="6" valign="top"><p class="mainCellContents">
+
+<ul class="mainCellContents">
+<li>6-8 page maximum<P>
+<p><li>Will be reviewed by at least two faculty members from the EE and/or CS departments 
+<p><li>Suggested content: excerpts or modifications of longer papers that were submitted to other journals, drafts of papers to be submitted to proper technical journals
+<p><li>Papers should be prepared in LaTeX; template files are available on the ECJ website at <a href="http://ieee.stanford.edu/ecj/templates.html">http://ieee.stanford.edu/ecj/templates.html</a>
+<p><li>Pictures/images must be in CMYK (not RGB) color format
+<p><li>MATLAB plots and other figures must be in EPS format
+</ul>
+      <p class="mainCellContents"><br>
+      </p></td>
+  </tr>
+  <tr> 
+    <td height="100" valign="top" class="mainLeftMenuItems"> <a href="about.html">about 
+      ecj</a><BR> <a href="dean.html">message from the dean</a><br> <a href="mission.html">mission</a><BR> 
+      <a href="sponsors.html">sponsors</a><span class="mainLeftMenuItems"></span></td>
+  </tr>
+  <tr> 
+    <td height="25" valign="top" class="mainLeftMenu">Issues</td>
+  </tr>
+  <tr> 
+    <td height="100" valign="top" class="mainLeftMenuItems"> <a href="spring04.html">spring 
+      2004</a><span class="mainLeftMenuItems"><BR>
+      </span> </td>
+  </tr>
+  <tr> 
+    <td height="25" valign="top" class="mainLeftMenu">Submissions</td>
+  </tr>
+  <tr> 
+    <td height="170" valign="top" class="mainLeftMenuItems"> <a
+  href="guidelines.html">guidelines</a><BR> 
+      <a href="templates.html">templates</a><br> 
+      <a href="shortpapers.html">short papers</a><br> <strong>long papers</strong></td>
+  </tr>
+  <tr> 
+    <td height="20" colspan="4" valign="top" class="topcell">&nbsp;Copyright &copy; 
+      2004 Stanford Electrical Engineering and Computer Science Research Journal. 
+      All rights reserved.</td>
+  </tr>
+</table>
+</body>
+</html>
