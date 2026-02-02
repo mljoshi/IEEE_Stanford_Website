@@ -143,7 +143,7 @@ export default function Officers() {
       id: 16,
       img: `${baseUrl}img/advisors/Michael_Condry.jpg`,
       name: 'Michael Condry',
-      role: 'Life IEEE Fellow',
+      role: 'IEEE Life Fellow',
       bio: ``, // TODO: Add Michael Condry's bio when he sends it
       href: 'https://www.linkedin.com/in/michael-condry-79931a/'
     },

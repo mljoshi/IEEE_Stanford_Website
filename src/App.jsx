@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
+import Banner from './components/Banner'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import Officers from './pages/Officers'
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <body class="page">
+      <Banner />
       <Nav />
       <main>
         <Routes>

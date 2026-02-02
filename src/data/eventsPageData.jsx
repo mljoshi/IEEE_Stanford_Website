@@ -1,6 +1,8 @@
-export const upcomingData = [
+// All upcoming events - add date field for events with specific dates
+const upcomingEventsRaw = [
   {
     id: 1,
+    date: null, // No specific date
     title: "Upcoming Stanford IEEE Events",
     dateStr: "2025–2026",
     details: <>Our winter quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated!</>,
@@ -9,6 +11,7 @@ export const upcomingData = [
   },
   {
     id: 2,
+    date: new Date('2026-01-08T19:00:00'),
     title: "2026 Impact of AI on Consumer Technology Products",
     dateStr: "1/8/2026 @ 7:00 PM",
     details: "Interactive panel on AI in consumer tech (smart health)",
@@ -27,8 +30,53 @@ export const upcomingData = [
                 </p>
             </>
         )
+  },
+  {
+    id: 3,
+    date: new Date('2026-02-02T17:00:00'),
+    title: "Steve Wozniak (Apple Co-Founder) Fireside Chat",
+    dateStr: "Monday, 2/2/2026 @ 5:00 PM",
+    details: "Discover the visionary behind Apple! Hear Wozniak's journey and insights!",
+    longDateStr: "Monday, Feb 2, 2026 · 5:00 PM PST",
+    longDetails: (
+            <>
+                <p>
+                    Discover the visionary behind Apple! Hear Wozniak's journey and insights!<br/>
+                    Location: Jordan Hall (Building 420), Room 040<br/>
+                    <a href="https://luma.com/10wko387">RSVP here!</a>
+                </p>
+            </>
+        )
   }
-]
+];
+
+// Automatically filter out past events
+export const upcomingData = upcomingEventsRaw.filter(event => {
+  if (!event.date) return true; // Keep events without specific dates
+  return event.date >= new Date(); // Only show future events
+});
+
+// Get event for banner (today or tomorrow, closest to now)
+export const getBannerEvent = () => {
+  const now = new Date();
+  const tomorrow = new Date(now);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setHours(23, 59, 59, 999); // End of tomorrow
+  
+  // Find all events happening today or tomorrow
+  const urgentEvents = upcomingEventsRaw.filter(event => {
+    if (!event.date) return false;
+    return event.date >= now && event.date <= tomorrow;
+  });
+  
+  // Return the one closest to now
+  if (urgentEvents.length === 0) return null;
+  return urgentEvents.reduce((closest, event) => {
+    const closestDiff = Math.abs(closest.date - now);
+    const eventDiff = Math.abs(event.date - now);
+    return eventDiff < closestDiff ? event : closest;
+  });
+};
 
 export const pastHighlightData = [
   {
