@@ -1,5 +1,5 @@
 // All upcoming events - add date field for events with specific dates
-const upcomingEventsRaw = [
+export const upcomingEventsRaw = [
   {
     id: 1,
     date: null, // No specific date

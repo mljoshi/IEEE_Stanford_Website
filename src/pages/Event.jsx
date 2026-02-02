@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { upcomingData } from "../data/eventsPageData";
+import { upcomingEventsRaw } from "../data/eventsPageData";
 
 export default function Event() {
   const { id } = useParams()
   const eventId = Number(id)
   const baseUrl = import.meta.env.BASE_URL
 
-  const event = upcomingData.find(e => e.id === eventId)
+  const event = upcomingEventsRaw.find(e => e.id === eventId)
 
   if (!event) {
     return (
