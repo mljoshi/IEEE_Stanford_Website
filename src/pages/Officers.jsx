@@ -17,7 +17,7 @@ export default function Officers() {
       id: 2,
       img: `${baseUrl}img/officers/luke.jpeg`,
       name: 'Luke Qiao',
-      major: 'MS in Electrical Engineering',
+      major: 'BS/MS in Electrical Engineering',
       role: 'Vice Chair',
       bio: 'He focuses on PCB and IC design, analog/RF engineering, and hardware systems. He has worked in R&D at Sandia National Laboratories, design verification at Apple, and CubeSat power electronics at Stanford. In his free time, he enjoys playing piano and exploring music technology.',
       href: 'https://www.linkedin.com/in/luke-qiao/'
@@ -27,7 +27,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/hannah.jpeg`,
       name: 'Hannah Shu',
       major: 'BS in Electrical Engineering',
-      role: 'Finance & Funding',
+      role: 'Chief Financial Officer',
       bio: 'She focuses on signal processing, sensing systems, and perception for autonomous vehicles. She helps organize TreeHacks and manages finances for the IEEE Stanford Student Branch. In her free time, she enjoys photography and playing violin.',
       href: 'https://www.linkedin.com/in/hannah-shu/'
     },
@@ -36,7 +36,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/milly.png`,
       name: 'Milly Wong',
       major: 'BS in Electrical Engineering; MS in Computer Science',
-      role: 'Marketing & Outreach',
+      role: 'Marketing',
       bio: 'She is interested in healthcare technologies, sensing systems, and hardware–software integration. She works on prototyping an ultrasound-based continuous blood pressure sensor and contributes to CubeSat and healthcare design teams on campus. Outside academics, she enjoys reading widely.',
       href: 'https://www.linkedin.com/in/millyyuwong/'
     },
@@ -45,7 +45,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/kierra.jpeg`,
       name: 'Kierra',
       major: 'BS in Electrical Engineering',
-      role: 'Event Operations',
+      role: 'Logistics',
       bio: 'She studies physical science and technology within electrical engineering and is involved in event coordination for the branch. She enjoys watching basketball and playing tennis in her free time.',
       href: 'https://www.linkedin.com/in/kierra-barr/'
     },
@@ -54,7 +54,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/brant.png`,
       name: 'Brant Bueno',
       major: 'BS in Electrical Engineering',
-      role: 'Industry Liaison',
+      role: 'Industry',
       bio: 'He is interested in embedded systems and the intersection of AI/ML with hardware. His experience includes interning at Amazon on modular computer vision devices and supporting corporate relations through SHPE and the Computer Forum. Outside academics, he enjoys organizing, community outreach, and spending time with friends.',
       href: '#'
     },
@@ -63,7 +63,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/weston.png`,
       name: 'Weston Keller',
       major: 'BS in Electrical Engineering and Music',
-      role: 'Institutional Affairs',
+      role: 'Industry',
       bio: 'He focuses on neuroscience, brain–computer interfaces, and interdisciplinary applications of electrical engineering. He is currently studying abroad in Japan and exploring cross-cultural perspectives in engineering and music.',
       href: 'https://www.linkedin.com/in/weston-keller/'
     },
@@ -72,7 +72,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/fabian.png`,
       name: 'Fabian Israel Conejo',
       major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
-      role: 'Event Ops and Finance',
+      role: 'Logistics',
       bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
       href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
     },
@@ -81,7 +81,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/nubia.png`,
       name: 'Nubia Correa',
       major: 'BS in Electrical Engineering',
-      role: 'Marketing and Outreach',
+      role: 'Marketing',
       bio: 'She specializes in hardware–software systems and machine learning, with research in deep-learning motion correction for cardiac PET imaging. She also supports outreach and advocacy efforts for IEEE and Women in Electrical Engineering. She is passionate about expanding access to opportunities in STEM.',
       href: 'https://www.linkedin.com/in/nubia-correa/'
     },
@@ -90,7 +90,7 @@ export default function Officers() {
       img: `${baseUrl}img/officers/ege.png`,
       name: 'Ege Turan',
       major: 'BS/MS in Electrical Engineering',
-      role: 'Industry Liaison',
+      role: 'Industry',
       bio: 'He focuses on hardware systems, mechatronics, and sensing technology. He also works as a Lab Assistant at lab64, helping students develop projects from concept to completion.',
       href: 'https://www.linkedin.com/in/ege-turan/'
     },
@@ -155,7 +155,7 @@ export default function Officers() {
         <section className="section">
         <div className="container">
             <div className="section-kicker">Team</div>
-            <h1 className="section-title">2025–2026 Officer Team</h1>
+            <h1 className="section-title">2025–2026 Officers</h1>
             <p className="section-description">
                 The Stanford IEEE Student Branch is being rebuilt after the pandemic.
             </p>

@@ -11,7 +11,7 @@ export default function Home() {
 
         <h1 className="hero-big-title">Hardware, software, and systems at Stanford.</h1>
         <p className="hero-tagline">
-          A focused community for students who like real circuits, chips,<br />
+          A focused community for students who like circuits, chips,<br />
           systems, and infrastructure.
         </p>
 
