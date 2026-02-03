@@ -56,7 +56,7 @@ export default function Officers() {
       major: 'BS in Electrical Engineering',
       role: 'Industry',
       bio: 'He is interested in embedded systems and the intersection of AI/ML with hardware. His experience includes interning at Amazon on modular computer vision devices and supporting corporate relations through SHPE and the Computer Forum. Outside academics, he enjoys organizing, community outreach, and spending time with friends.',
-      href: '#'
+      href: 'https://www.linkedin.com/in/brant-bueno/'
     },
     {
       id: 7,
