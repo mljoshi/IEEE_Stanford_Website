@@ -33,21 +33,21 @@ export default function Officers() {
     },
     {
       id: 4,
-      img: `${baseUrl}img/officers/milly.png`,
-      name: 'Milly Wong',
-      major: 'BS in Electrical Engineering; MS in Computer Science',
-      role: 'Marketing',
-      bio: 'She is interested in healthcare technologies, sensing systems, and hardware–software integration. She works on prototyping an ultrasound-based continuous blood pressure sensor and contributes to CubeSat and healthcare design teams on campus. Outside academics, she enjoys reading widely.',
-      href: 'https://www.linkedin.com/in/millyyuwong/'
-    },
-    {
-      id: 5,
       img: `${baseUrl}img/officers/kierra.jpeg`,
       name: 'Kierra',
       major: 'BS in Electrical Engineering',
       role: 'Logistics',
       bio: 'She studies physical science and technology within electrical engineering and is involved in event coordination for the branch. She enjoys watching basketball and playing tennis in her free time.',
       href: 'https://www.linkedin.com/in/kierra-barr/'
+    },
+    {
+      id: 5,
+      img: `${baseUrl}img/officers/fabian.png`,
+      name: 'Fabian Israel Conejo',
+      major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
+      role: 'Logistics',
+      bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
+      href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
     },
     {
       id: 6,
@@ -69,30 +69,30 @@ export default function Officers() {
     },
     {
       id: 8,
-      img: `${baseUrl}img/officers/fabian.png`,
-      name: 'Fabian Israel Conejo',
-      major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
-      role: 'Logistics',
-      bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
-      href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
-    },
-    {
-      id: 9,
-      img: `${baseUrl}img/officers/nubia.png`,
-      name: 'Nubia Correa',
-      major: 'BS in Electrical Engineering',
-      role: 'Marketing',
-      bio: 'She specializes in hardware–software systems and machine learning, with research in deep-learning motion correction for cardiac PET imaging. She also supports outreach and advocacy efforts for IEEE and Women in Electrical Engineering. She is passionate about expanding access to opportunities in STEM.',
-      href: 'https://www.linkedin.com/in/nubia-correa/'
-    },
-    {
-      id: 10,
       img: `${baseUrl}img/officers/ege.png`,
       name: 'Ege Turan',
       major: 'BS/MS in Electrical Engineering',
       role: 'Industry',
       bio: 'He focuses on hardware systems, mechatronics, and sensing technology. He also works as a Lab Assistant at lab64, helping students develop projects from concept to completion.',
       href: 'https://www.linkedin.com/in/ege-turan/'
+    },
+    {
+      id: 9,
+      img: `${baseUrl}img/officers/milly.png`,
+      name: 'Milly Wong',
+      major: 'BS in Electrical Engineering; MS in Computer Science',
+      role: 'Marketing',
+      bio: 'She is interested in healthcare technologies, sensing systems, and hardware–software integration. She works on prototyping an ultrasound-based continuous blood pressure sensor and contributes to CubeSat and healthcare design teams on campus. Outside academics, she enjoys reading widely.',
+      href: 'https://www.linkedin.com/in/millyyuwong/'
+    },
+    {
+      id: 10,
+      img: `${baseUrl}img/officers/nubia.png`,
+      name: 'Nubia Correa',
+      major: 'BS in Electrical Engineering',
+      role: 'Marketing',
+      bio: 'She specializes in hardware–software systems and machine learning, with research in deep-learning motion correction for cardiac PET imaging. She also supports outreach and advocacy efforts for IEEE and Women in Electrical Engineering. She is passionate about expanding access to opportunities in STEM.',
+      href: 'https://www.linkedin.com/in/nubia-correa/'
     },
     {
       id: 11,
