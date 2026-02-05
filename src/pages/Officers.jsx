@@ -51,6 +51,15 @@ export default function Officers() {
     },
     {
       id: 6,
+      img: `${baseUrl}img/officers/kristen.jpg`,
+      name: 'Kristen Guernsey',
+      major: 'MS in Electrical Engineering',
+      role: 'Logistics',
+      bio: '',
+      href: 'https://www.linkedin.com/in/kristen-guernsey/'
+    },
+    {
+      id: 7,
       img: `${baseUrl}img/officers/brant.png`,
       name: 'Brant Bueno',
       major: 'BS in Electrical Engineering',
@@ -59,7 +68,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/brant-bueno/'
     },
     {
-      id: 7,
+      id: 8,
       img: `${baseUrl}img/officers/weston.png`,
       name: 'Weston Keller',
       major: 'BS in Electrical Engineering and Music',
@@ -68,7 +77,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/weston-keller/'
     },
     {
-      id: 8,
+      id: 9,
       img: `${baseUrl}img/officers/ege.png`,
       name: 'Ege Turan',
       major: 'BS/MS in Electrical Engineering',
@@ -77,7 +86,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/ege-turan/'
     },
     {
-      id: 9,
+      id: 10,
       img: `${baseUrl}img/officers/milly.png`,
       name: 'Milly Wong',
       major: 'BS in Electrical Engineering; MS in Computer Science',
@@ -86,7 +95,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/millyyuwong/'
     },
     {
-      id: 10,
+      id: 11,
       img: `${baseUrl}img/officers/nubia.png`,
       name: 'Nubia Correa',
       major: 'BS in Electrical Engineering',
@@ -95,7 +104,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/nubia-correa/'
     },
     {
-      id: 11,
+      id: 12,
       img: `${baseUrl}img/officers/joshi.jpeg`,
       name: 'Joshiro Lawrence',
       major: 'BS in Computer Science',
@@ -104,7 +113,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/joshiro-lawrence/'
     },
     {
-      id: 12,
+      id: 13,
       img: `${baseUrl}img/officers/thomaslee.jpg`,
       name: 'Thomas Lee',
       major: 'Electrical Engineering',
