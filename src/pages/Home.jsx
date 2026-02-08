@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const eventImages = [
+  { src: 'img/events/woz/woz.JPG', alt: 'Steve Wozniak Fireside Chat', title: 'Steve Wozniak' }
+]
+
 export default function Home() {
   return (
     <>

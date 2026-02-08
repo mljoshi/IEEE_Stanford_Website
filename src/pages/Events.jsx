@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import UpcomingCard from '../components/UpcomingCard';
-import { pastHighlightData, upcomingData } from '../data/eventsPageData';
+import { pastHighlightData, upcomingData, recentEventsData } from '../data/eventsPageData';
 import PastHighlightCard from '../components/PastHighlightCard';
 
 export default function Events() {
@@ -32,6 +32,14 @@ export default function Events() {
       <div>
         {upcomingData.map((upcoming) => {
           return <UpcomingCard key={upcoming.id} {...upcoming}/>
+        })}
+      </div>
+      
+      <h3 className="text-center">Recent Events</h3>
+      {/* RECENT EVENTS */}
+      <div>
+        {recentEventsData.map((recentEvent) => {
+          return <UpcomingCard key={recentEvent.id} {...recentEvent}/>
         })}
       </div>
 

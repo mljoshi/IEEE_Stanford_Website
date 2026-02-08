@@ -1,4 +1,5 @@
 // All upcoming events - add date field for events with specific dates
+const baseUrl = import.meta.env.BASE_URL
 export const upcomingEventsRaw = [
   {
     id: 1,
@@ -13,7 +14,7 @@ export const upcomingEventsRaw = [
     id: 2,
     date: new Date('2026-01-08T19:00:00'),
     title: "2026 Impact of AI on Consumer Technology Products",
-    dateStr: "1/8/2026 @ 7:00 PM",
+    dateStr: "Thursday, 1/8/2026 @ 7:00 PM",
     details: "Interactive panel on AI in consumer tech (smart health)",
     longDateStr: "Jan 8, 2026 · Panel starts 7:00 PM PST",
     longDetails: (
@@ -22,8 +23,7 @@ export const upcomingEventsRaw = [
                     Interactive panel + networking on AI in consumer tech (smart health, ecosystems).
                 </p>
                 <p className="mt-3">
-                    <a href="https://us06web.zoom.us/j/82460481043?pwd=NBbEaH3xlpMcQp3ij7XTsRgnLXrdWS.1" target="_blank" rel="noreferrer">Join via Zoom</a> (free to join online!)
-                    <br/><a href="https://attend.ieee.org/consumer-ai/" target="_blank" rel="noreferrer">Event site</a>
+                    <a href="https://attend.ieee.org/consumer-ai/" target="_blank" rel="noreferrer">Event site</a>
                 </p>
                 <p className="mt-3">
                     Speakers: Praveen Raja (<b>Samsung</b> VP, Head of Digital Health), Miguel Adao (<b>Voler Systems</b> President & CEO), Adam Drobot (<b>OpenTechWorks</b> Board Chairman), Paolo Bonato (<b>Spaulding Rehab</b> Motion Analysis Lab Director), Michael Condry (prev. <b>Intel</b> Client Division CTO), moderated by Stuart Lipoff.
@@ -36,14 +36,16 @@ export const upcomingEventsRaw = [
     date: new Date('2026-02-02T17:00:00'),
     title: "Steve Wozniak (Apple Co-Founder) Fireside Chat",
     dateStr: "Monday, 2/2/2026 @ 5:00 PM",
-    details: "Discover the visionary behind Apple! Hear Wozniak's journey and insights!",
+    details: "A remarkable fireside chat with Steve Wozniak, Apple co-founder and visionary technologist!",
     longDateStr: "Monday, Feb 2, 2026 · 5:00 PM PST",
     longDetails: (
             <>
+                <img src={`${baseUrl}img/events/woz/woz.JPG`} alt="Steve Wozniak" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
                 <p>
-                    Discover the visionary behind Apple! Hear Wozniak's journey and insights!<br/>
-                    Location: Jordan Hall (Building 420), Room 040<br/>
-                    <a href="https://luma.com/10wko387">RSVP here!</a>
+                    A remarkable fireside chat with Steve Wozniak, Apple co-founder and visionary technologist!
+                </p>
+                <p className="mt-3">
+                    <a href="https://stanforddaily.com/2026/02/05/wozniak-urges-to-pursue-technology/" target="_blank" rel="noreferrer">Read coverage in Stanford Daily →</a>
                 </p>
             </>
         )
@@ -51,10 +53,28 @@ export const upcomingEventsRaw = [
 ];
 
 // Automatically filter out past events
-export const upcomingData = upcomingEventsRaw.filter(event => {
-  if (!event.date) return true; // Keep events without specific dates
-  return event.date >= new Date(); // Only show future events
-});
+export const upcomingData = upcomingEventsRaw
+  .filter(event => {
+    if (!event.date) return true; // Keep events without specific dates
+    return event.date >= new Date(); // Only show future events
+  })
+  .sort((a, b) => {
+    // Events without dates go to the start
+    if (!a.date) return -1;
+    if (!b.date) return 1;
+    // Sort by date ascending (soonest first)
+    return a.date - b.date;
+  });
+
+export const recentEventsData = upcomingEventsRaw
+  .filter(event => {
+    if (!event.date) return false;
+    return event.date < new Date();
+  })
+  .sort((a, b) => {
+    // Sort by date descending (most recent first)
+    return b.date - a.date;
+  });
 
 // Get event for banner (today or tomorrow, closest to now)
 export const getBannerEvent = () => {
