@@ -39,7 +39,7 @@ export default function Events() {
       {/* RECENT EVENTS */}
       <div>
         {recentEventsData.map((recentEvent) => {
-          return <UpcomingCard key={recentEvent.id} {...recentEvent}/>
+          return <UpcomingCard key={recentEvent.id} {...recentEvent} dateStr={recentEvent.shortDateStr}/>
         })}
       </div>
 
