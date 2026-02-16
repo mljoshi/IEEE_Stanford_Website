@@ -16,6 +16,12 @@ export default function App() {
     window.scrollTo(0, 0)
   }, [location.pathname])
 
+  useEffect(() => {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'page_view', { page_path: location.pathname })
+    }
+  }, [location.pathname])
+
   return (
     <body class="page">
       <Banner />
