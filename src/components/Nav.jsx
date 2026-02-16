@@ -43,8 +43,8 @@ export default function Nav() {
         </Link>
         <nav className="navbar-menu hidden md:flex">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/officers">Officers</NavLink>
           <NavLink to="/events">Events</NavLink>
+          <NavLink to="/team">Team</NavLink>
           <NavLink to="/resources">Resources</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <a
@@ -62,8 +62,8 @@ export default function Nav() {
         {mobileOpen &&
           <nav className="absolute top-full left-0 right-0 flex flex-col gap-2 px-6 py-4 bg-white border-t border-gray-200" onClick={() => setMobileOpen(false)}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/officers">Officers</NavLink>
             <NavLink to="/events">Events</NavLink>
+            <NavLink to="/team">Team</NavLink>
             <NavLink to="/resources">Resources</NavLink>
             <NavLink to="/contact">Contact</NavLink>
             <a

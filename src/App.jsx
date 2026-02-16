@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Banner from './components/Banner'
 import Nav from './components/Nav'
 import Home from './pages/Home'
-import Officers from './pages/Officers'
+import Team from './pages/Team'
 import Events from './pages/Events'
 import Resources from './pages/Resources'
 import Contact from './pages/Contact'
@@ -23,7 +23,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/officers" element={<Officers />} />
+          <Route path="/team" element={<Team />} />
           <Route path="/events" element={<Events />} />
           <Route path="/event/:id" element={<Event />} />
           <Route path="/resources" element={<Resources />} />

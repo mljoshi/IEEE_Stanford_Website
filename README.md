@@ -49,7 +49,7 @@ npm run build
 
 This creates a `dist/` folder with:
 
-- Static HTML files for each route (`/officers/index.html`, etc.)
+- Static HTML files for each route (`/team/index.html`, etc.)
 - Bundled and minified JavaScript/CSS in `/assets/`
 - All images and static assets copied from `public/`
 
@@ -63,7 +63,7 @@ Upload the contents of `dist/` to your web server via FTP/SFTP.
 2. Upload all files from `dist/` to your web root (afs/ir/group/ieee/www)
 3. Ensure `.htaccess` is uploaded for proper routing
 
-The `.htaccess` file enables clean URLs (`/officers` instead of `/#/officers`) on Apache servers.
+The `.htaccess` file enables clean URLs (`/team` instead of `/#/team`) on Apache servers.
 
 ## Project Structure
 
@@ -77,7 +77,7 @@ The `.htaccess` file enables clean URLs (`/officers` instead of `/#/officers`) o
 │   │   └── OfficerCard.jsx
 │   ├── pages/           # Route pages
 │   │   ├── Home.jsx
-│   │   ├── Officers.jsx
+│   │   ├── Team.jsx
 │   │   ├── Events.jsx
 │   │   ├── Resources.jsx
 │   │   └── Contact.jsx

@@ -1,7 +1,7 @@
 import React from 'react'
 import OfficerCard from '../components/OfficerCard'
 
-export default function Officers() {
+export default function Team() {
   const baseUrl = import.meta.env.BASE_URL
   const officers = [
     {
@@ -111,21 +111,33 @@ export default function Officers() {
       role: 'Webmaster',
       bio: 'He is interested in machine learning, signal processing, educational technology, and pure mathematics. Outside the classroom, he enjoys hockey, reading, gaming, and long-distance running.',
       href: 'https://www.linkedin.com/in/joshiro-lawrence/'
-    },
+    }
+  ]
+
+  const facultySupport = [
     {
       id: 13,
-      img: `${baseUrl}img/officers/thomaslee.jpg`,
+      img: `${baseUrl}img/faculty/thomaslee.jpg`,
       name: 'Thomas Lee',
       major: 'Electrical Engineering',
       role: 'Faculty Counselor',
       bio: 'He provides academic and professional guidance for the IEEE Stanford Student Branch. He supports student initiatives and helps foster connections between industry and the academic community.',
       href: 'https://profiles.stanford.edu/thomas-lee'
+    },
+    {
+      id: 14,
+      img: `${baseUrl}img/faculty/markhorowitz.jpg`,
+      name: 'Mark Horowitz',
+      major: 'Electrical Engineering',
+      role: 'Department Chair',
+      bio: '',
+      href: 'https://profiles.stanford.edu/mark-horowitz'
     }
   ]
 
   const industryAdvisors = [
     {
-      id: 13,
+      id: 15,
       img: `${baseUrl}img/advisors/kim.jpeg`,
       name: 'T. Kim Parnell, PhD, PE',
       role: 'IEEE Life Senior Member',
@@ -133,7 +145,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/ParnellPEC'
     },
     {
-      id: 14,
+      id: 16,
       img: `${baseUrl}img/advisors/mohan.png`,
       name: 'Mohan Sankaran',
       role: 'IEEE Senior Member',
@@ -141,7 +153,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/mohan-sankaran'
     },
     {
-      id: 15,
+      id: 17,
       img: `${baseUrl}img/advisors/tom.jpg`,
       name: 'Tom Coughlin',
       role: 'IEEE President (2024)',
@@ -149,7 +161,7 @@ export default function Officers() {
       href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
     },
     {
-      id: 16,
+      id: 18,
       img: `${baseUrl}img/advisors/Michael_Condry.jpg`,
       name: 'Michael Condry',
       role: 'IEEE Life Fellow',
@@ -175,10 +187,20 @@ export default function Officers() {
       <OfficerCard key={officer.id} img={officer.img} name={officer.name} role={officer.role} major={officer.major} bio={officer.bio} href={officer.href} />
     ))}
   </div>
-    {/* ===================== INDUSTRY ADVISORS ===================== */}
     <div className="advisor-section">
-        <div className="section-kicker">Advisors</div>
-        <h2 className="section-title">Industry advisors</h2>
+      <div className="section-kicker">Support</div>
+        {/* ===================== FACULTY Support ===================== */}
+        <h2 className="section-title">Faculty Support</h2>
+        <div className="officer-grid">
+            {facultySupport.map(iA => (
+              <OfficerCard key={iA.id} img={iA.img} name={iA.name} role={iA.role} bio={iA.bio} href={iA.href} />
+            ))}
+        </div>
+      </div>
+    <div className="advisor-section">
+      <div className="section-kicker">Advisors</div>
+        {/* ===================== INDUSTRY ADVISORS ===================== */}
+        <h2 className="section-title">Industry Advisors</h2>
         <div className="officer-grid">
             {industryAdvisors.map(iA => (
               <OfficerCard key={iA.id} img={iA.img} name={iA.name} role={iA.role} bio={iA.bio} href={iA.href} />
