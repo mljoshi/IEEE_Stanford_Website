@@ -15,7 +15,7 @@ export const upcomingEventsRaw = [
     date: new Date('2026-01-08T19:00:00'),
     title: "2026 Impact of AI on Consumer Technology Products",
     shortDateStr: "1/8/26",
-    dateStr: "Thursday, 1/8/2026 @ 7:00 PM",
+    dateStr: "Thursday, 1/8 @ 7:00 PM",
     details: "Interactive panel on AI in consumer tech (smart health)",
     longDateStr: "Jan 8, 2026 · Panel starts 7:00 PM PST",
     longDetails: (
@@ -37,7 +37,7 @@ export const upcomingEventsRaw = [
     date: new Date('2026-02-02T17:00:00'),
     title: "Steve Wozniak (Apple Co-Founder) Fireside Chat",
     shortDateStr: "2/2/26",
-    dateStr: "Monday, 2/2/2026 @ 5:00 PM",
+    dateStr: "Monday, 2/2 @ 5:00 PM",
     details: "A remarkable fireside chat with Steve Wozniak, Apple co-founder and visionary technologist!",
     longDateStr: "Monday, Feb 2, 2026 · 5:00 PM PST",
     longDetails: (
@@ -48,6 +48,28 @@ export const upcomingEventsRaw = [
                 </p>
                 <p className="mt-3">
                     <a href="https://stanforddaily.com/2026/02/05/wozniak-urges-to-pursue-technology/" target="_blank" rel="noreferrer">Read coverage in Stanford Daily →</a>
+                </p>
+            </>
+        )
+  },
+  {
+    id: 4,
+    date: new Date('2026-02-23T17:00:00'),
+    title: "Bechtolsheim x Stanford IEEE",
+    shortDateStr: "2/23/26",
+    dateStr: "Monday, 2/23 @ 5:00 PM",
+    details: "Welcome Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks!",
+    longDateStr: "Monday, Feb 23, 2026 · 5:00 PM PST",
+    longDetails: (
+            <>
+                <p>
+                    Join us as we welcome Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks, one of Silicon Valley's most legendary angel investors—and the person who wrote the first check to Google.
+                </p>
+                <p className="mt-3">
+                    Location: Bishop Auditorium
+                </p>
+                <p className="mt-3">
+                    <a href="https://luma.com/ALE5NOLD" target="_blank" rel="noreferrer">RSVP here →</a>
                 </p>
             </>
         )
