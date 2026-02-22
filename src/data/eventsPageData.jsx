@@ -55,7 +55,7 @@ export const upcomingEventsRaw = [
   {
     id: 4,
     date: new Date('2026-02-23T17:00:00'),
-    title: "Bechtolsheim x Stanford IEEE",
+    title: "IEEE x Bechtolsheim",
     shortDateStr: "2/23/26",
     dateStr: "Monday, 2/23 @ 5:00 PM",
     details: "Welcome Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks!",
@@ -73,6 +73,66 @@ export const upcomingEventsRaw = [
                 </p>
             </>
         )
+  },
+  {
+    id: 5,
+    date: new Date('2026-02-25T17:30:00'),
+    title: "IEEE x Espressif",
+    shortDateStr: "2/25/26",
+    dateStr: "Wednesday, 2/25 @ 5:30 PM",
+    details: "Espressif Systems—ESP32, IoT, embedded. Company intro, products, recruitment & Q&A.",
+    longDateStr: "Wednesday, Feb 25, 2026 · 5:30 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Espressif Systems, the company behind the ESP32 family of Wi-Fi/BLE microcontrollers widely used in robotics, IoT, and embedded systems.
+        </p>
+        <p className="mt-3">
+          Company introduction + Product and solutions overview + Recruitment + Q&A
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/lnkmc6nc" target="_blank" rel="noreferrer">Register →</a>
+        </p>
+      </>
+    )
+  },
+  {
+    id: 6,
+    date: new Date('2026-03-02T17:00:00'),
+    title: "IEEE x Engelhardt",
+    shortDateStr: "3/2/26",
+    dateStr: "Monday, 3/2 @ 5:00 PM",
+    details: "Mike Engelhardt—creator of QSpice and LTSpice, the universal analog circuit simulators.",
+    longDateStr: "Monday, Mar 2, 2026 · 5:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Mike is the creator of QSpice and LTSpice, the universal analog electronic circuit simulator every EE is familiar with.
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/l1hp7sk6" target="_blank" rel="noreferrer">Register →</a>
+        </p>
+      </>
+    )
+  },
+  {
+    id: 7,
+    date: new Date('2026-03-05T17:30:00'),
+    title: "2026 CES Download (Hybrid Event)",
+    shortDateStr: "3/5/26",
+    dateStr: "Thursday, 3/5 @ 5:30 PM",
+    details: "Summary of CES 2026 innovations with Tom Coughlin & Avery Lu—robotics to healthcare tech.",
+    longDateStr: "Thursday, Mar 5, 2026 · 5:30 PM PST",
+    longDetails: (
+      <>
+        <p>
+          A summary of the latest innovations from CES 2026, featuring Tom Coughlin (2024 IEEE President) and Avery Lu (IEEE SCV Chair). They'll cover everything from robotics to healthcare tech.
+        </p>
+        <p className="mt-3">
+          <a href="https://events.vtools.ieee.org/m/536441" target="_blank" rel="noreferrer">Sign up: IEEE vTools →</a>
+        </p>
+      </>
+    )
   }
 ];
 
