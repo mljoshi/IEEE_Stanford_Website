@@ -58,18 +58,13 @@ export const upcomingEventsRaw = [
     title: "IEEE x Bechtolsheim",
     shortDateStr: "2/23/26",
     dateStr: "Monday, 2/23 @ 5:00 PM",
-    details: "Welcome Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks!",
+    details: "We welcomed Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks!",
     longDateStr: "Monday, Feb 23, 2026 · 5:00 PM PST",
     longDetails: (
             <>
+                <img src={`${baseUrl}img/events/bechtolsheim/bechtolsheim.JPG`} alt="Andy Bechtolsheim" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
                 <p>
-                    Join us as we welcome Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks, one of Silicon Valley's most legendary angel investors—and the person who wrote the first check to Google.
-                </p>
-                <p className="mt-3">
-                    Location: Bishop Auditorium
-                </p>
-                <p className="mt-3">
-                    <a href="https://luma.com/ALE5NOLD" target="_blank" rel="noreferrer">RSVP here →</a>
+                    IEEE Stanford hosted Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks, who is one of Silicon Valley's most legendary angel investors and the person who wrote the first check to Google.
                 </p>
             </>
         )
@@ -160,26 +155,33 @@ export const recentEventsData = upcomingEventsRaw
     return b.date - a.date;
   });
 
-// Get event for banner (today or tomorrow, closest to now)
+// Get event for banner: ongoing (started < 30 min ago) or today/tomorrow. Tiebreaker: minimize time distance to event start.
 export const getBannerEvent = () => {
   const now = new Date();
+  const halfHourAgo = new Date(now.getTime() - 30 * 60 * 1000);
   const tomorrow = new Date(now);
   tomorrow.setDate(tomorrow.getDate() + 1);
   tomorrow.setHours(23, 59, 59, 999); // End of tomorrow
-  
-  // Find all events happening today or tomorrow
-  const urgentEvents = upcomingEventsRaw.filter(event => {
+
+  // Include ongoing (started less than 30 min ago) and upcoming (today or tomorrow) — do not filter out date >= now
+  const candidates = upcomingEventsRaw.filter(event => {
     if (!event.date) return false;
-    return event.date >= now && event.date <= tomorrow;
+    return event.date >= halfHourAgo && event.date <= tomorrow;
   });
-  
-  // Return the one closest to now
-  if (urgentEvents.length === 0) return null;
-  return urgentEvents.reduce((closest, event) => {
+
+  if (candidates.length === 0) return null;
+
+  // Tiebreaker: event whose start time is closest to now (minimize time distance)
+  const chosen = candidates.reduce((closest, event) => {
     const closestDiff = Math.abs(closest.date - now);
     const eventDiff = Math.abs(event.date - now);
     return eventDiff < closestDiff ? event : closest;
   });
+
+  return {
+    ...chosen,
+    isOngoing: chosen.date <= now,
+  };
 };
 
 export const pastHighlightData = [
