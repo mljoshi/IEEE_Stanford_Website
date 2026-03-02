@@ -34,7 +34,7 @@ export default function Team() {
     {
       id: 4,
       img: `${baseUrl}img/officers/kierra.jpeg`,
-      name: 'Kierra',
+      name: 'Kierra Barr',
       major: 'BS in Electrical Engineering',
       role: 'Logistics',
       bio: 'She studies physical science and technology within electrical engineering and is involved in event coordination for the branch. She enjoys watching basketball and playing tennis in her free time.',
@@ -43,7 +43,7 @@ export default function Team() {
     {
       id: 5,
       img: `${baseUrl}img/officers/fabian.png`,
-      name: 'Fabian Israel Conejo',
+      name: 'Fabian Cornejo',
       major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
       role: 'Logistics',
       bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
@@ -60,6 +60,15 @@ export default function Team() {
     },
     {
       id: 7,
+      img: `${baseUrl}img/officers/lydia.jpg`,
+      name: 'Lydia Huang',
+      major: 'MS in Electrical Engineering',
+      role: 'Logistics',
+      bio: '',
+      href: 'https://www.linkedin.com/in/lydia-huang-alakazoo'
+    },
+    {
+      id: 8,
       img: `${baseUrl}img/officers/brant.png`,
       name: 'Brant Bueno',
       major: 'BS in Electrical Engineering',
@@ -68,7 +77,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/brant-bueno/'
     },
     {
-      id: 8,
+      id: 9,
       img: `${baseUrl}img/officers/weston.png`,
       name: 'Weston Keller',
       major: 'BS in Electrical Engineering and Music',
@@ -77,7 +86,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/weston-keller/'
     },
     {
-      id: 9,
+      id: 10,
       img: `${baseUrl}img/officers/ege.png`,
       name: 'Ege Turan',
       major: 'BS/MS in Electrical Engineering',
@@ -86,7 +95,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/ege-turan/'
     },
     {
-      id: 10,
+      id: 11,
       img: `${baseUrl}img/officers/milly.png`,
       name: 'Milly Wong',
       major: 'BS in Electrical Engineering; MS in Computer Science',
@@ -95,7 +104,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/millyyuwong/'
     },
     {
-      id: 11,
+      id: 12,
       img: `${baseUrl}img/officers/nubia.png`,
       name: 'Nubia Correa',
       major: 'BS in Electrical Engineering',
@@ -104,7 +113,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/nubia-correa/'
     },
     {
-      id: 12,
+      id: 13,
       img: `${baseUrl}img/officers/joshi.jpeg`,
       name: 'Joshiro Lawrence',
       major: 'BS in Computer Science',
@@ -116,7 +125,7 @@ export default function Team() {
 
   const facultySupport = [
     {
-      id: 13,
+      id: 14,
       img: `${baseUrl}img/faculty/thomaslee.jpg`,
       name: 'Thomas Lee',
       major: 'Electrical Engineering',
@@ -125,7 +134,7 @@ export default function Team() {
       href: 'https://profiles.stanford.edu/thomas-lee'
     },
     {
-      id: 14,
+      id: 15,
       img: `${baseUrl}img/faculty/markhorowitz.jpg`,
       name: 'Mark Horowitz',
       major: 'Electrical Engineering',
@@ -137,7 +146,7 @@ export default function Team() {
 
   const industryAdvisors = [
     {
-      id: 15,
+      id: 16,
       img: `${baseUrl}img/advisors/kim.jpeg`,
       name: 'T. Kim Parnell, PhD, PE',
       role: 'IEEE Life Senior Member',
@@ -145,7 +154,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/ParnellPEC'
     },
     {
-      id: 16,
+      id: 17,
       img: `${baseUrl}img/advisors/mohan.png`,
       name: 'Mohan Sankaran',
       role: 'IEEE Senior Member',
@@ -153,7 +162,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/mohan-sankaran'
     },
     {
-      id: 17,
+      id: 18,
       img: `${baseUrl}img/advisors/tom.jpg`,
       name: 'Tom Coughlin',
       role: 'IEEE President (2024)',
@@ -161,7 +170,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
     },
     {
-      id: 18,
+      id: 19,
       img: `${baseUrl}img/advisors/Michael_Condry.jpg`,
       name: 'Michael Condry',
       role: 'IEEE Life Fellow',

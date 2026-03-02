@@ -16,7 +16,7 @@ export const upcomingEventsRaw = [
     title: "2026 Impact of AI on Consumer Technology Products",
     shortDateStr: "1/8/26",
     dateStr: "Thursday, 1/8 @ 7:00 PM",
-    details: "Interactive panel on AI in consumer tech (smart health)",
+    details: "An interactive panel on AI in consumer tech, featuring speakers from Samsung, Voler Systems, OpenTechWorks, and more.",
     longDateStr: "Jan 8, 2026 · Panel starts 7:00 PM PST",
     longDetails: (
             <>
@@ -35,7 +35,7 @@ export const upcomingEventsRaw = [
   {
     id: 3,
     date: new Date('2026-02-02T17:00:00'),
-    title: "Steve Wozniak (Apple Co-Founder) Fireside Chat",
+    title: "IEEE x Wozniak",
     shortDateStr: "2/2/26",
     dateStr: "Monday, 2/2 @ 5:00 PM",
     details: "A remarkable fireside chat with Steve Wozniak, Apple co-founder and visionary technologist!",
@@ -72,21 +72,19 @@ export const upcomingEventsRaw = [
   {
     id: 5,
     date: new Date('2026-02-25T17:30:00'),
-    title: "IEEE x Espressif",
+    title: "Espressif Systems: ESP32, IoT & Embedded",
     shortDateStr: "2/25/26",
     dateStr: "Wednesday, 2/25 @ 5:30 PM",
-    details: "Espressif Systems—ESP32, IoT, embedded. Company intro, products, recruitment & Q&A.",
+    details: "We hosted Espressif Systems—the team behind ESP32. They covered IoT/embedded products, recruitment, and Q&A.",
     longDateStr: "Wednesday, Feb 25, 2026 · 5:30 PM PST",
     longDetails: (
       <>
+        <img src={`${baseUrl}img/events/espressif/espressif.jpg`} alt="Espressif Systems" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
         <p>
-          Espressif Systems, the company behind the ESP32 family of Wi-Fi/BLE microcontrollers widely used in robotics, IoT, and embedded systems.
+          IEEE Stanford hosted Espressif Systems, the company behind the ESP32 family of Wi-Fi/BLE microcontrollers widely used in robotics, IoT, and embedded systems.
         </p>
         <p className="mt-3">
-          Company introduction + Product and solutions overview + Recruitment + Q&A
-        </p>
-        <p className="mt-3">
-          <a href="https://luma.com/lnkmc6nc" target="_blank" rel="noreferrer">Register →</a>
+          The session covered a company introduction, product and solutions overview, recruitment opportunities, and an open Q&A.
         </p>
       </>
     )
