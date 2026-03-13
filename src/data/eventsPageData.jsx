@@ -126,6 +126,38 @@ export const upcomingEventsRaw = [
         </p>
       </>
     )
+  },
+  {
+    id: 8,
+    date: new Date('2026-03-09T17:00:00'),
+    title: "Silimate x IEEE",
+    shortDateStr: "3/9/26",
+    dateStr: "Monday, 3/9 @ 5:00 PM",
+    details: "Silimate—the AI copilot for chip designers—joins IEEE Stanford. Meet the YC-backed founders designing chips 40x faster.",
+    longDateStr: "Monday, Mar 9, 2026 · 5:00 PM–6:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          <a href="https://luma.com/5yh3rv47" target="_blank" rel="noreferrer">Register →</a>
+        </p>
+        <p className="mt-3">
+          Silimate is the AI copilot for chip designers, fully encompassing agentic workflows and AI-native core tools.
+        </p>
+        <p className="mt-3">
+          Founded in 2023 and backed by Y Combinator, Silimate raised a multi-million dollar seed round in 2023 and reached profitability within 2 years. The team is largely from Stanford, with people joining from NVIDIA and Apple, and is fully in-person in Mountain View, CA.
+        </p>
+        <p className="mt-3"><b>Speakers:</b></p>
+        <p className="mt-2">
+          <b>Ann Wu</b> (co-founder &amp; CEO) designed several generations of chips at Apple, helped manage AI chip programs at Meta, and led product strategy at Celestial AI (acquired by Marvell). She earned a BS in Electrical Engineering (minor in CS) from UIUC and an MS in Electrical Engineering from Stanford.
+        </p>
+        <p className="mt-2">
+          <b>Akash Levy</b> (co-founder &amp; CTO) has taped out multiple chips, published 14 papers on circuit design, and holds 2 patents in the Electronic Design Automation (EDA) field. His technical expertise spans EDA, AI, and cloud through his time at NVIDIA, AWS, and Synopsys. He earned a BS in Electrical Engineering (minor in Physics/CS) from Princeton and a PhD in Electrical Engineering from Stanford.
+        </p>
+        <p className="mt-3">
+          <b>Location:</b> Bishop Auditorium
+        </p>
+      </>
+    )
   }
 ];
 
