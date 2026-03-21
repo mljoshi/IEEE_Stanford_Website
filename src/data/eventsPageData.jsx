@@ -6,9 +6,9 @@ export const upcomingEventsRaw = [
     date: null, // No specific date
     title: "Upcoming Stanford IEEE Events",
     dateStr: "2025–2026",
-    details: <>Our winter quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated!</>,
+    details: <>Our spring quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated!</>,
     longDateStr: "2025–2026",
-    longDetails: <>Our winter quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated!</>
+    longDetails: <>Our spring quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated!</>
   },
   {
     id: 2,
@@ -95,53 +95,30 @@ export const upcomingEventsRaw = [
     title: "IEEE x Engelhardt",
     shortDateStr: "3/2/26",
     dateStr: "Monday, 3/2 @ 5:00 PM",
-    details: "Mike Engelhardt—creator of QSpice and LTSpice, the universal analog circuit simulators.",
+    details: "We hosted Mike Engelhardt—creator of QSpice and LTSpice, the universal analog circuit simulators.",
     longDateStr: "Monday, Mar 2, 2026 · 5:00 PM PST",
     longDetails: (
       <>
+        <img src={`${baseUrl}img/events/engelhardt/mike.jfif`} alt="Mike Engelhardt" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
         <p>
-          Mike is the creator of QSpice and LTSpice, the universal analog electronic circuit simulator every EE is familiar with.
-        </p>
-        <p className="mt-3">
-          <a href="https://luma.com/l1hp7sk6" target="_blank" rel="noreferrer">Register →</a>
+          IEEE Stanford hosted Mike Engelhardt, the creator of QSpice and LTSpice, the universal analog electronic circuit simulators every EE is familiar with.
         </p>
       </>
     )
   },
   {
     id: 7,
-    date: new Date('2026-03-05T17:30:00'),
-    title: "2026 CES Download (Hybrid Event)",
-    shortDateStr: "3/5/26",
-    dateStr: "Thursday, 3/5 @ 5:30 PM",
-    details: "Summary of CES 2026 innovations with Tom Coughlin & Avery Lu—robotics to healthcare tech.",
-    longDateStr: "Thursday, Mar 5, 2026 · 5:30 PM PST",
-    longDetails: (
-      <>
-        <p>
-          A summary of the latest innovations from CES 2026, featuring Tom Coughlin (2024 IEEE President) and Avery Lu (IEEE SCV Chair). They'll cover everything from robotics to healthcare tech.
-        </p>
-        <p className="mt-3">
-          <a href="https://events.vtools.ieee.org/m/536441" target="_blank" rel="noreferrer">Sign up: IEEE vTools →</a>
-        </p>
-      </>
-    )
-  },
-  {
-    id: 8,
     date: new Date('2026-03-09T17:00:00'),
     title: "Silimate x IEEE",
     shortDateStr: "3/9/26",
     dateStr: "Monday, 3/9 @ 5:00 PM",
-    details: "Silimate—the AI copilot for chip designers—joins IEEE Stanford. Meet the YC-backed founders designing chips 40x faster.",
+    details: "We hosted Silimate—the AI copilot for chip designers. YC-backed founders designing chips 40x faster.",
     longDateStr: "Monday, Mar 9, 2026 · 5:00 PM–6:00 PM PST",
     longDetails: (
       <>
+        <img src={`${baseUrl}img/events/silimate/silimate.jfif`} alt="Silimate x IEEE" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
         <p>
-          <a href="https://luma.com/5yh3rv47" target="_blank" rel="noreferrer">Register →</a>
-        </p>
-        <p className="mt-3">
-          Silimate is the AI copilot for chip designers, fully encompassing agentic workflows and AI-native core tools.
+          IEEE Stanford hosted Silimate, the AI copilot for chip designers, with agentic workflows and AI-native core tools.
         </p>
         <p className="mt-3">
           Founded in 2023 and backed by Y Combinator, Silimate raised a multi-million dollar seed round in 2023 and reached profitability within 2 years. The team is largely from Stanford, with people joining from NVIDIA and Apple, and is fully in-person in Mountain View, CA.
@@ -152,9 +129,6 @@ export const upcomingEventsRaw = [
         </p>
         <p className="mt-2">
           <b>Akash Levy</b> (co-founder &amp; CTO) has taped out multiple chips, published 14 papers on circuit design, and holds 2 patents in the Electronic Design Automation (EDA) field. His technical expertise spans EDA, AI, and cloud through his time at NVIDIA, AWS, and Synopsys. He earned a BS in Electrical Engineering (minor in Physics/CS) from Princeton and a PhD in Electrical Engineering from Stanford.
-        </p>
-        <p className="mt-3">
-          <b>Location:</b> Bishop Auditorium
         </p>
       </>
     )
