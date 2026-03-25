@@ -113,7 +113,7 @@ export const upcomingEventsRaw = [
     shortDateStr: "3/9/26",
     dateStr: "Monday, 3/9 @ 5:00 PM",
     details: "We hosted Silimate—the AI copilot for chip designers. YC-backed founders designing chips 40x faster.",
-    longDateStr: "Monday, Mar 9, 2026 · 5:00 PM–6:00 PM PST",
+    longDateStr: "Monday, Mar 9, 2026 · 5:00 PM PST",
     longDetails: (
       <>
         <img src={`${baseUrl}img/events/silimate/silimate.jfif`} alt="Silimate x IEEE" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
