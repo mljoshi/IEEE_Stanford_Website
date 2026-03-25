@@ -18,7 +18,7 @@ export default function Contact() {
           <p>Email us anytime with questions or to get involved.</p>
 
           {/* <p><strong>General questions:</strong> ieee@ee.stanford.edu</p> */}
-          <div className="flex justify-center space-x-4">
+          <div className="contact-btn-row">
             <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" className="contact-btn" target="_blank">
               Join Mailing List
             </a>
@@ -44,7 +44,7 @@ export default function Contact() {
           {/* <p><strong>Speaking / tech talks:</strong> ieee@ee.stanford.edu</p>
           <p><strong>Sponsorships:</strong> ieee@ee.stanford.edu</p> */}
 
-          <div className="flex justify-center space-x-4">
+          <div className="contact-btn-row">
             <a href="mailto:ieee@ee.stanford.edu" className="contact-btn">
               Email the Branch
             </a>

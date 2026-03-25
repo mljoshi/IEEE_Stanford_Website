@@ -3,9 +3,23 @@ import { Link, useLocation } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
 import { ExternalLink } from 'lucide-react'
 
-function NavLink({ to, children }) {
+/** Normalize paths by removing trailing slashes, except in the case of the root path. */
+function stripTrailingSlashes(path) {
+  return path.length > 1 ? path.replace(/\/+$/, '') : path
+}
+
+function pathsMatch(path1, path2) {
+  return stripTrailingSlashes(path1) === stripTrailingSlashes(path2)
+}
+
+/** Events list and individual event detail routes share the same nav highlight. */
+function isEventsNavActive(pathname) {
+  return stripTrailingSlashes(pathname) === '/events' || pathname.startsWith('/event/')
+}
+
+function NavLink({ to, children, isActive }) {
   const loc = useLocation()
-  const active = loc.pathname === to
+  const active = isActive ? isActive(loc.pathname) : pathsMatch(loc.pathname, to)
   return (
     <Link
       to={to}
@@ -43,7 +57,9 @@ export default function Nav() {
         </Link>
         <nav className="navbar-menu hidden md:flex">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/events">Events</NavLink>
+          <NavLink to="/events" isActive={isEventsNavActive}>
+            Events
+          </NavLink>
           <NavLink to="/team">Team</NavLink>
           <NavLink to="/resources">Resources</NavLink>
           <NavLink to="/contact">Contact</NavLink>
@@ -62,7 +78,9 @@ export default function Nav() {
         {mobileOpen &&
           <nav className="absolute top-full left-0 right-0 flex flex-col gap-2 px-6 py-4 bg-white border-t border-gray-200" onClick={() => setMobileOpen(false)}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/events">Events</NavLink>
+            <NavLink to="/events" isActive={isEventsNavActive}>
+              Events
+            </NavLink>
             <NavLink to="/team">Team</NavLink>
             <NavLink to="/resources">Resources</NavLink>
             <NavLink to="/contact">Contact</NavLink>
