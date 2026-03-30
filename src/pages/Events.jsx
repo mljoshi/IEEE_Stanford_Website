@@ -30,17 +30,17 @@ export default function Events() {
 
       {/* UPCOMING */}
       <div>
-        {upcomingData.map((upcoming) => {
-          return <UpcomingCard key={upcoming.id} {...upcoming}/>
-        })}
+        {upcomingData.map((upcoming, i) => (
+          <UpcomingCard key={upcoming.id} {...upcoming} index={i} />
+        ))}
       </div>
       
       <h3 className="text-center">Recent Events</h3>
       {/* RECENT EVENTS */}
       <div>
-        {recentEventsData.map((recentEvent) => {
-          return <UpcomingCard key={recentEvent.id} {...recentEvent} dateStr={recentEvent.shortDateStr}/>
-        })}
+        {recentEventsData.map((recentEvent, i) => (
+          <UpcomingCard key={recentEvent.id} {...recentEvent} dateStr={recentEvent.shortDateStr} index={i} />
+        ))}
       </div>
 
       {/* PAST HIGHLIGHTS */}

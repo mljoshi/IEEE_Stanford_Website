@@ -10,14 +10,11 @@ export default function Event() {
 
   if (!event) {
     return (
-      <section className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-6xl font-bold text-black mb-4">404</h1>
-          <p className="text-xl text-gray-600 mb-8">Event not found</p>
-          <a 
-            href={`${baseUrl}events`} 
-            className="inline-block px-6 py-3 bg-red-900 text-white font-semibold rounded-lg hover:bg-red-800 transition transform hover:scale-105"
-          >
+      <section style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ textAlign: 'center' }}>
+          <h1 style={{ fontSize: '4rem', fontWeight: 800, marginBottom: '1rem' }}>404</h1>
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-2)', marginBottom: '2rem' }}>Event not found</p>
+          <a href={`${baseUrl}events`} className="btn-glow">
             Back to Events
           </a>
         </div>
@@ -26,45 +23,50 @@ export default function Event() {
   }
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative py-16 overflow-hidden">
-        <div className="container relative z-10 mx-auto px-4">
-          <div className="flex items-center justify-between mb-8">
-            <a 
-              href={`${baseUrl}events`} 
-              className="text-red-900 hover:text-red-700 font-semibold text-sm flex items-center gap-2 transition transform hover:translate-x-[-4px]"
-            >
-              ← Back to Events
-            </a>
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Event Details</span>
-          </div>
-
-          <div className="mb-8">
-            <div className="inline-block mb-6">
-              <span className="text-xs font-bold text-white bg-red-900 px-4 py-2 rounded-full uppercase tracking-widest">
-                {event.longDateStr}
-              </span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-black leading-tight mb-4">
-              {event.title}
-            </h1>
-          </div>
+    <section className="section">
+      <div className="container">
+        {/* Nav row */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2.5rem' }}>
+          <a
+            href={`${baseUrl}events`}
+            style={{
+              color: 'var(--red-accessible)',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              transition: 'var(--transition)',
+            }}
+          >
+            ← Back to Events
+          </a>
+          <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--text-3)', textTransform: 'uppercase', letterSpacing: '0.18em' }}>
+            Event Details
+          </span>
         </div>
-      </section>
 
-      {/* Content Section */}
-      <section>
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-3xl mx-auto">
-            <div className="prose prose-lg">
-              <p className="text-xl leading-relaxed text-gray-700 mb-8">
-                {event.longDetails}
-              </p>
-            </div>
-          </div>
+        {/* Date badge */}
+        <div style={{ marginBottom: '1.25rem' }}>
+          <span className="hero-badge" style={{ animation: 'none', fontSize: '0.72rem' }}>
+            <span className="hero-badge-dot" />
+            {event.longDateStr}
+          </span>
         </div>
-      </section>
-    </>
+
+        {/* Title */}
+        <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '2rem', maxWidth: '40rem' }}>
+          {event.title}
+        </h1>
+
+        {/* Body */}
+        <div style={{ maxWidth: '48rem' }}>
+          <p style={{ fontSize: '1.08rem', lineHeight: 1.8, color: 'var(--text-2)' }}>
+            {event.longDetails}
+          </p>
+        </div>
+      </div>
+    </section>
   )
 }

@@ -92,8 +92,8 @@ body {
 
 body {
   font-family: var(--font-body);
-  background-color: #fafafa;
-  color: var(--gray-dark);
+  background-color: #1c1014;
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -509,14 +509,9 @@ body {
 }
 
 footer {
-  /* Remove the visible divider and match the page background so footer blends in */
-  border-top: none;
   font-size: 0.875rem;
-  color: var(--gray-mid);
   padding: 2rem 0;
   margin-top: auto;
-  /* inherit body background to avoid a white strip between content and footer */
-  background: inherit;
 }
 
 /* Links */
@@ -948,9 +943,6 @@ a:hover {
 .officer-linkedin {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 600;
   color: #0A66C2;
   text-decoration: none;
   margin-top: 0.75rem;
@@ -959,7 +951,7 @@ a:hover {
 
 .officer-linkedin:hover {
   color: #084a8f;
-  transform: translateX(4px);
+  transform: scale(1.15);
 }
 
 /* Fix spacing between advisor section and legacy */
@@ -1047,12 +1039,20 @@ a:hover {
   transition: var(--transition);
   text-decoration: none;
   color: inherit;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.upcoming-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--stagger, 0) * 80ms);
 }
 
 .upcoming-card:hover {
-  transform: translateX(8px);
-  box-shadow: var(--shadow-hover);
-  border-left-width: 6px;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(140, 21, 21, 0.12), 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition-delay: 0ms;
 }
 
 .upcoming-left {
@@ -1281,4 +1281,945 @@ details[open] summary {
   .contact-grid-2col {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================================
+   REDESIGN — Dark Hero, Particles, Stats, Programs
+   ============================================================ */
+
+/* ---------- Event Banner ---------- */
+.event-banner {
+  position: relative;
+  background: #8c1515;
+  padding: 0.35rem 1rem 0.5rem;
+  text-align: center;
+  overflow: hidden;
+  transition: background 0.25s ease;
+}
+
+.event-banner:hover {
+  background: #a01c1c;
+}
+
+/* Shimmer sweep */
+.event-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.09) 50%, transparent 100%);
+  transform: translateX(-100%);
+  animation: banner-shimmer 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes banner-shimmer {
+  0%    { transform: translateX(-110%); }
+  45%   { transform: translateX(110%); }
+  100%  { transform: translateX(110%); }
+}
+
+.event-banner-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.event-banner-link:hover {
+  color: #fff;
+}
+
+.event-banner-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff8080;
+  box-shadow: 0 0 8px rgba(255, 100, 100, 0.9);
+  animation: pulse-dot 2.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.event-banner-arrow {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.event-banner-link:hover .event-banner-arrow {
+  transform: translateX(5px);
+}
+
+/* ---------- Navbar enhancements ---------- */
+.navbar-scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Dark hero ---------- */
+.hero-dark {
+  position: relative;
+  min-height: calc(100vh - var(--nav-height));
+  background-color: #160c0f;
+  background-image:
+    linear-gradient(rgba(140, 21, 21, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140, 21, 21, 0.13) 1px, transparent 1px);
+  background-size: 60px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-dark-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 5rem 2rem 6rem;
+  max-width: 860px;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(140, 21, 21, 0.22);
+  border: 1px solid rgba(200, 60, 60, 0.38);
+  border-radius: 999px;
+  color: rgba(255, 150, 150, 0.92);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  animation: fade-up 0.9s ease both;
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff6060;
+  box-shadow: 0 0 8px rgba(255, 60, 60, 0.9);
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.8); }
+}
+
+.hero-dark-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: white;
+  margin: 0;
+  animation: fade-up 0.9s 0.15s ease both;
+  text-shadow: 0 0 80px rgba(200, 50, 50, 0.25);
+}
+
+.hero-dark-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.75;
+  margin: 0;
+  animation: fade-up 0.9s 0.3s ease both;
+}
+
+/* CTA buttons */
+.btn-glow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.1rem;
+  border-radius: var(--radius-button);
+  background: var(--red);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 26px rgba(140, 21, 21, 0.55), 0 4px 16px rgba(140, 21, 21, 0.4);
+  transition: var(--transition);
+  animation: fade-up 0.9s 0.45s ease both;
+}
+
+.btn-glow:hover {
+  background: var(--red-light);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 0 44px rgba(140, 21, 21, 0.75), 0 10px 30px rgba(140, 21, 21, 0.5);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.1rem;
+  border-radius: var(--radius-button);
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  transition: var(--transition);
+  animation: fade-up 0.9s 0.52s ease both;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.28);
+  animation: bounce-hint 2.8s ease-in-out infinite;
+}
+
+@keyframes bounce-hint {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.28; }
+  50% { transform: translateX(-50%) translateY(9px); opacity: 0.55; }
+}
+
+/* ---------- Stats section ---------- */
+.stats-section {
+  background: linear-gradient(135deg, #1e1014 0%, #2a1218 50%, #1e1014 100%);
+  padding: 3.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(140, 21, 21, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 50%, rgba(140, 21, 21, 0.16) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0.75rem 1rem;
+}
+
+.stat-number {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.55rem;
+  background: linear-gradient(135deg, #ff9898 0%, #c94444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-suffix {
+  font-size: 0.75em;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+}
+
+.stats-grid .stat-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Programs section ---------- */
+.programs-section {
+  background: white;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.program-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(140, 21, 21, 0.08);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), #e05050);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 52px rgba(140, 21, 21, 0.13), 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-color: rgba(140, 21, 21, 0.2);
+}
+
+.program-card:hover::before {
+  transform: scaleX(1);
+}
+
+.program-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(140, 21, 21, 0.08) 0%, rgba(140, 21, 21, 0.15) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--red);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.program-card:hover .program-icon-wrap {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+.program-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 0.75rem;
+}
+
+.program-body {
+  font-size: 0.93rem;
+  color: var(--gray-mid);
+  line-height: 1.68;
+  margin: 0;
+}
+
+/* ---------- Upcoming preview ---------- */
+.upcoming-preview-section {
+  background: #fafafa;
+}
+
+.see-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--red);
+  text-decoration: none;
+  padding: 0.75rem 1.6rem;
+  border: 1.5px solid var(--red);
+  border-radius: var(--radius-button);
+  transition: var(--transition);
+}
+
+.see-all-link:hover {
+  background: var(--red);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(140, 21, 21, 0.3);
+}
+
+/* ---------- Shared entrance animation ---------- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .stats-grid .stat-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-dark-sub .hide-sm {
+    display: none;
+  }
+}
+
+/* ---------- Officer card polish ---------- */
+.officer-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.officer-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  box-shadow: inset 0 0 0 1.5px rgba(140, 21, 21, 0);
+  transition: box-shadow 0.3s ease;
+  pointer-events: none;
+}
+
+.officer-card:hover::after {
+  box-shadow: inset 0 0 0 1.5px rgba(140, 21, 21, 0.25);
+}
+
+/* ---------- UpcomingCard ---------- */
+.upcoming-card {
+  position: relative;
+}
+
+/* Arrow micro-animation */
+.upcoming-arrow {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.upcoming-card:hover .upcoming-arrow {
+  transform: translateX(6px);
+}
+
+/* ---------- Section kicker animated underline ---------- */
+.section-kicker {
+  position: relative;
+  display: inline-block;
+  /* Already centered via text-align on parent */
+}
+
+/* ---------- Summary/details refined hover ---------- */
+summary:hover {
+  background: var(--gray-light);
+  box-shadow: var(--shadow-hover);
+  transform: translateX(4px);
+}
+
+/* ---------- Footer polish ---------- */
+footer {
+  background: #0e0508;
+  color: rgba(255, 255, 255, 0.45);
+  border-top: none;
+  padding: 2.5rem 0;
+  margin-top: auto;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- Link color override for dark footer ---------- */
+footer a {
+  color: rgba(255, 150, 150, 0.7);
+}
+
+footer a:hover {
+  color: rgba(255, 150, 150, 1);
+}
+/* ============================================================
+   DARK MODE — Global token overrides & component styles
+   ============================================================ */
+
+:root {
+  /* Dark surface tokens */
+  --surface-1: #2c1a1e;
+  --surface-2: #361f23;
+  --surface-3: #42262b;
+  --border-dark: rgba(200, 80, 80, 0.28);
+  --text-1: rgba(255, 255, 255, 0.93);
+  --text-2: rgba(255, 255, 255, 0.70);
+  --text-3: rgba(255, 255, 255, 0.46);
+  --red-accessible: #e05555;
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.65);
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-1);
+}
+
+/* --- Links --- */
+a {
+  color: var(--red-accessible);
+}
+a:hover {
+  color: #f07070;
+}
+
+/* --- Section text --- */
+.section-kicker {
+  color: var(--red-accessible);
+}
+.section-title {
+  color: var(--text-1);
+}
+.section-description {
+  color: var(--text-2);
+}
+
+/* --- Navbar dark --- */
+.navbar {
+  background-color: rgba(22, 10, 14, 0.97) !important;
+  border-bottom: 1px solid var(--border-dark) !important;
+  box-shadow: none;
+}
+.navbar-logo-text {
+  color: rgba(255, 255, 255, 0.88);
+}
+.navbar-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+.navbar-link:hover,
+.navbar-link.active {
+  color: rgba(255, 255, 255, 0.92);
+}
+.navbar-scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5) !important;
+  border-bottom-color: rgba(180, 50, 50, 0.25) !important;
+}
+
+/* --- Generic cards --- */
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border-dark);
+  box-shadow: var(--shadow-soft);
+}
+.card:hover {
+  border-color: rgba(200, 60, 60, 0.35);
+  box-shadow: var(--shadow-hover);
+}
+.card-title {
+  color: var(--text-1);
+}
+.card-body {
+  color: var(--text-2);
+}
+
+/* --- Program cards (dark) --- */
+.program-card {
+  background: var(--surface-1) !important;
+  border-color: var(--border-dark) !important;
+  box-shadow: var(--shadow-soft);
+}
+.program-card:hover {
+  border-color: rgba(200, 60, 60, 0.35) !important;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.6) !important;
+}
+.program-title {
+  color: var(--text-1) !important;
+}
+.program-body {
+  color: var(--text-2) !important;
+}
+
+/* --- Upcoming event cards --- */
+.upcoming-card {
+  background: var(--surface-1) !important;
+  color: var(--text-1) !important;
+  box-shadow: var(--shadow-soft);
+}
+.upcoming-left {
+  color: var(--text-3) !important;
+}
+.upcoming-right h4 {
+  color: var(--text-1) !important;
+}
+.upcoming-right p {
+  color: var(--text-2) !important;
+}
+
+/* --- Past highlight cards --- */
+.highlight-card {
+  background: var(--surface-1) !important;
+  color: var(--text-1) !important;
+  border-left-color: var(--red) !important;
+  box-shadow: var(--shadow-soft);
+}
+.highlight-card .event-title {
+  color: var(--red-accessible) !important;
+}
+.highlight-card .event-meta {
+  color: var(--text-2) !important;
+}
+
+/* --- Officer / advisor cards --- */
+.officer-card {
+  background: var(--surface-1) !important;
+  border: 1px solid var(--border-dark) !important;
+  box-shadow: var(--shadow-soft);
+}
+.officer-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(200, 60, 60, 0.35) !important;
+}
+.officer-card::after {
+  display: none; /* remove the pseudo-element inset shadow that doesn't suit dark bg */
+}
+.officer-name {
+  color: var(--text-1) !important;
+}
+.officer-role {
+  color: var(--red-accessible) !important;
+}
+.officer-bio {
+  color: var(--text-2) !important;
+}
+.officer-photo-wrap {
+  border-color: rgba(180, 50, 50, 0.25) !important;
+}
+.officer-card:hover .officer-photo-wrap {
+  border-color: var(--red-accessible) !important;
+}
+
+/* --- Contact cards --- */
+.contact-card {
+  background: var(--surface-1) !important;
+  border-left-color: var(--red-accessible) !important;
+  box-shadow: var(--shadow-soft);
+}
+.contact-card h3 {
+  color: var(--text-1) !important;
+}
+.contact-card p {
+  color: var(--text-2) !important;
+}
+.contact-card:hover {
+  box-shadow: var(--shadow-hover) !important;
+}
+
+/* --- Contact list --- */
+.contact-list li {
+  color: var(--text-2);
+}
+
+/* --- Details / Summary --- */
+summary {
+  background: var(--surface-1) !important;
+  color: var(--text-1) !important;
+  border-left-color: var(--red-accessible) !important;
+}
+summary:hover {
+  background: var(--surface-2) !important;
+}
+details[open] summary {
+  background: var(--surface-2) !important;
+}
+
+.year-summary {
+  background: var(--surface-1) !important;
+  border-left-color: var(--red-accessible) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+.year-summary:hover {
+  background: var(--surface-2) !important;
+}
+.year-details[open] .year-summary {
+  background: var(--surface-2) !important;
+}
+.year-body {
+  background: var(--surface-2) !important;
+  border-left-color: var(--red-accessible) !important;
+  color: var(--text-2) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+.year-body p {
+  color: var(--text-2) !important;
+}
+.year-body a {
+  color: var(--red-accessible);
+}
+.year-body li {
+  color: var(--text-2);
+}
+.year-role {
+  color: var(--text-1);
+  font-weight: 600;
+}
+.year-bio {
+  color: var(--text-3);
+}
+
+/* --- Mini cards / reboot --- */
+.hero-mini-card,
+.mini-card,
+.reboot-card {
+  background: var(--surface-1);
+  border-color: var(--border-dark);
+  color: var(--text-2);
+}
+.hero-mini-card h3,
+.mini-card h3 {
+  color: var(--text-1);
+}
+.hero-mini-card p,
+.mini-card p,
+.hero-mini-card li,
+.mini-card li {
+  color: var(--text-2);
+}
+.reboot-link {
+  color: var(--red-accessible) !important;
+}
+.reboot-list li {
+  color: var(--text-2);
+}
+
+/* --- Timeline --- */
+.timeline {
+  border-left-color: rgba(180, 50, 50, 0.3);
+}
+.timeline-year {
+  color: var(--text-1);
+}
+.timeline-body {
+  color: var(--text-2);
+}
+.timeline-bullet {
+  background-color: var(--red-accessible);
+}
+
+/* --- Section backgrounds (make transparent so dark body shows) --- */
+.programs-section,
+.upcoming-preview-section {
+  background: transparent !important;
+}
+
+/* --- "See all" link dark --- */
+.see-all-link {
+  color: var(--red-accessible) !important;
+  border-color: var(--red-accessible) !important;
+}
+.see-all-link:hover {
+  background: var(--red) !important;
+  color: white !important;
+}
+
+/* --- Page dark background --- */
+.page {
+  background-color: #1c1014;
+}
+
+/* --- Footer (deepen slightly) --- */
+footer {
+  background: #160e10 !important;
+  color: rgba(255, 255, 255, 0.48) !important;
+  border-top: 1px solid rgba(200, 80, 80, 0.2) !important;
+}
+footer a {
+  color: rgba(200, 100, 100, 0.7) !important;
+}
+footer a:hover {
+  color: rgba(220, 130, 130, 1) !important;
+}
+
+/* --- Input / form styling (if any) --- */
+input, textarea {
+  background: var(--surface-1);
+  border: 1px solid var(--border-dark);
+  color: var(--text-1);
+}
+
+/* --- Stats section separator --- */
+.stats-section {
+  border-top: 1px solid rgba(200, 80, 80, 0.2);
+}
+
+/* --- Gray text class overrides for Tailwind classes used in JSX --- */
+.text-gray-600,
+.text-gray-700,
+.text-gray-500 {
+  color: var(--text-2) !important;
+}
+.text-black {
+  color: var(--text-1) !important;
+}
+.bg-white {
+  background-color: var(--surface-1) !important;
+}
+.border-gray-200 {
+  border-color: var(--border-dark) !important;
+}
+
+/* --- Archive container --- */
+.archive-container .year-events {
+  color: var(--text-2);
+}
+
+/* ============================================================
+   NAVIGATION — Pill group redesign
+   ============================================================ */
+
+/* Override old logo text formatting */
+.navbar-logo-text {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-weight: normal !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-ieee {
+  color: var(--red-accessible);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.logo-sep {
+  color: rgba(255, 255, 255, 0.22);
+  font-weight: 400;
+  margin: 0 0.28rem;
+}
+
+.logo-stanford {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Pill group container */
+.nav-pill-group {
+  align-items: center;
+  gap: 0.08rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(180, 50, 50, 0.2);
+  border-radius: 999px;
+  padding: 0.28rem;
+}
+
+/* Individual pill link */
+.nav-pill-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.46);
+  padding: 0.38rem 0.82rem;
+  border-radius: 999px;
+  transition: color 0.16s ease, background 0.16s ease;
+  white-space: nowrap;
+}
+
+/* Kill the old underline animation on these */
+.nav-pill-link::after {
+  display: none !important;
+}
+
+.nav-pill-link:hover {
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.nav-pill-link.active {
+  color: rgba(255, 255, 255, 0.95) !important;
+  background: rgba(180, 50, 50, 0.3);
+  font-weight: 600;
+}
+
+/* ECJ — subdued since it's secondary/external */
+.nav-ecj-link {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+.nav-ecj-link:hover {
+  opacity: 1;
+}
+
+/* Mobile hamburger wrapper */
+.nav-hamburger-wrap {
+  position: relative;
+}
+
+/* Mobile slide-down menu — positioned via the sticky header */
+.nav-mobile-menu {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.75rem 1.4rem;
+  background: rgba(28, 16, 20, 0.98);
+  border-top: 1px solid rgba(200, 80, 80, 0.22);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+/* Mobile link */
+.mobile-nav-link {
+  display: block;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.52);
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  transition: color 0.16s ease, background 0.16s ease;
+}
+
+.mobile-nav-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mobile-nav-link.active {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(180, 50, 50, 0.25);
+  font-weight: 600;
 }

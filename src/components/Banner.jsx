@@ -6,12 +6,14 @@ export default function Banner() {
 
   if (!event) return null;
 
-  const label = event.isOngoing ? 'Ongoing Event!' : 'Upcoming Event!';
+  const label = event.isOngoing ? 'Ongoing' : 'Upcoming';
 
   return (
-    <div className="bg-[#8c1515] py-2 px-4 text-center text-sm font-medium">
-      <Link to={`/event/${event.id}`} className="text-white hover:text-gray-300 hover:underline">
-        {label} • {event.title} • {event.dateStr}
+    <div className="event-banner">
+      <Link to={`/event/${event.id}`} className="event-banner-link">
+        <span className="event-banner-dot" aria-hidden="true" />
+        <span>{label} — {event.title} · {event.dateStr}</span>
+        <span className="event-banner-arrow" aria-hidden="true">→</span>
       </Link>
     </div>
   );

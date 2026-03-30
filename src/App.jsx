@@ -36,8 +36,11 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <footer className="py-6 text-center text-sm text-gray-600">
-        © {new Date().getFullYear()} Stanford IEEE Student Branch
+      <footer>
+        <div className="container">
+          <span>© {new Date().getFullYear()} Stanford IEEE Student Branch</span>
+          <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>Institute of Electrical and Electronics Engineers</span>
+        </div>
       </footer>
     </body>
   )
