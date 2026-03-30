@@ -47,24 +47,26 @@ export default function Event() {
           </span>
         </div>
 
-        {/* Date badge */}
-        <div style={{ marginBottom: '1.25rem' }}>
-          <span className="hero-badge" style={{ animation: 'none', fontSize: '0.72rem' }}>
-            <span className="hero-badge-dot" />
-            {event.longDateStr}
-          </span>
-        </div>
+        <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
+          {/* Date badge */}
+          <div style={{ marginBottom: '1.25rem' }}>
+            <span className="hero-badge" style={{ animation: 'none', fontSize: '0.72rem' }}>
+              <span className="hero-badge-dot" />
+              {event.longDateStr}
+            </span>
+          </div>
 
-        {/* Title */}
-        <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '2rem', maxWidth: '40rem' }}>
-          {event.title}
-        </h1>
+          {/* Title */}
+          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '2rem', maxWidth: '40rem' }}>
+            {event.title}
+          </h1>
 
-        {/* Body */}
-        <div style={{ maxWidth: '48rem' }}>
-          <p style={{ fontSize: '1.08rem', lineHeight: 1.8, color: 'var(--text-2)' }}>
-            {event.longDetails}
-          </p>
+          {/* Body */}
+          <div>
+            <p style={{ fontSize: '1.08rem', lineHeight: 1.8, color: 'var(--text-2)' }}>
+              {event.longDetails}
+            </p>
+          </div>
         </div>
       </div>
     </section>
