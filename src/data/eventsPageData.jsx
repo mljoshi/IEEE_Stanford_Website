@@ -132,6 +132,25 @@ export const upcomingEventsRaw = [
         </p>
       </>
     )
+  },
+  {
+    id: 8,
+    date: new Date('2026-04-15T17:00:00'),
+    title: "OpenAI Hardware x IEEE",
+    shortDateStr: "4/15/26",
+    dateStr: "Wednesday, 4/15 @ 5:00 PM",
+    details: "Fireside chat with Richard Ho, Head of Hardware at OpenAI.",
+    longDateStr: "Wednesday, Apr 15, 2026 · 5:00–6:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Fireside chat with Richard Ho, Head of Hardware at OpenAI.
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/0whewbgx" target="_blank" rel="noreferrer">Register on Luma →</a>
+        </p>
+      </>
+    )
   }
 ];
 
