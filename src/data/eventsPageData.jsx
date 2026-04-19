@@ -6,9 +6,9 @@ export const upcomingEventsRaw = [
     date: null, // No specific date
     title: "Upcoming Stanford IEEE Events",
     dateStr: "2025–2026",
-    details: <>Our spring quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated!</>,
+    details: <>Our spring quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated! Browse upcoming events on our <a href="https://luma.com/calendar/cal-LO8vEyiS1bADtaM" target="_blank" rel="noreferrer">Luma calendar</a>.</>,
     longDateStr: "2025–2026",
-    longDetails: <>Our spring quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated!</>
+    longDetails: <>Our spring quarter schedule will be announced soon. Join the <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" target="_blank">mailing list</a> to stay updated! Browse upcoming events on our <a href="https://luma.com/calendar/cal-LO8vEyiS1bADtaM" target="_blank" rel="noreferrer">Luma calendar</a>.</>
   },
   {
     id: 2,
@@ -139,15 +139,98 @@ export const upcomingEventsRaw = [
     title: "OpenAI Hardware x IEEE",
     shortDateStr: "4/15/26",
     dateStr: "Wednesday, 4/15 @ 5:00 PM",
-    details: "Fireside chat with Richard Ho, Head of Hardware at OpenAI.",
+    details: "We hosted a fireside chat with Richard Ho, Head of Hardware at OpenAI.",
     longDateStr: "Wednesday, Apr 15, 2026 · 5:00–6:00 PM PST",
     longDetails: (
       <>
+        <img src={`${baseUrl}img/events/openai/richard.jpg`} alt="Richard Ho, OpenAI Hardware" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
         <p>
-          Fireside chat with Richard Ho, Head of Hardware at OpenAI.
+          IEEE Stanford hosted a fireside chat with Richard Ho, Head of Hardware at OpenAI.
+        </p>
+      </>
+    )
+  },
+  {
+    id: 9,
+    date: new Date('2026-04-22T17:00:00'),
+    title: "Trackonomy Systems x IEEE",
+    shortDateStr: "4/22/26",
+    dateStr: "Wednesday, 4/22 @ 5:00 PM",
+    details: "Tech talk and recruiting with Trackonomy Systems—IoT and embedded systems, led by CEO Dr. Erik Volkerink. Food provided.",
+    longDateStr: "Wednesday, Apr 22, 2026 · 5:00–6:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Trackonomy Systems is a ~$1B IoT and embedded systems unicorn backed by Kleiner Perkins.
         </p>
         <p className="mt-3">
-          <a href="https://luma.com/0whewbgx" target="_blank" rel="noreferrer">Register on Luma →</a>
+          Their CEO, Dr. Erik Volkerink (former CTO of Flex, Stanford EE PhD) along with their engineering/recruiting team are coming to campus for a tech talk and recruiting session.
+        </p>
+        <p className="mt-3">
+          Good food provided!
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/13oui67r" target="_blank" rel="noreferrer">Register on Luma →</a>
+        </p>
+      </>
+    )
+  },
+  {
+    id: 10,
+    date: new Date('2026-04-29T17:00:00'),
+    title: "Shih x IEEE/Cap&Gown",
+    shortDateStr: "4/29/26",
+    dateStr: "Wednesday, 4/29 @ 5:00 PM",
+    details: "Clara Shih (Stanford 2005 CS co-term)—Senior Advisor and former Head of Meta Business AI; founder of Salesforce AI and Hearsay Systems.",
+    longDateStr: "Wednesday, Apr 29, 2026 · 5:00–6:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Clara Shih (Stanford 2005 CS co-term) is Senior Advisor, Founder, and Former Head of the Business AI Group at Meta, where she led the development, launch, and monetization of Meta&apos;s Business AI offerings for 200M businesses worldwide. Previously, Clara was founder and CEO of Salesforce AI, and founder and CEO of Hearsay Systems (now part of NASDAQ:YEXT), a SaaS startup.
+        </p>
+        <p className="mt-3">
+          Clara serves on the board of directors of Hubspot (NYSE:HUBS) and previously served on the Starbucks board. She is an advisor and investor in AI startups including Perplexity, Braintrust, and Qodo, and has been named to the TIME100 AI, Fortune 40 Under 40, and World Economic Forum Young Global Leaders. ​Notably, she was also Chair of Stanford IEEE from 2001–2004.
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/q5th4of4" target="_blank" rel="noreferrer">Register on Luma →</a>
+        </p>
+      </>
+    )
+  },
+  {
+    id: 11,
+    date: new Date('2026-05-07T17:00:00'),
+    title: "NetApp CEO x IEEE",
+    shortDateStr: "5/7/26",
+    dateStr: "Thursday, 5/7 @ 5:00 PM",
+    details: "Fireside chat with NetApp CEO George Kurian.",
+    longDateStr: "Thursday, May 7, 2026 · 5:00–6:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Fireside Chat with the CEO of NetApp, George Kurian.
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/cc8xgxc3" target="_blank" rel="noreferrer">Register on Luma →</a>
+        </p>
+      </>
+    )
+  },
+  {
+    id: 12,
+    date: new Date('2026-05-18T17:00:00'),
+    title: "Cerebras CEO/CTO x IEEE",
+    shortDateStr: "5/18/26",
+    dateStr: "Monday, 5/18 @ 5:00 PM",
+    details: "Fireside chat with Cerebras founders Andrew Feldman and Sean Lie.",
+    longDateStr: "Monday, May 18, 2026 · 5:00–6:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Fireside Chat with the founders of Cerebras, Andrew Feldman and Sean Lie.
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/kahupbqf" target="_blank" rel="noreferrer">Register on Luma →</a>
         </p>
       </>
     )
