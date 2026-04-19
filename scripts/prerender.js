@@ -25,7 +25,7 @@ if (upcomingIdMatch) {
   }
 }
 
-const routes = ['/team', '/events', '/resources', '/contact']
+const routes = ['/team', '/events', '/chapters', '/mtts', '/resources', '/contact']
 
 // Read the built index.html
 const template = fs.readFileSync(path.resolve(__dirname, '../dist/index.html'), 'utf-8')

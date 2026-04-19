@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Team from './pages/Team'
 import Events from './pages/Events'
 import Resources from './pages/Resources'
+import Chapters from './pages/Chapters'
+import MTTS from './pages/MTTS'
 import Contact from './pages/Contact'
 import Event from './pages/Event'
 
@@ -32,6 +34,8 @@ export default function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/events" element={<Events />} />
           <Route path="/event/:id" element={<Event />} />
+          <Route path="/chapters" element={<Chapters />} />
+          <Route path="/mtts" element={<MTTS />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

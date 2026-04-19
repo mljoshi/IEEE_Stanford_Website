@@ -72,6 +72,7 @@ export default function Nav() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/events" isActive={isEventsNavActive}>Events</NavLink>
           <NavLink to="/team">Team</NavLink>
+          <NavLink to="/chapters">Chapters</NavLink>
           <NavLink to="/resources">Resources</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <a
@@ -97,6 +98,7 @@ export default function Nav() {
               <MobileNavLink to="/">Home</MobileNavLink>
               <MobileNavLink to="/events" isActive={isEventsNavActive}>Events</MobileNavLink>
               <MobileNavLink to="/team">Team</MobileNavLink>
+              <MobileNavLink to="/chapters">Chapters</MobileNavLink>
               <MobileNavLink to="/resources">Resources</MobileNavLink>
               <MobileNavLink to="/contact">Contact</MobileNavLink>
               <a

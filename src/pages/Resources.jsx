@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Resources() {
   return (
@@ -8,7 +9,8 @@ export default function Resources() {
       <h1 className="section-title">Bay Area IEEE & Engineering Opportunities</h1>
       <p className="section-description">
         Key organizations, newsletters, and local engineering communities connected to the 
-        IEEE Santa Clara Valley Section and the broader Silicon Valley ecosystem.
+        IEEE Santa Clara Valley Section and the broader Silicon Valley ecosystem. For IEEE technical societies and Student Branch Chapters at Stanford, see{' '}
+        <Link to="/chapters">Chapters</Link>.
       </p>
 
       {/* SCV SECTION */}
