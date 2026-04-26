@@ -234,6 +234,41 @@ export const upcomingEventsRaw = [
         </p>
       </>
     )
+  },
+  {
+    id: 13,
+    date: new Date('2026-04-29T11:00:00'),
+    title: "Samsung x IEEE EDS/MTTS",
+    shortDateStr: "4/29/26",
+    dateStr: "Wednesday, 4/29 @ 11:00 AM",
+    details: "Network with Samsung executives (SVP, CVP, Sr. Directors). For students in semiconductors, memory, and RF/LSI—capacity 12; lunch and drinks covered.",
+    longDateStr: "Wednesday, Apr 29, 2026 · 11:00 AM–12:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Come network with leading Samsung executives. For students interested in semiconductors, memory, and RF/LSI design. Limited capacity of 12. Drinks and lunch covered.
+        </p>
+        <p className="mt-3"><b>Samsung executives</b></p>
+        <p className="mt-2">
+          <b>Dr. Kee-Bong Song</b>, SVP &amp; Head of the System LSI Research Center at Samsung Device Solutions Research America
+        </p>
+        <p className="mt-2">
+          <b>Dr. Joonhoi Hur</b>, CVP &amp; Head of Advanced Circuits and Systems Lab at Samsung Electronics
+        </p>
+        <p className="mt-2">
+          <b>Dr. Kwang Hun Kim</b>, Sr. Director at Samsung Semiconductor and Visiting Scholar under Prof. Horowitz
+        </p>
+        <p className="mt-2">
+          <b>Dr. Hamid Rategh</b>, Sr. Director of Samsung Semiconductor Innovation Center (Samsung&apos;s venture arm)
+        </p>
+        <p className="mt-3">
+          Registration is approval required; exact address is shown after you register. You may be asked to verify token ownership with your wallet when requesting to join.
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/4jxdaytd" target="_blank" rel="noreferrer">Request to join on Luma →</a>
+        </p>
+      </>
+    )
   }
 ];
 
