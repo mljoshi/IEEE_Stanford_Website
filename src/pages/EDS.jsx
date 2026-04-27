@@ -27,7 +27,7 @@ export default function EDS() {
             <p>
               <strong>Chair:</strong> Grace Sun
               <br />
-              <a href="mailto:gracesn@stanford.edu">gracesn@stanford.edu</a>
+              <a href="mailto:grace.sun2@stanford.edu">grace.sun2@stanford.edu</a>
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export default function EDS() {
             </p>
 
             <div className="contact-btn-row">
-              <a href="mailto:gracesn@stanford.edu" className="contact-btn">
+              <a href="mailto:grace.sun2@stanford.edu" className="contact-btn">
                 Contact the Chair
               </a>
             </div>
