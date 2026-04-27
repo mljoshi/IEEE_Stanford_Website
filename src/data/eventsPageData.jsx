@@ -262,7 +262,7 @@ export const upcomingEventsRaw = [
           <b>Dr. Hamid Rategh</b>, Sr. Director of Samsung Semiconductor Innovation Center (Samsung&apos;s venture arm)
         </p>
         <p className="mt-3">
-          Registration is approval required; exact address is shown after you register. You may be asked to verify token ownership with your wallet when requesting to join.
+          Registration is approval required; exact address is shown after you register.
         </p>
         <p className="mt-3">
           <a href="https://luma.com/4jxdaytd" target="_blank" rel="noreferrer">Request to join on Luma →</a>
