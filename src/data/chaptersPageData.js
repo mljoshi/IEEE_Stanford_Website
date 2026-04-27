@@ -44,28 +44,28 @@ export const chapters = [
   {
     id: 'pes',
     summaryTitle: 'PES — Power & Energy',
-    // badge: 'Template',
     paragraphs: [
-      'Power systems, energy conversion, grid modernization, and power electronics—aligned with IEEE Power & Energy Society activities and standards work.',
-      'Replace this text with your chapter’s focus at Stanford (e.g. power student group overlap, faculty sponsors, industry talks).',
+      'Power systems, energy conversion, grid modernization, and power electronics, aligned with IEEE Power & Energy Society activities and standards work.',
+      'The Stanford PES student branch chapter runs talks, workshops, and networking on campus. Officers, mailing list, and how to get involved are on the chapter page.',
     ],
     links: [
       { label: 'IEEE PES', href: 'https://www.ieee-pes.org/' },
       { label: 'IEEE societies overview', href: 'https://www.ieee.org/communities/societies/index.html' },
     ],
+    chapterPage: { path: '/pes', label: 'Stanford PES chapter page' },
   },
   {
     id: 'eds',
     summaryTitle: 'EDS — Electron Devices',
-    // badge: 'Template',
     paragraphs: [
-      'Semiconductor devices, solid-state electronics, and micro/nano fabrication—central to device physics, IC process, and hardware research on campus.',
-      'Template: note joint events with research groups, distinguished lectures, or device-themed journal clubs if applicable.',
+      'Semiconductor devices, solid-state electronics, and micro/nano fabrication, central to device physics, IC process, and hardware research on campus.',
+      'The Stanford EDS student branch chapter runs talks, workshops, and networking on campus. Officers, interest form, and how to get involved are on the chapter page.',
     ],
     links: [
       { label: 'IEEE EDS', href: 'https://eds.ieee.org/' },
       { label: 'About EDS', href: 'https://eds.ieee.org/about-eds' },
     ],
+    chapterPage: { path: '/eds', label: 'Stanford EDS chapter page' },
   },
 ]
 

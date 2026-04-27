@@ -8,6 +8,8 @@ import Events from './pages/Events'
 import Resources from './pages/Resources'
 import Chapters from './pages/Chapters'
 import MTTS from './pages/MTTS'
+import EDS from './pages/EDS'
+import PES from './pages/PES'
 import Contact from './pages/Contact'
 import Event from './pages/Event'
 
@@ -36,6 +38,8 @@ export default function App() {
           <Route path="/event/:id" element={<Event />} />
           <Route path="/chapters" element={<Chapters />} />
           <Route path="/mtts" element={<MTTS />} />
+          <Route path="/eds" element={<EDS />} />
+          <Route path="/pes" element={<PES />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
