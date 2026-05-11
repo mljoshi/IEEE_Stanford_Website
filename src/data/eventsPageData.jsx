@@ -156,21 +156,12 @@ export const upcomingEventsRaw = [
     title: "Trackonomy Systems x IEEE",
     shortDateStr: "4/22/26",
     dateStr: "Wednesday, 4/22 @ 5:00 PM",
-    details: "Tech talk and recruiting with Trackonomy Systems—IoT and embedded systems, led by CEO Dr. Erik Volkerink. Food provided.",
+    details: "We hosted a tech talk and recruiting session with Trackonomy Systems and CEO Dr. Erik Volkerink.",
     longDateStr: "Wednesday, Apr 22, 2026 · 5:00–6:00 PM PST",
     longDetails: (
       <>
         <p>
-          Trackonomy Systems is a ~$1B IoT and embedded systems unicorn backed by Kleiner Perkins.
-        </p>
-        <p className="mt-3">
-          Their CEO, Dr. Erik Volkerink (former CTO of Flex, Stanford EE PhD) along with their engineering/recruiting team are coming to campus for a tech talk and recruiting session.
-        </p>
-        <p className="mt-3">
-          Good food provided!
-        </p>
-        <p className="mt-3">
-          <a href="https://luma.com/13oui67r" target="_blank" rel="noreferrer">Register on Luma →</a>
+          IEEE Stanford hosted Trackonomy for a tech talk and recruiting session on IoT and embedded systems, with CEO Dr. Erik Volkerink (former CTO of Flex, Stanford EE PhD) and members of their engineering and recruiting teams.
         </p>
       </>
     )
@@ -181,18 +172,15 @@ export const upcomingEventsRaw = [
     title: "Shih x IEEE/Cap&Gown",
     shortDateStr: "4/29/26",
     dateStr: "Wednesday, 4/29 @ 5:00 PM",
-    details: "Clara Shih (Stanford 2005 CS co-term)—Senior Advisor and former Head of Meta Business AI; founder of Salesforce AI and Hearsay Systems.",
+    details: "We hosted a fireside with Clara Shih (Meta Business AI, Salesforce AI, Hearsay), co-hosted with Cap & Gown.",
     longDateStr: "Wednesday, Apr 29, 2026 · 5:00–6:00 PM PST",
     longDetails: (
       <>
         <p>
-          Clara Shih (Stanford 2005 CS co-term) is Senior Advisor, Founder, and Former Head of the Business AI Group at Meta, where she led the development, launch, and monetization of Meta&apos;s Business AI offerings for 200M businesses worldwide. Previously, Clara was founder and CEO of Salesforce AI, and founder and CEO of Hearsay Systems (now part of NASDAQ:YEXT), a SaaS startup.
+          IEEE Stanford and Cap &amp; Gown hosted Clara Shih (Stanford CS co-term &apos;04, MS &apos;05) for a fireside on her path through Google, Hearsay, Salesforce AI, and Meta Business AI, and on careers in an AI-heavy hiring market.
         </p>
         <p className="mt-3">
-          Clara serves on the board of directors of Hubspot (NYSE:HUBS) and previously served on the Starbucks board. She is an advisor and investor in AI startups including Perplexity, Braintrust, and Qodo, and has been named to the TIME100 AI, Fortune 40 Under 40, and World Economic Forum Young Global Leaders. ​Notably, she was also Chair of Stanford IEEE from 2001–2004.
-        </p>
-        <p className="mt-3">
-          <a href="https://luma.com/q5th4of4" target="_blank" rel="noreferrer">Register on Luma →</a>
+          <a href="https://stanforddaily.com/2026/05/01/former-salesforce-ai-ceo-clara-shih-04-m-s-05-urges-students-to-embrace-failure-stay-authentic/" target="_blank" rel="noreferrer">Stanford Daily coverage →</a>
         </p>
       </>
     )
@@ -203,15 +191,12 @@ export const upcomingEventsRaw = [
     title: "NetApp CEO x IEEE",
     shortDateStr: "5/7/26",
     dateStr: "Thursday, 5/7 @ 5:00 PM",
-    details: "Fireside chat with NetApp CEO George Kurian.",
+    details: "We hosted a fireside chat with NetApp CEO George Kurian.",
     longDateStr: "Thursday, May 7, 2026 · 5:00–6:00 PM PST",
     longDetails: (
       <>
         <p>
-          Fireside Chat with the CEO of NetApp, George Kurian.
-        </p>
-        <p className="mt-3">
-          <a href="https://luma.com/cc8xgxc3" target="_blank" rel="noreferrer">Register on Luma →</a>
+          IEEE Stanford hosted a fireside chat with George Kurian, CEO of NetApp.
         </p>
       </>
     )
@@ -222,12 +207,12 @@ export const upcomingEventsRaw = [
     title: "Cerebras CEO/CTO x IEEE",
     shortDateStr: "5/18/26",
     dateStr: "Monday, 5/18 @ 5:00 PM",
-    details: "Fireside chat with Cerebras founders Andrew Feldman and Sean Lie.",
+    details: "Fireside with Cerebras founders Andrew Feldman and Sean Lie.",
     longDateStr: "Monday, May 18, 2026 · 5:00–6:00 PM PST",
     longDetails: (
       <>
         <p>
-          Fireside Chat with the founders of Cerebras, Andrew Feldman and Sean Lie.
+          Fireside with Andrew Feldman (CEO) and Sean Lie (CTO), founders of Cerebras.
         </p>
         <p className="mt-3">
           <a href="https://luma.com/kahupbqf" target="_blank" rel="noreferrer">Register on Luma →</a>
@@ -241,31 +226,40 @@ export const upcomingEventsRaw = [
     title: "Samsung x IEEE EDS/MTTS",
     shortDateStr: "4/29/26",
     dateStr: "Wednesday, 4/29 @ 11:00 AM",
-    details: "Network with Samsung executives (SVP, CVP, Sr. Directors). For students in semiconductors, memory, and RF/LSI—capacity 12; lunch and drinks covered.",
+    details: "We hosted a small lunch with Samsung semiconductor and device-solutions leaders for students in semiconductors, memory, and RF/LSI.",
     longDateStr: "Wednesday, Apr 29, 2026 · 11:00 AM–12:00 PM PST",
     longDetails: (
       <>
         <p>
-          Come network with leading Samsung executives. For students interested in semiconductors, memory, and RF/LSI design. Limited capacity of 12. Drinks and lunch covered.
+          IEEE Stanford hosted a small-group lunch for students focused on semiconductors, memory, and RF/LSI with Dr. Kee-Bong Song (SVP, System LSI Research, Samsung Device Solutions Research America), Dr. Joonhoi Hur (CVP, Advanced Circuits and Systems Lab, Samsung Electronics), Dr. Kwang Hun Kim (Sr. Director, Samsung Semiconductor; visiting scholar), and Dr. Hamid Rategh (Sr. Director, Samsung Semiconductor Innovation Center).
         </p>
-        <p className="mt-3"><b>Samsung executives</b></p>
-        <p className="mt-2">
-          <b>Dr. Kee-Bong Song</b>, SVP &amp; Head of the System LSI Research Center at Samsung Device Solutions Research America
-        </p>
-        <p className="mt-2">
-          <b>Dr. Joonhoi Hur</b>, CVP &amp; Head of Advanced Circuits and Systems Lab at Samsung Electronics
-        </p>
-        <p className="mt-2">
-          <b>Dr. Kwang Hun Kim</b>, Sr. Director at Samsung Semiconductor and Visiting Scholar under Prof. Horowitz
-        </p>
-        <p className="mt-2">
-          <b>Dr. Hamid Rategh</b>, Sr. Director of Samsung Semiconductor Innovation Center (Samsung&apos;s venture arm)
+      </>
+    )
+  },
+  {
+    id: 14,
+    date: new Date('2026-05-12T16:30:00'),
+    title: "President, HP x IEEE",
+    shortDateStr: "5/12/26",
+    dateStr: "Tuesday, 5/12 @ 4:30 PM",
+    details: "Fireside chat with Manoj Leelanivas, President, HP Solutions, at Packard 101.",
+    longDateStr: "Tuesday, May 12, 2026 · 4:30–5:30 PM PST",
+    longDetails: (
+      <>
+        <p>
+          <b>LOCATION:</b> Packard 101, David Packard Electrical Engineering, 350 Jane Stanford Way, Stanford, CA
         </p>
         <p className="mt-3">
-          Registration is approval required; exact address is shown after you register.
+          Fireside chat with Manoj Leelanivas, President, HP Solutions.
         </p>
         <p className="mt-3">
-          <a href="https://luma.com/4jxdaytd" target="_blank" rel="noreferrer">Request to join on Luma →</a>
+          Manoj served as the Chief Operating Officer of Juniper Networks, a $5B+ global leader acquired by HPE in July 2025. Previously, Manoj was President and CEO of Cyphort, a pioneer in security analytics technology. He earlier held multiple senior leadership roles at Juniper, including EVP of Sales for Advanced Technologies and EVP/GM of the Software Business Group. He serves on the boards of Automation Anywhere, a global leader in Agentic Process Automation, and Forescout Technologies, a Cybersecurity leader.
+        </p>
+        <p className="mt-3">
+          Manoj holds degrees from NIT Karnataka and the University of Kentucky and is a graduate of the Stanford Executive Business Program.
+        </p>
+        <p className="mt-3">
+          <a href="https://luma.com/xkm36gjj" target="_blank" rel="noreferrer">Register on Luma →</a>
         </p>
       </>
     )

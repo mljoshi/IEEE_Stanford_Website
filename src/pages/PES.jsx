@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CHAIR_EMAIL = 'sq51e51@stanford.edu'
-const MAILING_LIST_URL = 'mailto:sq51e51@stanford.edu' // TODO: replace with actual mailing list URL
+const INTEREST_FORM_URL = 'https://forms.gle/aBGHrmKrJKXLdMFUA'
 
 export default function PES() {
   return (
@@ -14,8 +14,8 @@ export default function PES() {
         </p>
 
         <div className="contact-btn-row">
-          <a href={MAILING_LIST_URL} className="contact-btn" target="_blank" rel="noopener noreferrer">
-            Join Mailing List
+          <a href={INTEREST_FORM_URL} className="contact-btn" target="_blank" rel="noopener noreferrer">
+            Interest Form
           </a>
 
           <a href="https://www.ieee-pes.org/" className="contact-btn" target="_blank" rel="noopener noreferrer">

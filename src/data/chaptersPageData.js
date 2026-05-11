@@ -46,7 +46,7 @@ export const chapters = [
     summaryTitle: 'PES — Power & Energy',
     paragraphs: [
       'Power systems, energy conversion, grid modernization, and power electronics, aligned with IEEE Power & Energy Society activities and standards work.',
-      'The Stanford PES student branch chapter runs talks, workshops, and networking on campus. Officers, mailing list, and how to get involved are on the chapter page.',
+      'The Stanford PES student branch chapter runs talks, workshops, and networking on campus. Officers, interest form, and how to get involved are on the chapter page.',
     ],
     links: [
       { label: 'IEEE PES', href: 'https://www.ieee-pes.org/' },
