@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { Zap, BookOpen, Users } from 'lucide-react'
+import { HiOutlineBookOpen, HiOutlineUserGroup } from 'react-icons/hi2'
+import { PiCircuitry } from 'react-icons/pi'
 import ParticleCanvas from '../components/ParticleCanvas'
 import { upcomingData } from '../data/eventsPageData'
 import UpcomingCard from '../components/UpcomingCard'
@@ -45,17 +46,17 @@ function StatCounter({ value, suffix = '', label }) {
 
 const programs = [
   {
-    Icon: Zap,
+    Icon: PiCircuitry,
     title: 'Industry & Research',
     body: 'Real-world talks from engineers building chips, systems, and ML infrastructure. Past speakers include Jensen Huang, Steve Wozniak, and Andy Bechtolsheim.',
   },
   {
-    Icon: BookOpen,
+    Icon: HiOutlineBookOpen,
     title: 'Academics & Mentorship',
     body: 'Guidance on EE & CS courses, research groups, graduate school, and hardware career paths.',
   },
   {
-    Icon: Users,
+    Icon: HiOutlineUserGroup,
     title: 'Community',
     body: 'A few well-run events each quarter. We keep things small enough that everyone has a chance to connect meaningfully.',
   },
@@ -115,7 +116,7 @@ export default function Home() {
             {programs.map(({ Icon, title, body }) => (
               <div className="program-card" key={title}>
                 <div className="program-icon-wrap">
-                  <Icon size={22} strokeWidth={1.75} />
+                  <Icon size={22} aria-hidden />
                 </div>
                 <h3 className="program-title">{title}</h3>
                 <p className="program-body">{body}</p>

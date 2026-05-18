@@ -239,27 +239,21 @@ export const upcomingEventsRaw = [
   {
     id: 14,
     date: new Date('2026-05-12T16:30:00'),
-    title: "President, HP x IEEE",
+    title: "HP x IEEE",
     shortDateStr: "5/12/26",
     dateStr: "Tuesday, 5/12 @ 4:30 PM",
-    details: "Fireside chat with Manoj Leelanivas, President, HP Solutions, at Packard 101.",
+    details: "We hosted a fireside with Manoj Leelanivas, President of HP Solutions, at Packard 101—on enterprise IT, AI, and his path from Juniper to HPE.",
     longDateStr: "Tuesday, May 12, 2026 · 4:30–5:30 PM PST",
     longDetails: (
       <>
         <p>
-          <b>LOCATION:</b> Packard 101, David Packard Electrical Engineering, 350 Jane Stanford Way, Stanford, CA
-        </p>
-        <p className="mt-3">
-          Fireside chat with Manoj Leelanivas, President, HP Solutions.
+          IEEE Stanford hosted a fireside chat with Manoj Leelanivas, President of HP Solutions.
         </p>
         <p className="mt-3">
           Manoj served as the Chief Operating Officer of Juniper Networks, a $5B+ global leader acquired by HPE in July 2025. Previously, Manoj was President and CEO of Cyphort, a pioneer in security analytics technology. He earlier held multiple senior leadership roles at Juniper, including EVP of Sales for Advanced Technologies and EVP/GM of the Software Business Group. He serves on the boards of Automation Anywhere, a global leader in Agentic Process Automation, and Forescout Technologies, a Cybersecurity leader.
         </p>
         <p className="mt-3">
           Manoj holds degrees from NIT Karnataka and the University of Kentucky and is a graduate of the Stanford Executive Business Program.
-        </p>
-        <p className="mt-3">
-          <a href="https://luma.com/xkm36gjj" target="_blank" rel="noreferrer">Register on Luma →</a>
         </p>
       </>
     )
