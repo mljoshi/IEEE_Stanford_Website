@@ -257,6 +257,32 @@ export const upcomingEventsRaw = [
         </p>
       </>
     )
+  },
+  {
+    id: 15,
+    date: new Date('2026-05-20T19:00:00'),
+    title: "Well-Being With Woz",
+    shortDateStr: "5/20/26",
+    dateStr: "Wednesday, 5/20 @ 7:00 PM",
+    details: "An interview & Q&A with Steve and Janet Wozniak on nurturing happiness and wellbeing—in partnership with Stanford Speakers Bureau, Wellness Buddies, Stanford Mental Health Outreach, and SUPER.",
+    longDateStr: "Wednesday, May 20, 2026 · 7:00–8:00 PM PST",
+    longDetails: (
+      <>
+        <p>
+          Join us for &ldquo;Well-being with Woz,&rdquo; an inspiring evening featuring Steve Wozniak, co-founder of Apple, alongside his wife and former Apple employee Janet Wozniak. This special interview and Q&amp;A session will explore topics around nurturing happiness and wellbeing, offering unique insights from one of technology&apos;s most influential pioneers.
+        </p>
+        <p className="mt-3">
+          Presented by Wellness Buddies &amp; Stanford Mental Health Outreach. Hosted in partnership with Stanford Speakers Bureau, Wellness Buddies, Stanford Mental Health Outreach, IEEE, and SUPER. Special thanks to the Office of Student Engagement.
+        </p>
+        <p className="mt-3"><b>Who:</b> Steve Wozniak (co-founder of Apple) and Janet Wozniak (former Apple employee in IT and Education)</p>
+        <p className="mt-2"><b>What:</b> An interview &amp; Q&amp;A on nurturing happiness and wellbeing</p>
+        <p className="mt-2"><b>When:</b> Wednesday, May 20 at 7:00 PM</p>
+        <p className="mt-3"><b>Please note:</b> First come, first serve seating.</p>
+        <p className="mt-3">
+          <a href="https://luma.com/1g9nb6tt" target="_blank" rel="noreferrer">Register on Luma →</a>
+        </p>
+      </>
+    )
   }
 ];
 
