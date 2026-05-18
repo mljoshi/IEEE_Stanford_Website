@@ -19,7 +19,7 @@ export default function Contact() {
 
           {/* <p><strong>General questions:</strong> ieee@ee.stanford.edu</p> */}
           <div className="contact-btn-row">
-            <a href="https://forms.gle/bCdLGNa4bYvpxj3f7" className="contact-btn" target="_blank">
+            <a href="https://mailman.stanford.edu/mailman/listinfo/ieee-list" className="contact-btn" target="_blank">
               Join Mailing List
             </a>
 
