@@ -32,6 +32,14 @@ export default function MTTS() {
               <strong>Chair:</strong> Geneva Ecola
               <br />
               <a href="mailto:gecola@stanford.edu">gecola@stanford.edu</a>
+              <br />
+              <strong>Vice Chair:</strong> Austin Rothschild
+              <br />
+              <a href="mailto:austinxr@stanford.edu">austinxr@stanford.edu</a>
+              <br />
+              <strong>Treasurer:</strong> Tejus Rao
+              <br />
+              <strong>Secretary:</strong> Faris Alghamdi
             </p>
           </div>
 
