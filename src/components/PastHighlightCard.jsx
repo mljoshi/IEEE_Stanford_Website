@@ -1,9 +1,11 @@
-export default function PastHighlightCard(props) {
+import Reveal from './Reveal'
+
+export default function PastHighlightCard({ dateStr, title, details, index = 0 }) {
   return (
-    <article className="highlight-card">
-      <div className="event-meta">{props.dateStr}</div>
-      <div className="event-title">{props.title}</div>
-      <p className="event-meta">{props.details}</p>
-    </article>
+    <Reveal delay={index * 50} as="article" className="highlight-card highlight-card--interactive">
+      <div className="highlight-card-meta">{dateStr}</div>
+      <div className="highlight-card-title">{title}</div>
+      <p className="highlight-card-desc">{details}</p>
+    </Reveal>
   )
 }

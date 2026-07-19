@@ -1,5 +1,85 @@
 // All upcoming events - add date field for events with specific dates
 const baseUrl = import.meta.env.BASE_URL
+
+export const hostedCompaniesData = [
+  { name: 'Apple', style: 'apple' },
+  { name: 'NVIDIA', style: 'nvidia' },
+  { name: 'OpenAI', style: 'openai' },
+  { name: 'Samsung', style: 'samsung' },
+  { name: 'Cerebras', style: 'cerebras' },
+  { name: 'HP', style: 'hp' },
+  { name: 'Espressif', style: 'espressif' },
+  { name: 'Google', style: 'google' },
+  { name: 'Meta', style: 'meta' },
+  { name: 'Intel', style: 'intel' },
+  { name: 'NetApp', style: 'netapp' },
+]
+
+export const pressLinksData = [
+  {
+    id: 1,
+    outlet: 'Stanford Daily',
+    title: 'Wozniak urges students to pursue technology',
+    href: 'https://stanforddaily.com/2026/02/05/wozniak-urges-to-pursue-technology/',
+    dateStr: 'Feb 5, 2026',
+  },
+  {
+    id: 2,
+    outlet: 'Stanford Daily',
+    title: 'Clara Shih urges students to embrace failure, stay authentic',
+    href: 'https://stanforddaily.com/2026/05/01/former-salesforce-ai-ceo-clara-shih-04-m-s-05-urges-students-to-embrace-failure-stay-authentic/',
+    dateStr: 'May 1, 2026',
+  },
+]
+
+export const featuredEventsData = [
+  {
+    id: 3,
+    title: 'IEEE x Wozniak',
+    dateStr: 'Feb 2, 2026',
+    details: 'Fireside chat with Apple co-founder Steve Wozniak.',
+    image: `${baseUrl}img/events/woz/woz.JPG`,
+    placeholderLabel: 'Steve Wozniak',
+    pressLink: 'https://stanforddaily.com/2026/02/05/wozniak-urges-to-pursue-technology/',
+  },
+  {
+    id: 4,
+    title: 'IEEE x Bechtolsheim',
+    dateStr: 'Feb 23, 2026',
+    details: 'Fireside with Sun Microsystems & Arista co-founder Andy Bechtolsheim.',
+    image: `${baseUrl}img/events/bechtolsheim/bechtolsheim.JPG`,
+    placeholderLabel: 'Andy Bechtolsheim',
+  },
+  {
+    id: 8,
+    title: 'OpenAI Hardware x IEEE',
+    dateStr: 'Apr 15, 2026',
+    details: 'Fireside chat with Richard Ho, Head of Hardware at OpenAI.',
+    image: `${baseUrl}img/events/openai/richard.jpg`,
+  },
+  {
+    id: 5,
+    title: 'Espressif Systems',
+    dateStr: 'Feb 25, 2026',
+    details: 'ESP32, IoT & embedded systems with the team behind ESP32.',
+    image: `${baseUrl}img/events/espressif/espressif.jpg`,
+  },
+  {
+    id: 6,
+    title: 'IEEE x Engelhardt',
+    dateStr: 'Mar 2, 2026',
+    details: 'Creator of QSpice and LTSpice on analog circuit simulation.',
+    image: `${baseUrl}img/events/engelhardt/mike.jfif`,
+  },
+  {
+    id: 7,
+    title: 'Silimate x IEEE',
+    dateStr: 'Mar 9, 2026',
+    details: 'AI copilot for chip designers — YC-backed founders from Stanford.',
+    image: `${baseUrl}img/events/silimate/silimate.jfif`,
+  },
+]
+
 export const upcomingEventsRaw = [
   {
     id: 1,
@@ -39,10 +119,10 @@ export const upcomingEventsRaw = [
     shortDateStr: "2/2/26",
     dateStr: "Monday, 2/2 @ 5:00 PM",
     details: "A remarkable fireside chat with Steve Wozniak, Apple co-founder and visionary technologist!",
+    image: `${baseUrl}img/events/woz/woz.JPG`,
     longDateStr: "Monday, Feb 2, 2026 · 5:00 PM PST",
     longDetails: (
             <>
-                <img src={`${baseUrl}img/events/woz/woz.JPG`} alt="Steve Wozniak" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
                 <p>
                     A remarkable fireside chat with Steve Wozniak, Apple co-founder and visionary technologist!
                 </p>
@@ -59,10 +139,10 @@ export const upcomingEventsRaw = [
     shortDateStr: "2/23/26",
     dateStr: "Monday, 2/23 @ 5:00 PM",
     details: "We welcomed Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks!",
+    image: `${baseUrl}img/events/bechtolsheim/bechtolsheim.JPG`,
     longDateStr: "Monday, Feb 23, 2026 · 5:00 PM PST",
     longDetails: (
             <>
-                <img src={`${baseUrl}img/events/bechtolsheim/bechtolsheim.JPG`} alt="Andy Bechtolsheim" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
                 <p>
                     IEEE Stanford hosted Andy Bechtolsheim, co-founder of Sun Microsystems and Arista Networks, who is one of Silicon Valley's most legendary angel investors and the person who wrote the first check to Google.
                 </p>
@@ -76,10 +156,10 @@ export const upcomingEventsRaw = [
     shortDateStr: "2/25/26",
     dateStr: "Wednesday, 2/25 @ 5:30 PM",
     details: "We hosted Espressif Systems—the team behind ESP32. They covered IoT/embedded products, recruitment, and Q&A.",
+    image: `${baseUrl}img/events/espressif/espressif.jpg`,
     longDateStr: "Wednesday, Feb 25, 2026 · 5:30 PM PST",
     longDetails: (
       <>
-        <img src={`${baseUrl}img/events/espressif/espressif.jpg`} alt="Espressif Systems" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
         <p>
           IEEE Stanford hosted Espressif Systems, the company behind the ESP32 family of Wi-Fi/BLE microcontrollers widely used in robotics, IoT, and embedded systems.
         </p>
@@ -96,10 +176,10 @@ export const upcomingEventsRaw = [
     shortDateStr: "3/2/26",
     dateStr: "Monday, 3/2 @ 5:00 PM",
     details: "We hosted Mike Engelhardt—creator of QSpice and LTSpice, the universal analog circuit simulators.",
+    image: `${baseUrl}img/events/engelhardt/mike.jfif`,
     longDateStr: "Monday, Mar 2, 2026 · 5:00 PM PST",
     longDetails: (
       <>
-        <img src={`${baseUrl}img/events/engelhardt/mike.jfif`} alt="Mike Engelhardt" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
         <p>
           IEEE Stanford hosted Mike Engelhardt, the creator of QSpice and LTSpice, the universal analog electronic circuit simulators every EE is familiar with.
         </p>
@@ -113,10 +193,10 @@ export const upcomingEventsRaw = [
     shortDateStr: "3/9/26",
     dateStr: "Monday, 3/9 @ 5:00 PM",
     details: "We hosted Silimate—the AI copilot for chip designers. YC-backed founders designing chips 40x faster.",
+    image: `${baseUrl}img/events/silimate/silimate.jfif`,
     longDateStr: "Monday, Mar 9, 2026 · 5:00 PM PST",
     longDetails: (
       <>
-        <img src={`${baseUrl}img/events/silimate/silimate.jfif`} alt="Silimate x IEEE" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
         <p>
           IEEE Stanford hosted Silimate, the AI copilot for chip designers, with agentic workflows and AI-native core tools.
         </p>
@@ -140,10 +220,10 @@ export const upcomingEventsRaw = [
     shortDateStr: "4/15/26",
     dateStr: "Wednesday, 4/15 @ 5:00 PM",
     details: "We hosted a fireside chat with Richard Ho, Head of Hardware at OpenAI.",
+    image: `${baseUrl}img/events/openai/richard.jpg`,
     longDateStr: "Wednesday, Apr 15, 2026 · 5:00–6:00 PM PST",
     longDetails: (
       <>
-        <img src={`${baseUrl}img/events/openai/richard.jpg`} alt="Richard Ho, OpenAI Hardware" style={{width: '100%', borderRadius: '8px', marginBottom: '1rem'}} />
         <p>
           IEEE Stanford hosted a fireside chat with Richard Ho, Head of Hardware at OpenAI.
         </p>

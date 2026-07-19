@@ -208,50 +208,44 @@ export default function Team() {
 
 
   return (
-    <>
-        <section className="section">
-        <div className="container">
-            <div className="section-kicker">Team</div>
-            <h1 className="section-title">2025–2026 Officers</h1>
-            <p className="section-description">
-                The Stanford IEEE Student Branch is being rebuilt after the pandemic.
-            </p>
+    <section className="section team-page page-content">
+      <div className="container">
+        <header className="page-header">
+          <p className="section-kicker">Team</p>
+          <h1 className="page-title">2025–2026 Officers</h1>
+          <p className="page-description">
+            The Stanford IEEE Student Branch, rebuilt after the pandemic.
+          </p>
+        </header>
 
-    {/* ===================== CURRENT OFFICERS ===================== */}
-  <div className="officer-grid">
-    {officers.map(officer => (
-      <OfficerCard key={officer.id} img={officer.img} name={officer.name} role={officer.role} major={officer.major} bio={officer.bio} href={officer.href} />
-    ))}
-  </div>
-    <div className="advisor-section">
-      <div className="section-kicker">Support</div>
-        {/* ===================== FACULTY Support ===================== */}
-        <h2 className="section-title">Faculty Support</h2>
-        <div className="officer-grid">
-            {facultySupport.map(iA => (
-              <OfficerCard key={iA.id} img={iA.img} name={iA.name} role={iA.role} bio={iA.bio} href={iA.href} />
+        <div className="page-block" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
+          <div className="officer-grid">
+            {officers.map((officer, i) => (
+              <OfficerCard key={officer.id} img={officer.img} name={officer.name} role={officer.role} major={officer.major} href={officer.href} index={i} />
             ))}
+          </div>
         </div>
-      </div>
-    <div className="advisor-section">
-      <div className="section-kicker">Advisors</div>
-        {/* ===================== INDUSTRY ADVISORS ===================== */}
-        <h2 className="section-title">Industry Advisors</h2>
-        <div className="officer-grid">
-            {industryAdvisors.map(iA => (
-              <OfficerCard key={iA.id} img={iA.img} name={iA.name} role={iA.role} bio={iA.bio} href={iA.href} />
+
+        <div className="page-block">
+          <h2 className="page-block-title">Faculty support</h2>
+          <div className="officer-grid officer-grid--support">
+            {facultySupport.map((iA, i) => (
+              <OfficerCard key={iA.id} img={iA.img} name={iA.name} role={iA.role} href={iA.href} index={i} />
             ))}
+          </div>
         </div>
-    </div>
-    {/*  ===================== PAST LEADERSHIP (UNCHANGED) ===================== */}
-    {/* Past leadership TODO: turn these into container(s) to map */}
-    <div className="past-officers">
-        <div className="section-kicker">Legacy</div>
-        <h2 className="section-title">Past leadership &amp; officers</h2>
-        {/* <p className="past-intro">
-          Stanford IEEE has been run by many generations of students. Below is a curated archive of
-          past officers and roles, so future teams can see the lineage they are building on.
-        </p> */}
+
+        <div className="page-block">
+          <h2 className="page-block-title">Industry advisors</h2>
+          <div className="officer-grid officer-grid--support">
+            {industryAdvisors.map((iA, i) => (
+              <OfficerCard key={iA.id} img={iA.img} name={iA.name} role={iA.role} href={iA.href} index={i} />
+            ))}
+          </div>
+        </div>
+
+        <div className="past-officers">
+          <h2 className="page-block-title">Past leadership</h2>
 
         {/* 2015-2016 */}
         <details className="year-details">
@@ -542,9 +536,8 @@ export default function Team() {
           </div>
         </details>
 
+        </div>
       </div>
-    </div>
     </section>
-    </>
   )
 }

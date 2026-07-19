@@ -1,120 +1,118 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
-import { ExternalLink } from 'lucide-react'
 
-function stripTrailingSlashes(path) {
+const NAV_ITEMS = [
+  { to: '/', label: 'Home' },
+  { to: '/events', label: 'Events', isActive: (p) => normalizePath(p) === '/events' || p.startsWith('/event/') },
+  { to: '/team', label: 'Team' },
+  { to: '/chapters', label: 'Chapters' },
+  { to: '/resources', label: 'Resources' },
+  { to: '/contact', label: 'Contact' },
+]
+
+function normalizePath(path) {
   return path.length > 1 ? path.replace(/\/+$/, '') : path
 }
 
-function pathsMatch(path1, path2) {
-  return stripTrailingSlashes(path1) === stripTrailingSlashes(path2)
-}
+function NavItem({ to, label, isActive: isActiveFn, onNavigate, mobile = false }) {
+  const { pathname } = useLocation()
+  const active = isActiveFn ? isActiveFn(pathname) : normalizePath(pathname) === normalizePath(to)
+  const className = mobile ? 'mobile-nav-link' : 'nav-link'
 
-function isEventsNavActive(pathname) {
-  return stripTrailingSlashes(pathname) === '/events' || pathname.startsWith('/event/')
-}
-
-function NavLink({ to, children, isActive }) {
-  const loc = useLocation()
-  const active = isActive ? isActive(loc.pathname) : pathsMatch(loc.pathname, to)
   return (
-    <Link to={to} className={`nav-pill-link ${active ? 'active' : ''}`}>
-      {children}
-    </Link>
-  )
-}
-
-function MobileNavLink({ to, children, isActive }) {
-  const loc = useLocation()
-  const active = isActive ? isActive(loc.pathname) : pathsMatch(loc.pathname, to)
-  return (
-    <Link to={to} className={`mobile-nav-link ${active ? 'active' : ''}`}>
-      {children}
+    <Link
+      to={to}
+      className={`${className}${active ? ' active' : ''}`}
+      onClick={onNavigate}
+    >
+      {label}
     </Link>
   )
 }
 
 export default function Nav() {
-  const [hidden, setHidden] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [lastY, setLastY] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY || 0
-      const goingDown = y > lastY
-      setHidden(y > 10 && goingDown)
-      setScrolled(y > 20)
-      setLastY(y)
-    }
+    setMobileOpen(false)
+  }, [location.pathname])
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
     return () => window.removeEventListener('scroll', onScroll)
-  }, [lastY])
+  }, [])
+
+  useEffect(() => {
+    if (!mobileOpen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setMobileOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [mobileOpen])
+
+  const closeMobile = useCallback(() => setMobileOpen(false), [])
 
   return (
-    <header className={`navbar ${hidden ? 'navbar-hidden' : ''} ${scrolled ? 'navbar-scrolled' : ''}`}>
+    <header className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
       <div className="navbar-inner">
-
-        {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <img src={`${import.meta.env.BASE_URL}img/ieee.png`} className="navbar-logo-img" alt="IEEE Logo" />
+          <img src={`${import.meta.env.BASE_URL}img/ieee.png`} className="navbar-logo-img" alt="" />
           <span className="navbar-logo-text">
             <span className="logo-ieee">IEEE</span>
-            <span className="logo-sep"> · </span>
+            <span className="logo-sep">·</span>
             <span className="logo-stanford">Stanford</span>
           </span>
         </Link>
 
-        {/* Desktop nav pill group */}
-        <nav className="nav-pill-group hidden md:flex" aria-label="Main navigation">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/events" isActive={isEventsNavActive}>Events</NavLink>
-          <NavLink to="/team">Team</NavLink>
-          <NavLink to="/chapters">Chapters</NavLink>
-          <NavLink to="/resources">Resources</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-          <a
-            href={`${import.meta.env.BASE_URL}ecj/index.html`}
-            className="nav-pill-link nav-ecj-link"
-            aria-label="ECJ journal (opens in new tab)"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ECJ <ExternalLink size={11} aria-hidden="true" />
-          </a>
+        <nav className="nav-links" aria-label="Main navigation">
+          {NAV_ITEMS.map(({ to, label, isActive }) => (
+            <NavItem key={to} to={to} label={label} isActive={isActive} />
+          ))}
         </nav>
 
-        {/* Mobile hamburger */}
-        <div className="md:hidden nav-hamburger-wrap">
-          <Hamburger toggled={mobileOpen} toggle={setMobileOpen} size={20} color="rgba(255,255,255,0.7)" />
-          {mobileOpen && (
-            <nav
-              className="nav-mobile-menu"
-              onClick={() => setMobileOpen(false)}
-              aria-label="Mobile navigation"
-            >
-              <MobileNavLink to="/">Home</MobileNavLink>
-              <MobileNavLink to="/events" isActive={isEventsNavActive}>Events</MobileNavLink>
-              <MobileNavLink to="/team">Team</MobileNavLink>
-              <MobileNavLink to="/chapters">Chapters</MobileNavLink>
-              <MobileNavLink to="/resources">Resources</MobileNavLink>
-              <MobileNavLink to="/contact">Contact</MobileNavLink>
-              <a
-                href={`${import.meta.env.BASE_URL}ecj/index.html`}
-                className="mobile-nav-link"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ECJ <ExternalLink size={11} aria-hidden="true" />
-              </a>
-            </nav>
-          )}
+        <div className="nav-hamburger">
+          <Hamburger
+            toggled={mobileOpen}
+            toggle={setMobileOpen}
+            size={20}
+            color="rgba(255,255,255,0.7)"
+            label={mobileOpen ? 'Close menu' : 'Open menu'}
+          />
         </div>
-
       </div>
+
+      {mobileOpen && (
+        <>
+          <button
+            type="button"
+            className="nav-backdrop"
+            aria-label="Close menu"
+            onClick={closeMobile}
+          />
+          <nav className="nav-mobile-menu" aria-label="Mobile navigation">
+            {NAV_ITEMS.map(({ to, label, isActive }) => (
+              <NavItem
+                key={to}
+                to={to}
+                label={label}
+                isActive={isActive}
+                onNavigate={closeMobile}
+                mobile
+              />
+            ))}
+          </nav>
+        </>
+      )}
     </header>
   )
 }

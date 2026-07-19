@@ -1,92 +1,85 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import { PageHeader } from '../components/Section'
+
+const baseUrl = import.meta.env.BASE_URL
+
+const resources = [
+  {
+    id: 'scv',
+    title: 'IEEE Santa Clara Valley Section',
+    paragraphs: [
+      'The Stanford IEEE Student Branch is part of the IEEE Santa Clara Valley Section — one of the most active IEEE sections in the world.',
+    ],
+    link: { label: 'Visit IEEE-SCV Section', href: 'https://www.ieee.org/communities/scv.html' },
+  },
+  {
+    id: 'egrid',
+    title: 'eGrid — Bay Area IEEE Events',
+    paragraphs: [
+      'Aggregates IEEE chapter events across the Bay Area — talks, seminars, workshops, and networking.',
+    ],
+    link: { label: 'View eGrid', href: 'https://egrid.ieeesfbac.org' },
+  },
+  {
+    id: 'cnsv',
+    title: "IEEE-CNSV (Consultants' Network)",
+    paragraphs: [
+      'Monthly presentations on consulting, entrepreneurship, and engineering topics — in-person and via Zoom.',
+    ],
+    link: { label: 'CaliforniaConsultants.org', href: 'https://www.californiaconsultants.org' },
+  },
+  {
+    id: 'svec',
+    title: 'Silicon Valley Engineering Council',
+    paragraphs: [
+      'Represents engineering societies across Silicon Valley. Hosts Engineers Week and student scholarships.',
+    ],
+    link: { label: 'SVEC.org', href: 'https://www.svec.org' },
+  },
+  {
+    id: 'ecj',
+    title: 'Electrical & Computer Journal (ECJ)',
+    paragraphs: [
+      "Stanford IEEE's student-run journal — browse past issues and submission history.",
+    ],
+    link: { label: 'ECJ archive', href: `${baseUrl}ecj/index.html`, external: false },
+  },
+]
 
 export default function Resources() {
   return (
-    <section className="section">
-    <div className="container">
-      <div className="section-kicker">Resources</div>
-      <h1 className="section-title">Bay Area IEEE & Engineering Opportunities</h1>
-      <p className="section-description">
-        Key organizations, newsletters, and local engineering communities connected to the 
-        IEEE Santa Clara Valley Section and the broader Silicon Valley ecosystem. For IEEE technical societies and Student Branch Chapters at Stanford, see{' '}
-        <Link to="/chapters">Chapters</Link>.
-      </p>
+    <section className="section page-content">
+      <div className="container">
+        <PageHeader
+          kicker="Resources"
+          title="Bay Area IEEE & engineering."
+          description={
+            <>
+              Organizations and newsletters connected to IEEE SCV and Silicon Valley. For Stanford chapters, see{' '}
+              <Link to="/chapters">Chapters</Link>.
+            </>
+          }
+        />
 
-      {/* SCV SECTION */}
-      <details className="year-details">
-        <summary className="year-summary">
-          <strong>IEEE Santa Clara Valley (SCV) Section</strong>
-        </summary>
-        <div className="year-body">
-          <p>
-            The Stanford IEEE Student Branch is part of the IEEE Santa Clara Valley Section, one of the
-            most active IEEE sections in the world. The SCV Section organizes major technical talks,
-            student support programs, and professional activities across Silicon Valley.
-          </p>
-          <p>
-            <a href="https://www.ieee.org/communities/scv.html" target="_blank">
-              Visit IEEE-SCV Section
-            </a>
-          </p>
+        <div className="card-grid card-grid--2">
+          {resources.map(({ id, title, paragraphs, link }) => (
+            <article key={id} className="card">
+              <h3 className="card-title">{title}</h3>
+              {paragraphs.map((p, i) => (
+                <p key={i} className="card-body">{p}</p>
+              ))}
+              <p style={{ marginTop: '0.75rem', marginBottom: 0 }}>
+                <a
+                  href={link.href}
+                  {...(link.external !== false ? { target: '_blank', rel: 'noreferrer' } : {})}
+                >
+                  {link.label} →
+                </a>
+              </p>
+            </article>
+          ))}
         </div>
-      </details>
-
-      {/* eGRID */}
-      <details className="year-details">
-        <summary className="year-summary">
-          <strong>eGrid — Upcoming IEEE Talks & Chapter Meetings</strong>
-        </summary>
-        <div className="year-body">
-          <p>
-            eGrid aggregates every IEEE Chapter event across the Bay Area, including technical
-            talks, seminars, workshops, and networking events across dozens of IEEE societies.
-          </p>
-          <p>
-            <a href="https://egrid.ieeesfbac.org" target="_blank">View eGrid Newsletter</a>
-          </p>
-        </div>
-      </details>
-
-      {/* CNSV */}
-      <details className="year-details">
-        <summary className="year-summary">
-          <strong>IEEE-CNSV (Consultants’ Network of Silicon Valley)</strong>
-        </summary>
-        <div className="year-body">
-          <p>
-            CNSV is an IEEE-affiliated professional group with monthly presentations on the 
-            2nd Tuesday of each month. Meetings are available both in-person and via Zoom and 
-            cover consulting, entrepreneurship, and cutting-edge engineering topics.
-          </p>
-          <p>
-            <a href="https://www.californiaconsultants.org" target="_blank">
-              Visit CaliforniaConsultants.org
-            </a>
-          </p>
-        </div>
-      </details>
-
-      {/* SVEC */}
-      <details className="year-details">
-        <summary className="year-summary">
-          <strong>Silicon Valley Engineering Council (SVEC)</strong>
-        </summary>
-        <div className="year-body">
-          <p>
-            SVEC represents multiple engineering societies across Silicon Valley. They host the annual 
-            Engineers Week Banquet and provide competitive engineering scholarships for students.
-          </p>
-          <p>
-            Scholarship applications are currently open—see details at:
-          </p>
-          <p>
-            <a href="https://www.svec.org" target="_blank">Visit SVEC.org</a>
-          </p>
-        </div>
-      </details>
-
-    </div>
-  </section>
+      </div>
+    </section>
   )
 }

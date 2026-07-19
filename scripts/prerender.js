@@ -53,9 +53,26 @@ eventIds.forEach((id) => {
   console.log(`✓ Created ${eventRoute}/index.html`)
 })
 
-// Create .htaccess for Apache routing
+// Create .htaccess for Apache routing + cache strategy
+// HTML shells must revalidate so deploys pick up new hashed asset names.
+// Hashed /assets/* files are safe to cache long-term (filename changes each build).
 const htaccess = `RewriteEngine On
 RewriteBase /group/ieee/
+
+# ── Cache control ──
+<IfModule mod_headers.c>
+  # Never long-cache HTML entry points (index.html copies on every route)
+  <FilesMatch "\\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  # Vite emits content-hashed filenames — safe to cache aggressively
+  <FilesMatch "\\.(js|css|woff2?|png|jpg|jpeg|gif|svg|webp|ico|jfif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
 
 # Handle subdirectory routing (including nested routes like event/123)
 RewriteCond %{REQUEST_FILENAME} !-f
