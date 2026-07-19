@@ -1114,6 +1114,10 @@ a:hover { color: #e66; }
 }
 
 /* ── Chapters & resources ── */
+.chapter-page-actions {
+  margin-bottom: 2.5rem;
+}
+
 .chapters-callout {
   margin: -0.5rem 0 2rem;
   padding: 0.85rem 1.1rem;

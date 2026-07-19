@@ -5,7 +5,7 @@ export default function ChapterPage({ kicker, title, description, actions, child
     <section className="section page-content">
       <div className="container">
         <PageHeader kicker={kicker} title={title} description={description} />
-        {actions && <div className="btn-row">{actions}</div>}
+        {actions && <div className="btn-row chapter-page-actions">{actions}</div>}
         {children}
       </div>
     </section>
