@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { HiOutlineBookOpen, HiOutlineUserGroup } from 'react-icons/hi2'
 import { PiCircuitry } from 'react-icons/pi'
+import ParticleCanvas from '../components/ParticleCanvas'
 import Section from '../components/Section'
 import Reveal from '../components/Reveal'
 import StatCounter from '../components/StatCounter'
@@ -37,6 +38,7 @@ export default function Home() {
   return (
     <>
       <section className="hero">
+        <ParticleCanvas />
         <div className="hero-glow" aria-hidden="true" />
         <div className="hero-inner">
           <p className="hero-label hero-in">IEEE @ Stanford</p>

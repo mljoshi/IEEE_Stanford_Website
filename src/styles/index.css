@@ -314,11 +314,27 @@ a:hover { color: #e66; }
 /* ── Hero ── */
 .hero {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--nav-height));
   padding: 5rem 1.5rem 4.5rem;
   text-align: center;
   border-bottom: 1px solid var(--border);
   background: var(--bg);
   overflow: hidden;
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  touch-action: pan-y;
+  transform: translateZ(0);
+  z-index: 0;
 }
 
 .hero-glow {
@@ -327,6 +343,7 @@ a:hover { color: #e66; }
   height: 70%;
   background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(140, 21, 21, 0.22), transparent 70%);
   pointer-events: none;
+  z-index: 0;
   animation: hero-glow 8s ease-in-out infinite alternate;
 }
 
@@ -1366,7 +1383,10 @@ details[open] .year-body {
 
 @media (max-width: 768px) {
   .section { padding: 3.5rem 0; }
-  .hero { padding: 3.5rem 1.25rem 3rem; }
+  .hero {
+    min-height: calc(100svh - var(--nav-height));
+    padding: 4rem 1.25rem 3.5rem;
+  }
 
   .card-grid--3,
   .featured-grid--3,
