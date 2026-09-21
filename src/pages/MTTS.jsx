@@ -8,7 +8,7 @@ export default function MTTS() {
       description="Technical talks, workshops, and networking around microwave engineering, wireless communications, and RF circuit design."
       actions={
         <>
-          
+          <a
             href="https://mailman.stanford.edu/mailman/listinfo/ieee-mtts-list"
             className="btn btn-primary"
             target="_blank"
