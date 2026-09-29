@@ -627,6 +627,7 @@ a:hover { color: #e66; }
 
 .card-grid--3 { grid-template-columns: repeat(3, 1fr); }
 .card-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.card-grid--1 { grid-template-columns: 1fr; }
 
 .card {
   background: var(--surface);
