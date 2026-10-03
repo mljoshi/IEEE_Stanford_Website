@@ -49,3 +49,6 @@ out/
 
 # Cloudflare Wrangler local state
 .wrangler/
+
+# Claude Code local config
+.claude/
