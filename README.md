@@ -96,13 +96,15 @@ This creates a `dist/` folder with:
 
 ### Deployment
 
-Upload the contents of `dist/` to your web server via FTP/SFTP.
+```bash
+npm run deploy -- <your-sunetid>
+```
 
-**For Stanford hosting:**
+This builds the site and uploads `dist/` (including `.htaccess`) to `/afs/ir/group/ieee/WWW` on `rice.stanford.edu` via `scp`. You'll be asked for your SUNet password and a Duo approval. You can also set the `SUNET` environment variable instead of passing it as an argument.
 
-1. Connect to Stanford's server via Cyberduck
-2. Upload all files from `dist/` to your web root (afs/ir/group/ieee/WWW)
-3. Ensure `.htaccess` is uploaded for proper routing
+Stanford's login hosts require Duo, so deploys can't run unattended from GitHub. Instead, a GitHub Action ([.github/workflows/build.yml](.github/workflows/build.yml)) builds every push and PR to `main` to catch broken builds, and saves the built `dist/` as a downloadable artifact.
+
+Manual fallback: connect to `rice.stanford.edu` with Cyberduck and upload everything in `dist/` (including `.htaccess`) to `afs/ir/group/ieee/WWW`.
 
 The `.htaccess` file enables clean URLs (`/team` instead of `/#/team`) on Apache servers.
 

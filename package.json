@@ -10,6 +10,7 @@
     "worker:deploy": "npx wrangler@4 deploy -c worker/luma-events/wrangler.toml",
     "build": "vite build && node scripts/prerender.js",
     "preview": "vite preview --port 5174",
+    "deploy": "npm run build && node scripts/deploy.js",
     "format": "prettier --write \"**/*.{html,css,js,jsx,json}\""
   },
   "dependencies": {
