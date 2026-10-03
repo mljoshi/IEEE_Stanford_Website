@@ -1,11 +1,11 @@
 import { Link, useParams } from 'react-router-dom'
 import Reveal from '../components/Reveal'
-import { upcomingEventsRaw } from '../data/eventsPageData'
+import { eventPagesData } from '../data/eventsPageData'
 
 export default function Event() {
   const { id } = useParams()
   const eventId = Number(id)
-  const event = upcomingEventsRaw.find((e) => e.id === eventId)
+  const event = eventPagesData.find((e) => e.id === eventId)
 
   if (!event) {
     return (

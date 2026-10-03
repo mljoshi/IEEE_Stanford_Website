@@ -1,0 +1,17 @@
+name = "ieee-stanford-events"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Refresh the stored events from Luma every 15 minutes.
+[triggers]
+crons = ["*/15 * * * *"]
+
+# Create with: npx wrangler kv namespace create EVENTS
+# then paste the printed id below.
+[[kv_namespaces]]
+binding = "EVENTS"
+id = "df4a48715f0d47c7bbb28098174fba66"
+
+# Keep request logs (incl. refresh warnings) in the Cloudflare dashboard.
+[observability]
+enabled = true

@@ -9,14 +9,14 @@ const eventsPageDataPath = path.resolve(__dirname, '../src/data/eventsPageData.j
 const eventsPageDataContent = fs.readFileSync(eventsPageDataPath, 'utf-8')
 
 // Extract event IDs from the data file
-const upcomingIdMatch = eventsPageDataContent.match(/export const upcomingEventsRaw = \[([\s\S]*?)\]/m)
+const eventPagesMatch = eventsPageDataContent.match(/export const eventPagesData = \[([\s\S]*?)\]/m)
 const pastHighlightIdMatch = eventsPageDataContent.match(/export const pastHighlightData = \[([\s\S]*?)\]/m)
 
 const eventIds = new Set()
 
-// Extract IDs from upcomingData
-if (upcomingIdMatch) {
-  const matches = upcomingIdMatch[1].match(/id:\s*(\d+)/g)
+// Extract IDs from eventPagesData
+if (eventPagesMatch) {
+  const matches = eventPagesMatch[1].match(/id:\s*(\d+)/g)
   if (matches) {
     matches.forEach(match => {
       const id = match.match(/\d+/)[0]

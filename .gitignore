@@ -46,3 +46,6 @@ out/
 .history/
 *.pem
 *.key
+
+# Cloudflare Wrangler local state
+.wrangler/

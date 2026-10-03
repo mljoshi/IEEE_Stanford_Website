@@ -6,10 +6,10 @@ import Section from '../components/Section'
 import Reveal from '../components/Reveal'
 import StatCounter from '../components/StatCounter'
 import {
-  upcomingData,
   featuredEventsData,
   hostedCompaniesData,
 } from '../data/eventsPageData'
+import { useLumaEvents } from '../data/lumaEvents'
 import UpcomingCard from '../components/UpcomingCard'
 import FeaturedHighlightCard from '../components/FeaturedHighlightCard'
 
@@ -32,9 +32,11 @@ const programs = [
 ]
 
 const homeFeatured = featuredEventsData.slice(0, 3)
-const preview = upcomingData.filter((e) => e.date !== null).slice(0, 3)
-
 export default function Home() {
+  const luma = useLumaEvents()
+  // Even count, to fill the 2-column grid.
+  const preview = luma.status === 'ready' ? luma.upcoming.slice(0, 4) : []
+
   return (
     <>
       <section className="hero">

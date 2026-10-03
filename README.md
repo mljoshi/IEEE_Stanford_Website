@@ -36,10 +36,51 @@ Visit `http://localhost:5173` to see the site.
 
 ### Available Scripts
 
-- `npm run dev` - Start development server with hot reload
+- `npm run dev` - Start development server with hot reload (events come from the deployed Worker, same as production)
+- `npm run dev:local-events` - Same, but events come from a local Worker (see [Events](#events-luma))
+- `npm run worker:dev` - Run the events Worker locally on port 8787
+- `npm run worker:deploy` - Deploy the events Worker to Cloudflare
 - `npm run build` - Build for production (outputs to `dist/`)
 - `npm run preview` - Preview production build locally
 - `npm run format` - Format code with Prettier
+
+## Events (Luma)
+
+The Upcoming and Recent lists on the Events page, the "What's next" section on the
+home page, and the event banner all come from the
+[IEEE Stanford Luma calendar](https://luma.com/calendar/cal-LO8vEyiS1bADtaM).
+**To add or change an event, edit it in Luma.** The site picks up changes within
+about 15 minutes. You don't need to rebuild or redeploy.
+
+How it works: a Cloudflare Worker ([worker/luma-events](worker/luma-events/README.md))
+reads the Luma calendar every 15 minutes and serves it as JSON. The site fetches that
+JSON in the visitor's browser ([src/data/lumaEvents.js](src/data/lumaEvents.js)).
+
+Still hand-written, in [src/data/eventsPageData.jsx](src/data/eventsPageData.jsx):
+
+- **Featured** cards (`featuredEventsData`) and their `/event/:id` write-up pages
+- Past events that were never on Luma (marked `notOnLuma: true`)
+- Press links, past highlights, and the pre-2026 archive
+
+If the Worker can't be reached, or Luma has nothing upcoming, those sections are hidden.
+
+### Working on events locally
+
+`npm run dev` uses the deployed Worker, so you see the same events as the live site.
+To change the Worker itself, run it locally in a second terminal:
+
+```bash
+npm run worker:dev
+```
+
+Then start the site against it:
+
+```bash
+npm run dev:local-events
+```
+
+The Worker URL comes from `VITE_LUMA_EVENTS_URL`, falling back to the deployed URL in
+`src/data/lumaEvents.js`. You can also set it in a `.env.local` file.
 
 ## Building for Production
 
@@ -81,12 +122,15 @@ The `.htaccess` file enables clean URLs (`/team` instead of `/#/team`) on Apache
 │   │   ├── Events.jsx
 │   │   ├── Resources.jsx
 │   │   └── Contact.jsx
+│   ├── data/            # Page content, plus lumaEvents.js (Luma events fetch)
 │   ├── styles/          # CSS files
 │   │   └── index.css
 │   ├── App.jsx          # Main app component
 │   └── main.jsx         # Entry point
 ├── scripts/
 │   └── prerender.js     # Generates static HTML for routes
+├── worker/
+│   └── luma-events/     # Cloudflare Worker serving the Luma calendar as JSON
 ├── dist/                # Production build output
 ├── legacy/              # Original static site (archived)
 └── vite.config.js       # Vite configuration

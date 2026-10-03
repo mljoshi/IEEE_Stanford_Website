@@ -544,6 +544,12 @@ a:hover { color: #e66; }
   text-align: center;
 }
 
+.events-loading {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-faint);
+}
+
 .page-content { padding-top: 3rem; }
 
 .page-header {
@@ -758,6 +764,10 @@ a:hover { color: #e66; }
   font-size: 0.8125rem;
   color: var(--text-muted);
   line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .event-card-arrow {
@@ -1400,7 +1410,13 @@ details[open] .year-body {
   }
 
   .event-card-date { display: none; }
-  .event-card-date--mobile { display: inline; }
+  .event-card-title { flex-wrap: wrap; row-gap: 0.15rem; }
+  /* Own line above the title, so long dates don't squeeze it. */
+  .event-card-date--mobile {
+    display: block;
+    order: -1;
+    flex-basis: 100%;
+  }
 
   .event-card-thumb {
     width: 48px;
