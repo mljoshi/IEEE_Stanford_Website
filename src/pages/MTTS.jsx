@@ -18,7 +18,7 @@ const upcomingEvents = [
   {
     dateStr: 'Oct 9',
     title: 'IEEE AP-S Distinguished Lecturer Workshop',
-    meta: 'Allen 101X Building',
+    meta: '9:00 AM – 1:30 PM · Allen 101X Building',
     description:
       'A joint AP-S/MTT-S workshop featuring five distinguished lecturers: Sima Noghanian (CRN), Nacer Chatat (NASA/Caltech), Zhen Peng (University of Illinois), Richard E. Hodges (JPL), and Levent Sevgi (Istanbul Technical University). Organized by the IEEE Joint AP/MTT Student Branch Chapter.',
   },
@@ -27,7 +27,7 @@ const upcomingEvents = [
     title: 'SciML Seminar: Prof. Costas Sarris',
     meta: '4:00 PM · Packard 204',
     description:
-      'Professor Costas Sarris (Electrical and Computer Engineering, University of Toronto) presents a seminar on scientific machine learning (SciML).',
+      '"Scientific Machine Learning for Electromagnetic Field Computations" — Professor Costas Sarris (Electrical and Computer Engineering, University of Toronto) presents a seminar on scientific machine learning (SciML).',
   },
   {
     dateStr: 'Nov 17',
