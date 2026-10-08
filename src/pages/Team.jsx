@@ -15,19 +15,19 @@ export default function Team() {
     },
     {
       id: 2,
-      img: `${baseUrl}img/officers/luke.jpeg`,
-      name: 'Luke Qiao',
-      major: 'BS/MS in Electrical Engineering',
+      img: `${baseUrl}img/officers/fabian.png`,
+      name: 'Fabian Cornejo',
+      major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
       role: 'Vice Chair',
-      bio: 'He focuses on PCB and IC design, analog/RF engineering, and hardware systems. He has worked in R&D at Sandia National Laboratories, design verification at Apple, and CubeSat power electronics at Stanford. In his free time, he enjoys playing piano and exploring music technology.',
-      href: 'https://www.linkedin.com/in/luke-qiao/'
+      bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
+      href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
     },
     {
       id: 3,
       img: `${baseUrl}img/officers/hannah.jpeg`,
       name: 'Hannah Shu',
       major: 'BS in Electrical Engineering',
-      role: 'Chief Financial Officer',
+      role: 'Finance',
       bio: 'She focuses on signal processing, sensing systems, and perception for autonomous vehicles. She helps organize TreeHacks and manages finances for the IEEE Stanford Student Branch. In her free time, she enjoys photography and playing violin.',
       href: 'https://www.linkedin.com/in/hannah-shu/'
     },
@@ -42,33 +42,24 @@ export default function Team() {
     },
     {
       id: 5,
-      img: `${baseUrl}img/officers/fabian.png`,
-      name: 'Fabian Cornejo',
-      major: 'BS in Sustainable Systems and Power Engineering (IDMEN)',
-      role: 'Logistics',
-      bio: 'He is passionate about sustainable energy systems and the intersection of electrical engineering with modern power infrastructure. His work centers on designing environmentally responsible engineering solutions.',
-      href: 'https://www.linkedin.com/in/fabian-cornejo-8b9423282/'
-    },
-    {
-      id: 6,
       img: `${baseUrl}img/officers/kristen.jpg`,
       name: 'Kristen Guernsey',
       major: 'MS in Electrical Engineering',
-      role: 'Logistics',
+      role: 'Social',
       bio: '',
       href: 'https://www.linkedin.com/in/kristen-guernsey/'
     },
     {
-      id: 7,
+      id: 6,
       img: `${baseUrl}img/officers/lydia.jpg`,
       name: 'Lydia Huang',
       major: 'MS in Electrical Engineering',
-      role: 'Logistics',
+      role: 'Social',
       bio: '',
       href: 'https://www.linkedin.com/in/lydia-huang-alakazoo'
     },
     {
-      id: 8,
+      id: 7,
       img: `${baseUrl}img/officers/brant.png`,
       name: 'Brant Bueno',
       major: 'BS in Electrical Engineering',
@@ -77,7 +68,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/brant-bueno/'
     },
     {
-      id: 9,
+      id: 8,
       img: `${baseUrl}img/officers/weston.png`,
       name: 'Weston Keller',
       major: 'BS in Electrical Engineering and Music',
@@ -86,16 +77,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/weston-keller/'
     },
     {
-      id: 10,
-      img: `${baseUrl}img/officers/ege.png`,
-      name: 'Ege Turan',
-      major: 'BS/MS in Electrical Engineering',
-      role: 'Industry',
-      bio: 'He focuses on hardware systems, mechatronics, and sensing technology. He also works as a Lab Assistant at lab64, helping students develop projects from concept to completion.',
-      href: 'https://www.linkedin.com/in/ege-turan/'
-    },
-    {
-      id: 11,
+      id: 9,
       img: `${baseUrl}img/officers/caroline.jpg`,
       name: 'Caroline Geiger',
       major: 'BS in Electrical Engineering',
@@ -103,17 +85,18 @@ export default function Team() {
       bio: '',
       href: 'https://www.linkedin.com/in/carolineegeiger/'
     },
+    // TODO: uncomment once Sara sends her headshot, major, and LinkedIn
+    // {
+    //   id: 10,
+    //   img: `${baseUrl}img/officers/sara.jpg`,
+    //   name: 'Sara Kothari',
+    //   major: '',
+    //   role: 'Industry',
+    //   bio: '',
+    //   href: ''
+    // },
     {
-      id: 12,
-      img: `${baseUrl}img/officers/paloma.jpg`,
-      name: 'Paloma Hodje',
-      major: 'BS in Electrical Engineering',
-      role: 'Industry',
-      bio: '',
-      href: 'https://www.linkedin.com/in/palomahodje/'
-    },
-    {
-      id: 13,
+      id: 11,
       img: `${baseUrl}img/officers/milly.png`,
       name: 'Milly Wong',
       major: 'BS in Electrical Engineering; MS in Computer Science',
@@ -122,7 +105,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/millyyuwong/'
     },
     {
-      id: 14,
+      id: 12,
       img: `${baseUrl}img/officers/nubia.png`,
       name: 'Nubia Correa',
       major: 'BS in Electrical Engineering',
@@ -131,16 +114,7 @@ export default function Team() {
       href: 'https://www.linkedin.com/in/nubia-correa/'
     },
     {
-      id: 15,
-      img: `${baseUrl}img/officers/grace.jpg`,
-      name: 'Grace Sun',
-      major: 'BS in Electrical Engineering and Computer Science',
-      role: 'EDS Chair',
-      bio: '',
-      href: 'https://www.linkedin.com/in/grace-sun-951305279'
-    },
-    {
-      id: 16,
+      id: 13,
       img: `${baseUrl}img/officers/joshi.jpeg`,
       name: 'Joshiro Lawrence',
       major: 'BS in Computer Science',
@@ -168,51 +142,24 @@ export default function Team() {
       role: 'Department Chair',
       bio: '',
       href: 'https://profiles.stanford.edu/mark-horowitz'
-    }
-  ]
-
-  const industryAdvisors = [
+    },
     {
       id: 19,
-      img: `${baseUrl}img/advisors/kim.jpeg`,
-      name: 'T. Kim Parnell, PhD, PE',
-      role: 'IEEE Life Senior Member',
-      bio: `Mechanical engineering expert specializing in forensic analysis, product failures, and patent disputes. With over 30 years of experience, he provides clear, defensible technical insight for high-stakes litigation as founder of Parnell Engineering & Consulting. A Life Senior Member of IEEE and ASME Fellow, he has led major engineering initiatives, collaborated with Stanford researchers, and presented nationally on failure mechanisms. His career includes expert testimony in numerous federal cases and forensic work on major industrial incidents such as the 1988 PEPCON explosion.`,
-      href: 'https://www.linkedin.com/in/ParnellPEC'
-    },
-    {
-      id: 20,
-      img: `${baseUrl}img/advisors/mohan.png`,
-      name: 'Mohan Sankaran',
-      role: 'IEEE Senior Member',
-      bio: `Experienced engineer with two decades of hands-on work across fintech, secure mobile systems, artificial intelligence, and cybersecurity. A Senior Member of IEEE, he contributes to the IEEE-USA AI Policy Committee (AIPC). He serves as a peer reviewer and has chaired technical sessions at IEEE conferences.`,
-      href: 'https://www.linkedin.com/in/mohan-sankaran'
-    },
-    {
-      id: 21,
-      img: `${baseUrl}img/advisors/tom.jpg`,
-      name: 'Tom Coughlin',
-      role: 'IEEE President (2024)',
-      bio: `Digital storage analyst and business/technology consultant. He has over 40 years in the data storage industry with engineering and senior management positions. Coughlin Associates consults, publishes books and market and technology reports and puts on digital storage and memory-oriented events. He is a regular contributor for forbes.com and M&E organization websites. He is an IEEE Fellow, 2025 IEEE Past President, Past-President IEEE-USA, Past Director IEEE Region 6 and Past Chair Santa Clara Valley IEEE Section, and is also active with SNIA and SMPTE.`,
-      href: 'https://www.linkedin.com/in/thomas-coughlin-41a65/'
-    },
-    {
-      id: 21,
-      img: `${baseUrl}img/advisors/Michael_Condry.jpg`,
-      name: 'Michael Condry',
-      role: 'IEEE Life Fellow',
-      bio: ``,
-      href: 'https://www.linkedin.com/in/michael-condry-79931a/'
-    },
+      img: `${baseUrl}img/faculty/dustinschroeder.jpg`,
+      name: 'Dustin Schroeder',
+      major: 'Electrical Engineering',
+      role: 'Faculty Advisor',
+      bio: 'He teaches EE 100.',
+      href: 'https://profiles.stanford.edu/dustin-schroeder'
+    }
   ]
-
 
   return (
     <section className="section team-page page-content">
       <div className="container">
         <header className="page-header">
           <p className="section-kicker">Team</p>
-          <h1 className="page-title">2025–2026 Officers</h1>
+          <h1 className="page-title">2026–2027 Officers</h1>
           <p className="page-description">
             The Stanford IEEE Student Branch, rebuilt after the pandemic.
           </p>
@@ -235,17 +182,29 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="page-block">
-          <h2 className="page-block-title">Industry advisors</h2>
-          <div className="officer-grid officer-grid--support">
-            {industryAdvisors.map((iA, i) => (
-              <OfficerCard key={iA.id} img={iA.img} name={iA.name} role={iA.role} href={iA.href} index={i} />
-            ))}
-          </div>
-        </div>
-
         <div className="past-officers">
           <h2 className="page-block-title">Past leadership</h2>
+
+        {/* 2025-2026 */}
+        <details className="year-details">
+          <summary className="year-summary">
+            <span className="year-label">2025–2026 </span>
+            <span className="year-subtitle">Chair: Ethan Song · Vice Chair: Luke Qiao</span>
+          </summary>
+          <div className="year-body">
+            <ul>
+              <li><span className="year-role">Chair:</span> Ethan Song</li>
+              <li><span className="year-role">Vice Chair:</span> Luke Qiao</li>
+              <li><span className="year-role">Chief Financial Officer:</span> Hannah Shu</li>
+              <li><span className="year-role">Logistics:</span> Kierra Barr, Fabian Cornejo, Kristen Guernsey, Lydia Huang</li>
+              <li><span className="year-role">Industry:</span> Brant Bueno, Weston Keller, Ege Turan, Caroline Geiger</li>
+              <li><span className="year-role">Marketing:</span> Milly Wong, Nubia Correa</li>
+              <li><span className="year-role">EDS Chair:</span> Grace Sun</li>
+              <li><span className="year-role">Webmaster:</span> Joshiro Lawrence</li>
+              <li><span className="year-role">Industry Advisors:</span> T. Kim Parnell, Mohan Sankaran, Tom Coughlin, Michael Condry</li>
+            </ul>
+          </div>
+        </details>
 
         {/* 2015-2016 */}
         <details className="year-details">
