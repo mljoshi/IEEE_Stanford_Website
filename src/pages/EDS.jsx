@@ -1,8 +1,12 @@
 import ChapterPage from '../components/ChapterPage'
 
+const EDS_LIST_EMAIL = 'eds-stanford@lists.stanford.edu'
+const EDS_LIST_URL = 'https://mailman.stanford.edu/mailman/listinfo/eds-stanford'
+
 export default function EDS() {
   return (
     <ChapterPage
+      chapterId="eds"
       kicker="EDS Student Chapter"
       title="Electron Devices Society"
       description="Technical talks and networking around semiconductor devices, solid-state electronics, and micro/nano fabrication."
@@ -16,6 +20,9 @@ export default function EDS() {
           >
             Interest form
           </a>
+          <a href={EDS_LIST_URL} className="btn btn-secondary" target="_blank" rel="noreferrer">
+            Mailing list
+          </a>
           <a href="https://eds.ieee.org/" className="btn btn-secondary" target="_blank" rel="noreferrer">
             IEEE EDS
           </a>
@@ -23,6 +30,14 @@ export default function EDS() {
       }
     >
       <div className="contact-grid">
+        <div className="contact-card">
+          <h3>Mailing list</h3>
+          <p>
+            Talks and events from the EDS chapter:{' '}
+            <a href={`mailto:${EDS_LIST_EMAIL}`}>{EDS_LIST_EMAIL}</a>
+          </p>
+          <a href={EDS_LIST_URL} className="btn btn-secondary" target="_blank" rel="noreferrer">Subscribe</a>
+        </div>
         <div className="contact-card">
           <h3>Board</h3>
           <p>

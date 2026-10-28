@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import UpcomingCard from '../components/UpcomingCard'
 import {
   pastHighlightData,
@@ -10,6 +11,7 @@ import PastHighlightCard from '../components/PastHighlightCard'
 import FeaturedHighlightCard from '../components/FeaturedHighlightCard'
 import { PageHeader } from '../components/Section'
 import { eventsArchiveData } from '../data/eventsArchiveData'
+import { aiComputeMeta } from '../data/aiComputeData'
 
 const RECENT_PREVIEW_COUNT = 8
 
@@ -31,7 +33,32 @@ export default function Events() {
           description="Talks, fireside chats, and recruiting sessions with industry leaders and researchers."
         />
 
-        <div className="page-block" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
+        <Link to={aiComputeMeta.path} className="conf-callout">
+          <span className="conf-callout-kicker">Symposium · {aiComputeMeta.dateStr}</span>
+          <span className="conf-callout-title">
+            AI Compute Orchestration <em>S2S</em>
+            <span className="conf-callout-sub">{aiComputeMeta.subtitle}</span>
+          </span>
+          <span className="conf-callout-desc">
+            {aiComputeMeta.description} {aiComputeMeta.where}.
+          </span>
+          <span className="conf-callout-cta">Program, speakers &amp; registration →</span>
+        </Link>
+
+        {/* Static site in public/urtc, so a full page load rather than a router link */}
+        <a href={`${import.meta.env.BASE_URL}urtc/index.html`} className="conf-callout conf-callout--urtc">
+          <span className="conf-callout-kicker">Conference · Spring 2027</span>
+          <span className="conf-callout-title">
+            Stanford URTC <em>2027</em>
+            <span className="conf-callout-sub">Undergraduate Research Technology Conference</span>
+          </span>
+          <span className="conf-callout-desc">
+            A one-day, student-run conference for undergraduate and high school researchers. Posters, paper talks and lightning talks.
+          </span>
+          <span className="conf-callout-cta">About URTC &amp; interest list →</span>
+        </a>
+
+        <div className="page-block">
           <h2 className="page-block-title">Featured</h2>
           <div className="featured-grid featured-grid--3">
             {featuredEventsData.slice(0, 3).map((ev, i) => (
